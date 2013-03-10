@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="game_engine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/game_engine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-lSDL_image" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/game_engine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`sdl-config --cflags`" />
+		</Compiler>
+		<Linker>
+			<Add option="`sdl-config --libs`" />
+			<Add option="-lSDL_image" />
+		</Linker>
+		<Unit filename="Core/display_manager.cpp" />
+		<Unit filename="Core/display_manager.hpp" />
+		<Unit filename="Core/game.cpp" />
+		<Unit filename="Core/game.hpp" />
+		<Unit filename="Core/game_state.cpp" />
+		<Unit filename="Core/game_state.hpp" />
+		<Unit filename="Core/global.cpp" />
+		<Unit filename="Core/global.hpp" />
+		<Unit filename="Core/intro_state.cpp" />
+		<Unit filename="Core/intro_state.hpp" />
+		<Unit filename="Core/menu_state.cpp" />
+		<Unit filename="Core/menu_state.hpp" />
+		<Unit filename="Core/play_state.cpp" />
+		<Unit filename="Core/play_state.hpp" />
+		<Unit filename="Objects/collision_object.hpp" />
+		<Unit filename="Objects/creature.cpp" />
+		<Unit filename="Objects/creature.hpp" />
+		<Unit filename="Objects/movable_object.cpp" />
+		<Unit filename="Objects/movable_object.hpp" />
+		<Unit filename="Objects/object.hpp" />
+		<Unit filename="Objects/wall.cpp" />
+		<Unit filename="Objects/wall.hpp" />
+		<Unit filename="Util/fps_counter.cpp" />
+		<Unit filename="Util/fps_counter.hpp" />
+		<Unit filename="Util/image_func.cpp" />
+		<Unit filename="Util/image_func.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.hpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

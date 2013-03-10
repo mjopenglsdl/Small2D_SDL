@@ -1,0 +1,307 @@
+# depslib dependency file v1.0
+1361044979 source:/home/tree/Projects/game_engine/main.cpp
+	<SDL/SDL.h>
+	"Core/global.hpp"
+	"Core/game.hpp"
+
+1343821716 /usr/include/SDL/SDL.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1343821716 /usr/include/SDL/SDL_platform.h
+
+1343821716 /usr/include/SDL/begin_code.h
+
+1343821716 /usr/include/SDL/close_code.h
+
+1343821716 /usr/include/SDL/SDL_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_keysym.h
+
+1343821716 /usr/include/SDL/SDL_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1343821716 /usr/include/SDL/SDL_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1343821716 /usr/include/SDL/SDL_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1361044531 source:/home/tree/Projects/game_engine/Core/game.cpp
+	"game.hpp"
+	"display_manager.hpp"
+
+1361045849 /home/tree/Projects/game_engine/Core/game.hpp
+
+1361046747 source:/home/tree/Projects/game_engine/Core/display_manager.cpp
+	"display_manager.hpp"
+	"global.hpp"
+	"intro_state.hpp"
+
+1361045942 /home/tree/Projects/game_engine/Core/display_manager.hpp
+	<SDL.h>
+	<vector>
+	"global.hpp"
+	"game_state.hpp"
+
+1361044531 source:/home/tree/Projects/game_engine/Core/global.cpp
+	<SDL.h>
+	"global.hpp"
+
+1361045645 /home/tree/Projects/game_engine/Core/global.hpp
+	"game_state.hpp"
+	<vector>
+	<SDL.h>
+
+1361044531 source:/home/tree/Projects/game_engine/Core/intro_state.cpp
+	<SDL.h>
+	"global.hpp"
+	"../Util/image_func.hpp"
+	"../Util/fps_counter.hpp"
+	"intro_state.hpp"
+	"play_state.hpp"
+
+1361044531 source:/home/tree/Projects/game_engine/Core/menu_state.cpp
+	"menu_state.hpp"
+	"global.hpp"
+	"../Util/image_func.hpp"
+	"../Util/fps_counter.hpp"
+
+1361051275 source:/home/tree/Projects/game_engine/Core/play_state.cpp
+	"global.hpp"
+	"play_state.hpp"
+	"menu_state.hpp"
+	"../Util/image_func.hpp"
+	"../Util/fps_counter.hpp"
+	"../Objects/wall.hpp"
+	"../Objects/creature.hpp"
+	"../Objects/object.hpp"
+	"../Objects/collision_object.hpp"
+
+1361048449 /home/tree/Projects/game_engine/Core/play_state.hpp
+
+1361045417 /home/tree/Projects/game_engine/Core/game_state.hpp
+
+1361045582 /home/tree/Projects/game_engine/Core/intro_state.hpp
+	"game_state.hpp"
+
+1361045541 /home/tree/Projects/game_engine/Core/menu_state.hpp
+	"game_state.hpp"
+	<SDL.h>
+
+1361044531 source:/home/tree/Projects/game_engine/Core/game_state.cpp
+	"game_state.hpp"
+
+1360452925 source:/home/tree/Projects/game_engine/Util/image_func.cpp
+	<SDL_image.h>
+	"image_func.hpp"
+
+1346969474 /usr/include/SDL/SDL_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1361046624 /home/tree/Projects/game_engine/Util/image_func.hpp
+	<SDL.h>
+
+1359294696 source:/home/tree/Projects/game_engine/Util/fps_counter.cpp
+	"fps_counter.hpp"
+	<SDL.h>
+
+1361046625 /home/tree/Projects/game_engine/Util/fps_counter.hpp
+
+1359834674 /home/tree/Projects/game_engine/Core/state_manager.hpp
+	<vector>
+
+1360452519 source:/home/tree/Projects/game_engine/Objects/collision_object.cpp
+
+1361047299 /home/tree/Projects/game_engine/Objects/object.hpp
+	<SDL.h>
+
+1361044531 source:/home/tree/Projects/game_engine/Objects/wall.cpp
+	"object.hpp"
+	"collision_object.hpp"
+	"wall.hpp"
+	"../Util/image_func.hpp"
+	"../Core/global.hpp"
+
+1361047581 /home/tree/Projects/game_engine/Objects/collision_object.hpp
+	"object.hpp"
+
+1361045311 /home/tree/Projects/game_engine/Objects/wall.hpp
+	"collision_object.hpp"
+
+1361047465 source:/home/tree/Projects/game_engine/Objects/movable_object.cpp
+
+1361051258 source:/home/tree/Projects/game_engine/Objects/creature.cpp
+	"object.hpp"
+	"movable_object.hpp"
+	"creature.hpp"
+	"../Util/image_func.hpp"
+	"../Core/global.hpp"
+
+1361047660 /home/tree/Projects/game_engine/Objects/movable_object.hpp
+	"object.hpp"
+
+1361048284 /home/tree/Projects/game_engine/Objects/creature.hpp
+	"movable_object.hpp"
+
