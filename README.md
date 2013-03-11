@@ -1,6 +1,8 @@
 2dsdlengine
 ===========
 
-a c++ game engine with SDL library  that my friend and I current working on
+a c++ game engine with SDL library  that my friend and I are current working on
 
-we make it to be GPL 3 public license
+The engine isn't really perfect, if you want to contribute, feel free to join us!
+
+we make it to be GNU 3 public license
