@@ -76,7 +76,7 @@ void cPlayState::OnRender()
         ImageFunc::BlitSprites(0,0,m_sf_bg,Global::screen);
         m_creature->Draw();
         m_wall->Draw();
-        SDL_Flip(Global::screen);
+//        SDL_Flip(Global::screen);
 }
 
 

@@ -1,5 +1,6 @@
 
-#include <SDL_image.h>
+#include <SDL2_image/SDL_image.h>
+
 #include "image_func.hpp"
 
 // load images from file to the SDL_surface memory
@@ -10,12 +11,12 @@ SDL_Surface* ImageFunc::LoadSprites(const char* filemame,bool alpha,int r, int g
 
         old_image=IMG_Load(filemame);
 
-        new_image=SDL_DisplayFormat(old_image);
+//        new_image=SDL_DisplayFormat(old_image);
         SDL_FreeSurface(old_image);
 
         if(alpha)
         {
-            SDL_SetColorKey( new_image, SDL_SRCCOLORKEY, SDL_MapRGB( new_image->format,r, g,b ) );
+//            SDL_SetColorKey( new_image, SDL_SRCCOLORKEY, SDL_MapRGB( new_image->format,r, g,b ) );
         }
 
 

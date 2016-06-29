@@ -54,7 +54,7 @@ void cMenuState::OnEvent()
 void cMenuState::OnRender()
 {
         ImageFunc::BlitSprites(0,0,m_sf_bg,Global::screen);
-        SDL_Flip(Global::screen);
+//        SDL_Flip(Global::screen);
 }
 
 

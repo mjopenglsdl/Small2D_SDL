@@ -7,7 +7,7 @@
 
 cDisplayManager::cDisplayManager()
 {
-    Global::screen= SDL_SetVideoMode(Global::screen_width, Global::screen_height, 16,SDL_HWSURFACE|SDL_DOUBLEBUF);
+//    Global::screen= SDL_SetVideoMode(Global::screen_width, Global::screen_height, 16,0);
 
     cIntroState *p_intro=new cIntroState;
     p_intro->OnInit();

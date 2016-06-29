@@ -1,7 +1,7 @@
 /// *********************16/02/2013***********************///
 
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include "global.hpp"
 #include "../Util/image_func.hpp"
 #include "../Util/fps_counter.hpp"
@@ -67,7 +67,7 @@ void cIntroState::OnEvent()
 void cIntroState::OnRender()
 {
     ImageFunc::BlitSprites(0,0,m_sf_bg,Global::screen);
-    SDL_Flip(Global::screen);
+//    SDL_Flip(Global::screen);
 }
 
 

@@ -8,14 +8,13 @@ included into other cpp files
 
 #include "game_state.hpp"
 #include <vector>
-#include <SDL.h>
+#include<SDL2/SDL.h>
+
 namespace Global
 {
 extern SDL_Surface *screen;
 extern int screen_width;
 extern int screen_height;
-
-
 
 extern std::vector<cGameState*> state;
 
