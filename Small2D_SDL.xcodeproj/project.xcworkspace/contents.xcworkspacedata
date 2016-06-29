@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:2dsdlengine.xcodeproj">
+      location = "self:/Users/minjie/Projects/2dsdlengine/Small2D_SDL.xcodeproj">
    </FileRef>
 </Workspace>

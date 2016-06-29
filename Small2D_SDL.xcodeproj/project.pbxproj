@@ -40,7 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		35A0BD1A1D236FA000155656 /* 2dsdlengine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 2dsdlengine; sourceTree = BUILT_PRODUCTS_DIR; };
+		35A0BD1A1D236FA000155656 /* Small2D_SDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Small2D_SDL; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AFD7E21D23733B003FAE93 /* config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.txt; sourceTree = "<group>"; };
 		35AFD7E41D23733B003FAE93 /* display_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = display_manager.cpp; sourceTree = "<group>"; };
 		35AFD7E51D23733B003FAE93 /* display_manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = display_manager.hpp; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		35A0BD1B1D236FA000155656 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35A0BD1A1D236FA000155656 /* 2dsdlengine */,
+				35A0BD1A1D236FA000155656 /* Small2D_SDL */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,9 +215,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		35A0BD191D236FA000155656 /* 2dsdlengine */ = {
+		35A0BD191D236FA000155656 /* Small2D_SDL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35A0BD211D236FA000155656 /* Build configuration list for PBXNativeTarget "2dsdlengine" */;
+			buildConfigurationList = 35A0BD211D236FA000155656 /* Build configuration list for PBXNativeTarget "Small2D_SDL" */;
 			buildPhases = (
 				35A0BD171D236FA000155656 /* Frameworks */,
 				35A0BD161D236FA000155656 /* Sources */,
@@ -227,9 +227,9 @@
 			);
 			dependencies = (
 			);
-			name = 2dsdlengine;
+			name = Small2D_SDL;
 			productName = 2dsdlengine;
-			productReference = 35A0BD1A1D236FA000155656 /* 2dsdlengine */;
+			productReference = 35A0BD1A1D236FA000155656 /* Small2D_SDL */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 35A0BD151D236FA000155656 /* Build configuration list for PBXProject "2dsdlengine" */;
+			buildConfigurationList = 35A0BD151D236FA000155656 /* Build configuration list for PBXProject "Small2D_SDL" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,7 +258,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				35A0BD191D236FA000155656 /* 2dsdlengine */,
+				35A0BD191D236FA000155656 /* Small2D_SDL */,
 			);
 		};
 /* End PBXProject section */
@@ -376,7 +376,7 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Small2D_SDL;
 			};
 			name = Debug;
 		};
@@ -387,14 +387,14 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Small2D_SDL;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		35A0BD151D236FA000155656 /* Build configuration list for PBXProject "2dsdlengine" */ = {
+		35A0BD151D236FA000155656 /* Build configuration list for PBXProject "Small2D_SDL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35A0BD1F1D236FA000155656 /* Debug */,
@@ -403,7 +403,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35A0BD211D236FA000155656 /* Build configuration list for PBXNativeTarget "2dsdlengine" */ = {
+		35A0BD211D236FA000155656 /* Build configuration list for PBXNativeTarget "Small2D_SDL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35A0BD221D236FA000155656 /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "35A0BD191D236FA000155656"
-               BuildableName = "2dsdlengine"
-               BlueprintName = "2dsdlengine"
-               ReferencedContainer = "container:2dsdlengine.xcodeproj">
+               BuildableName = "Small2D_SDL"
+               BlueprintName = "Small2D_SDL"
+               ReferencedContainer = "container:Small2D_SDL.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35A0BD191D236FA000155656"
-            BuildableName = "2dsdlengine"
-            BlueprintName = "2dsdlengine"
-            ReferencedContainer = "container:2dsdlengine.xcodeproj">
+            BuildableName = "Small2D_SDL"
+            BlueprintName = "Small2D_SDL"
+            ReferencedContainer = "container:Small2D_SDL.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35A0BD191D236FA000155656"
-            BuildableName = "2dsdlengine"
-            BlueprintName = "2dsdlengine"
-            ReferencedContainer = "container:2dsdlengine.xcodeproj">
+            BuildableName = "Small2D_SDL"
+            BlueprintName = "Small2D_SDL"
+            ReferencedContainer = "container:Small2D_SDL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35A0BD191D236FA000155656"
-            BuildableName = "2dsdlengine"
-            BlueprintName = "2dsdlengine"
-            ReferencedContainer = "container:2dsdlengine.xcodeproj">
+            BuildableName = "Small2D_SDL"
+            BlueprintName = "Small2D_SDL"
+            ReferencedContainer = "container:Small2D_SDL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
