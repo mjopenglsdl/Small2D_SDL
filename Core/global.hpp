@@ -12,7 +12,9 @@ included into other cpp files
 
 namespace Global
 {
-extern SDL_Surface *screen;
+    
+    extern SDL_Window *window;
+    extern SDL_Renderer *renderer;
 extern int screen_width;
 extern int screen_height;
 

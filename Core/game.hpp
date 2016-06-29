@@ -17,7 +17,6 @@ class cGame
         int OnInitGlobal();
         int Run();   //NOTE: from main, it enters here
 
-
 };
 
 

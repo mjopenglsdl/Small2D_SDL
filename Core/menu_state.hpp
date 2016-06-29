@@ -13,10 +13,10 @@ cGameState->cMenuState
 class cMenuState:public cGameState
 {
     private:
-        SDL_Surface* m_sf_bg;
+        SDL_Texture* m_tex_bg;
 
     public:
-        cMenuState(){m_sf_bg=NULL;}
+        cMenuState(){m_tex_bg=NULL;}
 
     public:
          int OnInit();

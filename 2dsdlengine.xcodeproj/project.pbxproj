@@ -78,6 +78,7 @@
 		35AFD81B1D2374A5003FAE93 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = /Library/Frameworks/SDL2_mixer.framework; sourceTree = "<absolute>"; };
 		35AFD81F1D23765B003FAE93 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		35AFD8361D23A47A003FAE93 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		35AFD8381D23AECB003FAE93 /* Tile32x32_seamless_brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tile32x32_seamless_brown.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,20 +140,20 @@
 		35AFD7E31D23733B003FAE93 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				35AFD7E41D23733B003FAE93 /* display_manager.cpp */,
-				35AFD7E51D23733B003FAE93 /* display_manager.hpp */,
-				35AFD7E61D23733B003FAE93 /* game.cpp */,
-				35AFD7E71D23733B003FAE93 /* game.hpp */,
-				35AFD7E91D23733B003FAE93 /* game_state.cpp */,
-				35AFD7EA1D23733B003FAE93 /* game_state.hpp */,
-				35AFD7EB1D23733B003FAE93 /* global.cpp */,
 				35AFD7EC1D23733B003FAE93 /* global.hpp */,
-				35AFD7ED1D23733B003FAE93 /* intro_state.cpp */,
+				35AFD7EB1D23733B003FAE93 /* global.cpp */,
+				35AFD7E51D23733B003FAE93 /* display_manager.hpp */,
+				35AFD7E41D23733B003FAE93 /* display_manager.cpp */,
+				35AFD7E71D23733B003FAE93 /* game.hpp */,
+				35AFD7E61D23733B003FAE93 /* game.cpp */,
+				35AFD7EA1D23733B003FAE93 /* game_state.hpp */,
+				35AFD7E91D23733B003FAE93 /* game_state.cpp */,
 				35AFD7EE1D23733B003FAE93 /* intro_state.hpp */,
-				35AFD7EF1D23733B003FAE93 /* menu_state.cpp */,
+				35AFD7ED1D23733B003FAE93 /* intro_state.cpp */,
 				35AFD7F01D23733B003FAE93 /* menu_state.hpp */,
-				35AFD7F11D23733B003FAE93 /* play_state.cpp */,
+				35AFD7EF1D23733B003FAE93 /* menu_state.cpp */,
 				35AFD7F21D23733B003FAE93 /* play_state.hpp */,
+				35AFD7F11D23733B003FAE93 /* play_state.cpp */,
 			);
 			path = Core;
 			sourceTree = SOURCE_ROOT;
@@ -169,6 +170,7 @@
 		35AFD7F61D23733B003FAE93 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				35AFD8381D23AECB003FAE93 /* Tile32x32_seamless_brown.png */,
 			);
 			path = Images;
 			sourceTree = SOURCE_ROOT;
@@ -176,15 +178,15 @@
 		35AFD7F91D23733B003FAE93 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				35AFD7FA1D23733B003FAE93 /* collision_object.cpp */,
-				35AFD7FB1D23733B003FAE93 /* collision_object.hpp */,
-				35AFD7FC1D23733B003FAE93 /* creature.cpp */,
-				35AFD7FD1D23733B003FAE93 /* creature.hpp */,
-				35AFD7FE1D23733B003FAE93 /* movable_object.cpp */,
-				35AFD7FF1D23733B003FAE93 /* movable_object.hpp */,
 				35AFD8001D23733B003FAE93 /* object.hpp */,
-				35AFD8011D23733B003FAE93 /* wall.cpp */,
+				35AFD7FB1D23733B003FAE93 /* collision_object.hpp */,
+				35AFD7FA1D23733B003FAE93 /* collision_object.cpp */,
+				35AFD7FD1D23733B003FAE93 /* creature.hpp */,
+				35AFD7FC1D23733B003FAE93 /* creature.cpp */,
+				35AFD7FF1D23733B003FAE93 /* movable_object.hpp */,
+				35AFD7FE1D23733B003FAE93 /* movable_object.cpp */,
 				35AFD8021D23733B003FAE93 /* wall.hpp */,
+				35AFD8011D23733B003FAE93 /* wall.cpp */,
 			);
 			path = Objects;
 			sourceTree = SOURCE_ROOT;
@@ -192,10 +194,10 @@
 		35AFD8041D23733B003FAE93 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				35AFD8051D23733B003FAE93 /* fps_counter.cpp */,
 				35AFD8061D23733B003FAE93 /* fps_counter.hpp */,
-				35AFD8071D23733B003FAE93 /* image_func.cpp */,
+				35AFD8051D23733B003FAE93 /* fps_counter.cpp */,
 				35AFD8081D23733B003FAE93 /* image_func.hpp */,
+				35AFD8071D23733B003FAE93 /* image_func.cpp */,
 			);
 			path = Util;
 			sourceTree = SOURCE_ROOT;

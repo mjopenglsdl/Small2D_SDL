@@ -10,12 +10,12 @@
 
 cWall::cWall()
 {
-    img=ImageFunc::LoadSprites("Images/brick.bmp");
+    m_tex=ImageFunc::LoadSprites("Images/tile.png");
 }
 
 cWall::~cWall()
 {
-    SDL_FreeSurface(img);
+    SDL_DestroyTexture(m_tex);
 }
 
 
@@ -23,24 +23,24 @@ void cWall::Draw()
 {
         for(int j=3;j<7;j++)
         {
-            ImageFunc::BlitSprites(j*XSCALE,8*YSCALE,img,Global::screen);
+//            ImageFunc::BlitSprites(j*XSCALE,8*YSCALE,img,Global::screen);
         }
 
         for(int j=4;j<8;j++)
         {
-            ImageFunc::BlitSprites(j*XSCALE,14*YSCALE,img,Global::screen);
+//            ImageFunc::BlitSprites(j*XSCALE,14*YSCALE,img,Global::screen);
         }
 
         for(int j=10;j<16;j++)
         {
-            ImageFunc::BlitSprites(j*XSCALE,10*YSCALE,img,Global::screen);
+//            ImageFunc::BlitSprites(j*XSCALE,10*YSCALE,img,Global::screen);
         }
 
     for(int i=0;i<2;i++)
     {
         for(int j=0;j<20;j++)
         {
-            ImageFunc::BlitSprites(j*XSCALE,(18+i)*YSCALE,img,Global::screen);
+//            ImageFunc::BlitSprites(j*XSCALE,(18+i)*YSCALE,img,Global::screen);
         }
 
     }

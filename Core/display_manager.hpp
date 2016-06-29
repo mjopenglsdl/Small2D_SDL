@@ -18,6 +18,7 @@ class cDisplayManager
 
     public:
         cDisplayManager();
+        ~cDisplayManager();
 
         int PushScreen();
         int PopScreen();

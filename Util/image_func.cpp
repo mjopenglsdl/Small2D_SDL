@@ -1,18 +1,19 @@
 
 #include <SDL2_image/SDL_image.h>
+#include <iostream>
 
 #include "image_func.hpp"
+#include "global.hpp"
+
 
 // load images from file to the SDL_surface memory
-SDL_Surface* ImageFunc::LoadSprites(const char* filemame,bool alpha,int r, int g, int b)
+SDL_Texture* ImageFunc::LoadSprites(const char* filemame,bool alpha,int r, int g, int b)
 {
-        SDL_Surface* old_image=NULL;
-        SDL_Surface* new_image=NULL;
-
-        old_image=IMG_Load(filemame);
-
-//        new_image=SDL_DisplayFormat(old_image);
-        SDL_FreeSurface(old_image);
+    SDL_Texture *tex=IMG_LoadTexture(Global::renderer, filemame);
+    
+    if (!tex) {
+        std::cout <<  " error: " << SDL_GetError() << std::endl;
+    }
 
         if(alpha)
         {
@@ -20,12 +21,12 @@ SDL_Surface* ImageFunc::LoadSprites(const char* filemame,bool alpha,int r, int g
         }
 
 
-        return new_image;
+        return tex;
 }
 
 
 
-int ImageFunc::BlitSprites(int dx, int dy, SDL_Surface*src, SDL_Surface*des, bool clip,int cx, int cy,int cw, int ch)
+int ImageFunc::DrawTexture(int dx, int dy, SDL_Texture*tex, bool clip,int cx, int cy,int cw, int ch)
 {
         SDL_Rect rc_d;
         rc_d.x=dx;
@@ -38,13 +39,14 @@ int ImageFunc::BlitSprites(int dx, int dy, SDL_Surface*src, SDL_Surface*des, boo
             rc_s.y=cy;
             rc_s.w=cw;
             rc_s.h=ch;
-            SDL_BlitSurface(src,&rc_s,des,&rc_d);
-
+            SDL_RenderCopy(Global::renderer, tex, &rc_s, &rc_d);
         }
 
-        else
+        else{
+//            SDL_RenderCopy(Global::renderer, tex, 0, &rc_d);
+             SDL_RenderCopy(Global::renderer, tex, 0, 0);
+        }
 
-        SDL_BlitSurface(src,0,des,&rc_d);
 
         return 0;
 }

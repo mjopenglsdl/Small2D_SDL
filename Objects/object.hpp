@@ -18,7 +18,7 @@ class cObject
         static const int XSCALE=40;
         static const int YSCALE=30;
 
-        SDL_Surface *img;
+        SDL_Texture *m_tex;
 
     public:
 

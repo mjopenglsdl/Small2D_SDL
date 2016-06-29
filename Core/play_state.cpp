@@ -16,8 +16,8 @@
 
 int cPlayState::OnInit()
 {
-m_sf_bg=NULL;
-m_sf_bg=ImageFunc::LoadSprites("Images/Map1.bmp");
+m_tex_bg=NULL;
+m_tex_bg=ImageFunc::LoadSprites("Images/play.png");
 
 //init other members
 m_wall=new cWall;
@@ -35,9 +35,9 @@ int cPlayState::OnCleanUp()
     delete m_creature;
 
     delete mp_fps;
+    SDL_DestroyTexture(m_tex_bg);
 
-    SDL_FreeSurface(m_sf_bg);
-return 0;
+    return 0;
 }
 
 
@@ -73,10 +73,17 @@ void cPlayState::OnEvent()
 
 void cPlayState::OnRender()
 {
-        ImageFunc::BlitSprites(0,0,m_sf_bg,Global::screen);
-        m_creature->Draw();
-        m_wall->Draw();
-//        SDL_Flip(Global::screen);
+    SDL_RenderClear(Global::renderer);
+    
+    ImageFunc::DrawTexture(0, 0, m_tex_bg);
+    
+    m_creature->Draw();
+    m_wall->Draw();
+    
+    SDL_RenderPresent(Global::renderer);
+    
+    
+
 }
 
 

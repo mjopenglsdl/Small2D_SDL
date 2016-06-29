@@ -11,8 +11,8 @@
 
 int cMenuState::OnInit()
 {
-m_sf_bg=NULL;
-m_sf_bg=ImageFunc::LoadSprites("Images/Menu.bmp");
+m_tex_bg=NULL;
+m_tex_bg=ImageFunc::LoadSprites("Images/menu.png");
     mp_fps=new cFPSCounter(25);
     mp_fps->StartCount();
 return 0;
@@ -22,7 +22,7 @@ return 0;
 int cMenuState::OnCleanUp()
 {
         delete mp_fps;
-    SDL_FreeSurface(m_sf_bg);
+    SDL_DestroyTexture(m_tex_bg);
 
 return 0;
 }
@@ -53,8 +53,11 @@ void cMenuState::OnEvent()
 
 void cMenuState::OnRender()
 {
-        ImageFunc::BlitSprites(0,0,m_sf_bg,Global::screen);
-//        SDL_Flip(Global::screen);
+    SDL_RenderClear(Global::renderer);
+    
+    ImageFunc::DrawTexture(0, 0, m_tex_bg);
+    
+    SDL_RenderPresent(Global::renderer);
 }
 
 

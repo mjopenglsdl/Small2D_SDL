@@ -7,11 +7,18 @@
 
 cDisplayManager::cDisplayManager()
 {
-//    Global::screen= SDL_SetVideoMode(Global::screen_width, Global::screen_height, 16,0);
-
+    Global::window=SDL_CreateWindow("hello", 100, 100, Global::screen_width, Global::screen_height, SDL_WINDOW_SHOWN);
+    Global::renderer=SDL_CreateRenderer(Global::window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    
     cIntroState *p_intro=new cIntroState;
     p_intro->OnInit();
     Global::state.push_back(p_intro);
+}
+
+
+cDisplayManager::~cDisplayManager(){
+    SDL_DestroyRenderer(Global::renderer);
+    SDL_DestroyWindow(Global::window);
 }
 
 

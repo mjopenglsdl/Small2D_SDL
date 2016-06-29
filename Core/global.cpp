@@ -6,7 +6,9 @@
 
 namespace Global
 {
-SDL_Surface *screen=NULL;
+    SDL_Window *window=NULL;
+    SDL_Renderer *renderer=NULL;
+    
 int screen_width=800;
 int screen_height=600;
 

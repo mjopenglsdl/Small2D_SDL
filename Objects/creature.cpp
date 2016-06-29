@@ -10,16 +10,16 @@
 
 cCreature::cCreature()
 {
-    img=ImageFunc::LoadSprites("Images/HeroDown.bmp",true,255,0,0);
+    m_tex=ImageFunc::LoadSprites("Images/tile.png",true,255,0,0);
 }
 
 cCreature::~cCreature()
 {
-    SDL_FreeSurface(img);
+    SDL_DestroyTexture(m_tex);
 }
 
 
 void cCreature::Draw()
 {
-            ImageFunc::BlitSprites(3*XSCALE,15*YSCALE,img,Global::screen);
+//            ImageFunc::BlitSprites(3*XSCALE,15*YSCALE,img,Global::screen);
 }

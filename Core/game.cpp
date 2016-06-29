@@ -3,14 +3,22 @@
 #include "game.hpp"
 #include "display_manager.hpp"
 
+#include <SDL2_image/SDL_image.h>
+
+
 cGame::cGame()
 {
-    SDL_Init( SDL_INIT_VIDEO );
+    SDL_Init( SDL_INIT_EVERYTHING);
+    
+    // other libs
+    IMG_Init(IMG_INIT_PNG);
 }
 
 cGame::~cGame()
 {
     SDL_Quit();
+    
+    IMG_Quit();
     printf("Exited cleanly\n");
 }
 
@@ -35,8 +43,8 @@ int cGame::Run()
 
 
     //display code
-cDisplayManager display_manager;
-display_manager.Display();
+    cDisplayManager display_manager;
+    display_manager.Display();
 
 
 return 0;

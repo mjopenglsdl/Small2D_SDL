@@ -1,8 +1,6 @@
-SDL 2D Game Engine (C++)
+Small SDL 2D Game Engine (C++)
 ===========
 
-A skeleton of C++ game engine with SDL library  that my friend and I are current working on
+A skeleton of small C++ game engine with SDL library  
 
-More spacifically it is a state machine 
-
-We make it to be GNU 3 public license
+More spacifically it is a state machine

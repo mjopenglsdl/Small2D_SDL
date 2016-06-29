@@ -14,7 +14,7 @@ class cPlayState:public cGameState
 {
     //core members
     private:
-        SDL_Surface* m_sf_bg;
+        SDL_Texture* m_tex_bg;
 
     //other members
     private:

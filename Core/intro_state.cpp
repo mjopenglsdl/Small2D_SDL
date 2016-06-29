@@ -12,8 +12,8 @@
 
 int cIntroState::OnInit()
 {
-m_sf_bg=NULL;
-m_sf_bg=ImageFunc::LoadSprites("Images/IntroPage.bmp");
+m_tex_bg=NULL;
+m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
     mp_fps=new cFPSCounter(25);
     mp_fps->StartCount();
 
@@ -24,7 +24,7 @@ return 0;
 int cIntroState::OnCleanUp()
 {
     delete mp_fps;
-SDL_FreeSurface(m_sf_bg);
+SDL_DestroyTexture(m_tex_bg);
 return 0;
 }
 
@@ -66,8 +66,11 @@ void cIntroState::OnEvent()
 
 void cIntroState::OnRender()
 {
-    ImageFunc::BlitSprites(0,0,m_sf_bg,Global::screen);
-//    SDL_Flip(Global::screen);
+    SDL_RenderClear(Global::renderer);
+    
+    ImageFunc::DrawTexture(0, 0, m_tex_bg);
+    
+    SDL_RenderPresent(Global::renderer);
 }
 
 
