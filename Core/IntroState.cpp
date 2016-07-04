@@ -4,10 +4,10 @@
 #include <SDL2/SDL.h>
 #include "global.hpp"
 #include "../Util/image_func.hpp"
-#include "../Util/fps_counter.hpp"
+#include "../Util/FPSCounter.hpp"
 
-#include "intro_state.hpp"
-#include "play_state.hpp"
+#include "IntroState.hpp"
+#include "PlayState.hpp"
 
 
 int cIntroState::OnInit()

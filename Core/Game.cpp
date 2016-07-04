@@ -1,7 +1,7 @@
 /// *********************16/02/2013***********************///
 
-#include "game.hpp"
-#include "display_manager.hpp"
+#include "Game.hpp"
+#include "DisplayManager.hpp"
 
 #include <SDL2_image/SDL_image.h>
 

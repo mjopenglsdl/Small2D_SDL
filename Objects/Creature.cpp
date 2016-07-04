@@ -1,9 +1,9 @@
 /// *********************16/02/2013***********************///
 
 
-#include "object.hpp"
-#include "movable_object.hpp"
-#include "creature.hpp"
+#include "Object.hpp"
+#include "MovableObject.hpp"
+#include "Creature.hpp"
 
 #include "../Util/image_func.hpp"
 #include "../Core/global.hpp"

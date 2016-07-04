@@ -7,7 +7,7 @@ cObject->cMovableObject->cCreature
 
 #ifndef _CREATURE_HPP_
     #define _CREATURE_HPP_
-#include "movable_object.hpp"
+#include "MovableObject.hpp"
 
 class cObject;
 class cMovableObject;

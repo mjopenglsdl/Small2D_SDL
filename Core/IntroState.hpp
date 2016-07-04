@@ -6,7 +6,7 @@ cGameState->cIntroState
 #ifndef _INTRO_HPP_
     #define _INTRO_HPP_
 
-#include "game_state.hpp"
+#include "GameState.hpp"
 
 class cIntroState:public cGameState
 {

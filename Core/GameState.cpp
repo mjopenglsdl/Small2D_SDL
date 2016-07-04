@@ -1,7 +1,7 @@
 /// *********************16/02/2013***********************///
 
 
-#include "game_state.hpp"
+#include "GameState.hpp"
 
 cGameState::cGameState()
 {

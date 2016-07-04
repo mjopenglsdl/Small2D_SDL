@@ -7,7 +7,7 @@ cGameState->cMenuState
 #ifndef _MENUSTATE_HPP_
     #define _MENUSTATE_HPP_
 
-#include "game_state.hpp"
+#include "GameState.hpp"
 #include<SDL2/SDL.h>
 
 class cMenuState:public cGameState

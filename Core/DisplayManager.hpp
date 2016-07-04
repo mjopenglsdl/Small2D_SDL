@@ -9,7 +9,7 @@
 #include<SDL2/SDL.h>
 #include <vector>
 #include "global.hpp"
-#include "game_state.hpp"
+#include "GameState.hpp"
 
 
 class cDisplayManager

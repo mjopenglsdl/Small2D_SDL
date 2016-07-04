@@ -1,9 +1,9 @@
 /// *********************16/02/2013***********************///
 
 
-#include "display_manager.hpp"
+#include "DisplayManager.hpp"
 #include "global.hpp"
-#include "intro_state.hpp"
+#include "IntroState.hpp"
 
 cDisplayManager::cDisplayManager()
 {

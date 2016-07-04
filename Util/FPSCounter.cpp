@@ -1,5 +1,5 @@
 
-#include "fps_counter.hpp"
+#include "FPSCounter.hpp"
 #include <SDL2/SDL.h>
 
 

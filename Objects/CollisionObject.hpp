@@ -7,7 +7,7 @@ cObject->cCollisionObject
 #ifndef _COLLISIONOBJECT_HPP_
     #define _COLLISIONOBJECT_HPP_
 
-#include "object.hpp"
+#include "Object.hpp"
 
 class cCollisionObject:public cObject
 {

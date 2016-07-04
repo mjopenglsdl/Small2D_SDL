@@ -6,7 +6,7 @@ included into other cpp files
 #ifndef _GLOBAL_HPP_
     #define _GLOBAL_HPP_
 
-#include "game_state.hpp"
+#include "GameState.hpp"
 #include <vector>
 #include<SDL2/SDL.h>
 

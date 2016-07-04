@@ -1,10 +1,10 @@
 /// *********************16/02/2013***********************///
 
 
-#include "menu_state.hpp"
+#include "MenuState.hpp"
 #include "global.hpp"
 #include "../Util/image_func.hpp"
-#include "../Util/fps_counter.hpp"
+#include "../Util/FPSCounter.hpp"
 
 
 

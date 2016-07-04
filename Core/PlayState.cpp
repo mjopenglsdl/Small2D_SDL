@@ -2,16 +2,16 @@
 
 
 #include "global.hpp"
-#include "play_state.hpp"
-#include "menu_state.hpp"
+#include "PlayState.hpp"
+#include "MenuState.hpp"
 #include "../Util/image_func.hpp"
-#include "../Util/fps_counter.hpp"
+#include "../Util/FPSCounter.hpp"
 
-#include "../Objects/wall.hpp"
-#include "../Objects/creature.hpp"
+#include "../Objects/Wall.hpp"
+#include "../Objects/Creature.hpp"
 
-#include "../Objects/object.hpp"
-#include "../Objects/collision_object.hpp"
+#include "../Objects/Object.hpp"
+#include "../Objects/CollisionObject.hpp"
 
 
 int cPlayState::OnInit()
@@ -81,9 +81,6 @@ void cPlayState::OnRender()
     m_wall->Draw();
     
     SDL_RenderPresent(Global::renderer);
-    
-    
-
 }
 
 
