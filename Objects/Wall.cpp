@@ -25,7 +25,7 @@ cWall::~cWall()
 void cWall::Draw()
 {
     for (int i=0; i<SCREEN_WIDTH_GRIDS ; i++) {
-        ImageFunc::DrawTexture(UNIT_X*i, UpperPositionY(1) , m_tex);
+        ImageFunc::DrawTexture(UNIT_X*i, UpperGridPositionY(1) , m_tex);
     }
     
 //        for(int j=3;j<7;j++)

@@ -23,8 +23,7 @@ class cDisplayManager
         int PushScreen();
         int PopScreen();
         int Display();  //game enters here from cGame::Run()
-
-
+    
 };
 
 

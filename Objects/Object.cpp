@@ -11,7 +11,7 @@
 #include "global.hpp"
 
 
-int cObject::UpperPositionY(int gridNum){
+int cObject::UpperGridPositionY(int gridNum){
     
     int finalPosiY=UNIT_Y*(SCREEN_HEIGHT_GRIDS-gridNum);
     return finalPosiY;

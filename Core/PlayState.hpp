@@ -20,7 +20,7 @@ class cPlayState:public cGameState
     
     private:
         cWall *m_wall;
-        cCreature *m_creature;
+        cCreature *m_player;
 
     public:
       //  cPlayState();

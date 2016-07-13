@@ -17,7 +17,6 @@
 		35AFD80F1D23733B003FAE93 /* PlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7F11D23733B003FAE93 /* PlayState.cpp */; };
 		35AFD8101D23733B003FAE93 /* CollisionObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7FA1D23733B003FAE93 /* CollisionObject.cpp */; };
 		35AFD8111D23733B003FAE93 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7FC1D23733B003FAE93 /* Creature.cpp */; };
-		35AFD8121D23733B003FAE93 /* MovableObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7FE1D23733B003FAE93 /* MovableObject.cpp */; };
 		35AFD8131D23733B003FAE93 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD8011D23733B003FAE93 /* Wall.cpp */; };
 		35AFD8151D23733B003FAE93 /* FPSCounter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD8051D23733B003FAE93 /* FPSCounter.cpp */; };
 		35AFD8161D23733B003FAE93 /* image_func.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD8071D23733B003FAE93 /* image_func.cpp */; };
@@ -68,8 +67,6 @@
 		35AFD7FB1D23733B003FAE93 /* CollisionObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CollisionObject.hpp; sourceTree = "<group>"; };
 		35AFD7FC1D23733B003FAE93 /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
 		35AFD7FD1D23733B003FAE93 /* Creature.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Creature.hpp; sourceTree = "<group>"; };
-		35AFD7FE1D23733B003FAE93 /* MovableObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovableObject.cpp; sourceTree = "<group>"; };
-		35AFD7FF1D23733B003FAE93 /* MovableObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MovableObject.hpp; sourceTree = "<group>"; };
 		35AFD8001D23733B003FAE93 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		35AFD8011D23733B003FAE93 /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wall.cpp; sourceTree = "<group>"; };
 		35AFD8021D23733B003FAE93 /* Wall.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Wall.hpp; sourceTree = "<group>"; };
@@ -200,8 +197,6 @@
 				35AFD7FA1D23733B003FAE93 /* CollisionObject.cpp */,
 				35AFD7FD1D23733B003FAE93 /* Creature.hpp */,
 				35AFD7FC1D23733B003FAE93 /* Creature.cpp */,
-				35AFD7FF1D23733B003FAE93 /* MovableObject.hpp */,
-				35AFD7FE1D23733B003FAE93 /* MovableObject.cpp */,
 				35AFD8021D23733B003FAE93 /* Wall.hpp */,
 				35AFD8011D23733B003FAE93 /* Wall.cpp */,
 			);
@@ -293,7 +288,6 @@
 				35AFD8371D23A47A003FAE93 /* main.cpp in Sources */,
 				355A022D1D2A476C00AEB41D /* Button.cpp in Sources */,
 				35AFD80C1D23733B003FAE93 /* global.cpp in Sources */,
-				35AFD8121D23733B003FAE93 /* MovableObject.cpp in Sources */,
 				35AFD8131D23733B003FAE93 /* Wall.cpp in Sources */,
 				35AFD8101D23733B003FAE93 /* CollisionObject.cpp in Sources */,
 				35AFD8161D23733B003FAE93 /* image_func.cpp in Sources */,

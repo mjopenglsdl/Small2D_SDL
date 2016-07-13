@@ -7,19 +7,21 @@ cObject->cMovableObject->cCreature
 
 #ifndef _CREATURE_HPP_
     #define _CREATURE_HPP_
-#include "MovableObject.hpp"
 
 class cObject;
-class cMovableObject;
 
-class cCreature: public cMovableObject
+
+class cCreature: public cObject
 {
-    public:
-        cCreature();
-        ~cCreature();
+public:
+    cCreature();
+    ~cCreature();
 
-    public:
-        void Draw();
+public:
+    void Draw();
+    void Move(int xOffset);
+    
+
 };
 
 #endif

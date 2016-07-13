@@ -21,7 +21,7 @@ m_tex_bg=NULL;
 
 //init other members
 m_wall=new cWall;
-m_creature=new cCreature;
+m_player=new cCreature;
 
     mp_fps=new cFPSCounter(25);
     mp_fps->StartCount();
@@ -32,7 +32,7 @@ return 0;
 int cPlayState::OnCleanUp()
 {
     delete m_wall;
-    delete m_creature;
+    delete m_player;
 
     delete mp_fps;
     SDL_DestroyTexture(m_tex_bg);
@@ -59,12 +59,21 @@ void cPlayState::OnEvent()
                             Global::state.push_back(p_menu);
                 }
 
-                if(event.key.keysym.sym==SDLK_q)
+                else if(event.key.keysym.sym==SDLK_q)
                 {
                     Global::state.back()->OnCleanUp();
                     delete Global::state.back();
                     Global::state.pop_back();
                 }
+                 
+                // movement
+                else if (event.key.keysym.sym==SDLK_LEFT) {
+                    m_player->Move(-5);
+                }
+                else if(event.key.keysym.sym==SDLK_RIGHT){
+                    m_player->Move(5);
+                }
+                    
                 break;
             }
         }
@@ -77,7 +86,7 @@ void cPlayState::OnRender()
     
     ImageFunc::DrawTexture(0, 0, m_tex_bg);
     
-    m_creature->Draw();
+    m_player->Draw();
     m_wall->Draw();
     
     SDL_RenderPresent(Global::renderer);
@@ -89,5 +98,4 @@ void cPlayState::OnUpdate()
     mp_fps->CheckFPS();
 
     mp_fps->GetNewTick();
-return;
 }

@@ -23,4 +23,3 @@ class cWall:public cCollisionObject
 };
 
 #endif
-

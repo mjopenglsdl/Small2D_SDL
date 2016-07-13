@@ -12,12 +12,14 @@ class cObject
 {
   protected:
     //grid position of the object
-        int xGrid;
-        int yGrid;
+        int m_xGrid;
+        int m_yGrid;
+    int m_xPosi;
+    int m_yPosi;
     
     // util
     // let Y axis towards upper
-    int UpperPositionY(int gridNum);
+    int UpperGridPositionY(int gridNum);
     
 public:
     //x position= xGrid*xScale;
