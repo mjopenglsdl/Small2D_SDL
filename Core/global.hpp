@@ -10,18 +10,23 @@ included into other cpp files
 #include <vector>
 #include<SDL2/SDL.h>
 
+
+#define SCREEN_WIDTH_GRIDS 24
+#define SCREEN_HEIGHT_GRIDS 16
+
+
 namespace Global
 {
     
     extern SDL_Window *window;
     extern SDL_Renderer *renderer;
+    
 extern int screen_width;
 extern int screen_height;
 
 extern std::vector<cGameState*> state;
 
 }
-
 
 
 #endif

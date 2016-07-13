@@ -10,7 +10,7 @@
 
 cCreature::cCreature()
 {
-    m_tex=ImageFunc::LoadSprites("Images/tile.png",true,255,0,0);
+    m_tex=ImageFunc::LoadSprites("Images/teddy.png",true,255,0,0);
 }
 
 cCreature::~cCreature()
@@ -21,5 +21,5 @@ cCreature::~cCreature()
 
 void cCreature::Draw()
 {
-//            ImageFunc::BlitSprites(3*XSCALE,15*YSCALE,img,Global::screen);
+    ImageFunc::DrawTexture(0, UpperPositionY(2) , m_tex);
 }

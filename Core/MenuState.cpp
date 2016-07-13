@@ -39,7 +39,7 @@ void cMenuState::OnEvent()
                 Global::state.clear();
                 break;
             case SDL_KEYDOWN:
-                if(event.key.keysym.sym==SDLK_q)
+                if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
                     Global::state.back()->OnCleanUp();
                     delete Global::state.back();

@@ -17,6 +17,7 @@ class cPlayState:public cGameState
         SDL_Texture* m_tex_bg;
 
     //other members
+    
     private:
         cWall *m_wall;
         cCreature *m_creature;

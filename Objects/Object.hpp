@@ -14,12 +14,18 @@ class cObject
     //grid position of the object
         int xGrid;
         int yGrid;
+    
+    // util
+    // let Y axis towards upper
+    int UpperPositionY(int gridNum);
+    
+public:
     //x position= xGrid*xScale;
-        static const int XSCALE=40;
-        static const int YSCALE=30;
+        static const int UNIT_X=32;
+        static const int UNIT_Y=32;
 
         SDL_Texture *m_tex;
-
+    
     public:
 
 };

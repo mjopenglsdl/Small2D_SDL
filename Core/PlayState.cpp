@@ -17,7 +17,7 @@
 int cPlayState::OnInit()
 {
 m_tex_bg=NULL;
-m_tex_bg=ImageFunc::LoadSprites("Images/play.png");
+//m_tex_bg=ImageFunc::LoadSprites("Images/play.png");
 
 //init other members
 m_wall=new cWall;
@@ -52,7 +52,7 @@ void cPlayState::OnEvent()
                 Global::state.clear();
                 break;
             case SDL_KEYDOWN:
-                if(event.key.keysym.sym==SDLK_y)
+                if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
                             cMenuState *p_menu=new cMenuState;
                             p_menu->OnInit();

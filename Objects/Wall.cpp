@@ -8,6 +8,9 @@
 #include "../Util/image_func.hpp"
 #include "../Core/global.hpp"
 
+#include "global.hpp"
+
+
 cWall::cWall()
 {
     m_tex=ImageFunc::LoadSprites("Images/tile.png");
@@ -21,27 +24,30 @@ cWall::~cWall()
 
 void cWall::Draw()
 {
-        for(int j=3;j<7;j++)
-        {
-//            ImageFunc::BlitSprites(j*XSCALE,8*YSCALE,img,Global::screen);
-        }
-
-        for(int j=4;j<8;j++)
-        {
-//            ImageFunc::BlitSprites(j*XSCALE,14*YSCALE,img,Global::screen);
-        }
-
-        for(int j=10;j<16;j++)
-        {
-//            ImageFunc::BlitSprites(j*XSCALE,10*YSCALE,img,Global::screen);
-        }
-
-    for(int i=0;i<2;i++)
-    {
-        for(int j=0;j<20;j++)
-        {
-//            ImageFunc::BlitSprites(j*XSCALE,(18+i)*YSCALE,img,Global::screen);
-        }
-
+    for (int i=0; i<SCREEN_WIDTH_GRIDS ; i++) {
+        ImageFunc::DrawTexture(UNIT_X*i, UpperPositionY(1) , m_tex);
     }
+    
+//        for(int j=3;j<7;j++)
+//        {
+////            ImageFunc::BlitSprites(j*XSCALE,8*YSCALE,img,Global::screen);
+//        }
+//
+//        for(int j=4;j<8;j++)
+//        {
+////            ImageFunc::BlitSprites(j*XSCALE,14*YSCALE,img,Global::screen);
+//        }
+//
+//        for(int j=10;j<16;j++)
+//        {
+////            ImageFunc::BlitSprites(j*XSCALE,10*YSCALE,img,Global::screen);
+//        }
+//
+//    for(int i=0;i<2;i++)
+//    {
+//        for(int j=0;j<20;j++)
+//        {
+////            ImageFunc::BlitSprites(j*XSCALE,(18+i)*YSCALE,img,Global::screen);
+//        }
+//    }
 }

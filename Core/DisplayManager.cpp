@@ -5,6 +5,8 @@
 #include "global.hpp"
 #include "IntroState.hpp"
 
+
+
 cDisplayManager::cDisplayManager()
 {
     Global::window=SDL_CreateWindow("hello", 100, 100, Global::screen_width, Global::screen_height, SDL_WINDOW_SHOWN);

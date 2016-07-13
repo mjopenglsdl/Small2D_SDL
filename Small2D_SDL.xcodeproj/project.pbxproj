@@ -25,6 +25,7 @@
 		35AFD81D1D2374A5003FAE93 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35AFD81B1D2374A5003FAE93 /* SDL2_mixer.framework */; };
 		35AFD8201D23765B003FAE93 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35AFD81F1D23765B003FAE93 /* SDL2_image.framework */; };
 		35AFD8371D23A47A003FAE93 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD8361D23A47A003FAE93 /* main.cpp */; };
+		35EFCFBC1D361B2000F14859 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35EFCFBB1D361B2000F14859 /* Object.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +83,7 @@
 		35AFD81F1D23765B003FAE93 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		35AFD8361D23A47A003FAE93 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
 		35AFD8381D23AECB003FAE93 /* Tile32x32_seamless_brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tile32x32_seamless_brown.png; sourceTree = "<group>"; };
+		35EFCFBB1D361B2000F14859 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				35AFD8001D23733B003FAE93 /* Object.hpp */,
+				35EFCFBB1D361B2000F14859 /* Object.cpp */,
 				35AFD7FB1D23733B003FAE93 /* CollisionObject.hpp */,
 				35AFD7FA1D23733B003FAE93 /* CollisionObject.cpp */,
 				35AFD7FD1D23733B003FAE93 /* Creature.hpp */,
@@ -284,6 +287,7 @@
 			files = (
 				35AFD8151D23733B003FAE93 /* FPSCounter.cpp in Sources */,
 				35AFD80E1D23733B003FAE93 /* MenuState.cpp in Sources */,
+				35EFCFBC1D361B2000F14859 /* Object.cpp in Sources */,
 				35AFD8091D23733B003FAE93 /* DisplayManager.cpp in Sources */,
 				35AFD80B1D23733B003FAE93 /* GameState.cpp in Sources */,
 				35AFD8371D23A47A003FAE93 /* main.cpp in Sources */,

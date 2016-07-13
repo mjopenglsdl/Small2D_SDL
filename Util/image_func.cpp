@@ -28,9 +28,15 @@ SDL_Texture* ImageFunc::LoadSprites(const char* filemame,bool alpha,int r, int g
 
 int ImageFunc::DrawTexture(int dx, int dy, SDL_Texture*tex, bool clip,int cx, int cy,int cw, int ch)
 {
+    int w,h;
+    SDL_QueryTexture(tex, 0, 0, &w, &h);
+
         SDL_Rect rc_d;
         rc_d.x=dx;
         rc_d.y=dy;
+    
+    rc_d.w=w;
+    rc_d.h=h;
 
         if(clip)
         {
@@ -43,8 +49,8 @@ int ImageFunc::DrawTexture(int dx, int dy, SDL_Texture*tex, bool clip,int cx, in
         }
 
         else{
-//            SDL_RenderCopy(Global::renderer, tex, 0, &rc_d);
-             SDL_RenderCopy(Global::renderer, tex, 0, 0);
+            SDL_RenderCopy(Global::renderer, tex, 0, &rc_d);
+//             SDL_RenderCopy(Global::renderer, tex, 0, 0);
         }
 
 
