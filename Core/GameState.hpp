@@ -12,7 +12,7 @@ class cFPSCounter;
 class cGameState
 {
     protected:
-       cFPSCounter *mp_fps;
+       cFPSCounter *m_fps;
 
     public:
         virtual int OnInit()=0;

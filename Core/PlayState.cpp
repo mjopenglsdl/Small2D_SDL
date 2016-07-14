@@ -23,8 +23,8 @@ m_tex_bg=NULL;
 m_wall=new cWall;
 m_player=new cCreature;
 
-    mp_fps=new cFPSCounter(25);
-    mp_fps->StartCount();
+    m_fps=new cFPSCounter(60);
+    m_fps->StartCount();
 return 0;
 }
 
@@ -34,7 +34,7 @@ int cPlayState::OnCleanUp()
     delete m_wall;
     delete m_player;
 
-    delete mp_fps;
+    delete m_fps;
     SDL_DestroyTexture(m_tex_bg);
 
     return 0;
@@ -44,19 +44,21 @@ int cPlayState::OnCleanUp()
 void cPlayState::OnEvent()
 {
         SDL_Event event;
+
         while (SDL_PollEvent(&event))
         {
             switch (event.type)
             {
             case SDL_QUIT:
+                // FIX: mem leak
                 Global::state.clear();
                 break;
             case SDL_KEYDOWN:
                 if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
-                            cMenuState *p_menu=new cMenuState;
-                            p_menu->OnInit();
-                            Global::state.push_back(p_menu);
+                    cMenuState *p_menu=new cMenuState;
+                    p_menu->OnInit();
+                    Global::state.push_back(p_menu);
                 }
 
                 else if(event.key.keysym.sym==SDLK_q)
@@ -68,14 +70,30 @@ void cPlayState::OnEvent()
                  
                 // movement
                 else if (event.key.keysym.sym==SDLK_LEFT) {
-                    m_player->Move(-5);
+                    m_player->Move(Move_LEFT);
                 }
                 else if(event.key.keysym.sym==SDLK_RIGHT){
-                    m_player->Move(5);
+                    m_player->Move(Move_RIGHT);
+                }
+                    
+                // jump
+                else if(event.key.keysym.sym==SDLK_SPACE){
+                    m_player->Jump();
                 }
                     
                 break;
+                    
+            case SDL_KEYUP:
+                // movement
+                if (event.key.keysym.sym==SDLK_LEFT) {
+                    m_player->Move(Move_NONE);
+                }
+                else if(event.key.keysym.sym==SDLK_RIGHT){
+                    m_player->Move(Move_NONE);
+                }
+                    break;
             }
+
         }
 }
 
@@ -95,7 +113,10 @@ void cPlayState::OnRender()
 
 void cPlayState::OnUpdate()
 {
-    mp_fps->CheckFPS();
-
-    mp_fps->GetNewTick();
+    m_fps->CheckFPS();
+    
+    m_player->Update(m_fps->m_deltaTime);
+    
+    m_fps->GetNewTick();
 }
+

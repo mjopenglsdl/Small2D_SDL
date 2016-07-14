@@ -13,15 +13,15 @@ int cMenuState::OnInit()
 {
 m_tex_bg=NULL;
 m_tex_bg=ImageFunc::LoadSprites("Images/menu.png");
-    mp_fps=new cFPSCounter(25);
-    mp_fps->StartCount();
+    m_fps=new cFPSCounter(25);
+    m_fps->StartCount();
 return 0;
 }
 
 
 int cMenuState::OnCleanUp()
 {
-        delete mp_fps;
+        delete m_fps;
     SDL_DestroyTexture(m_tex_bg);
 
 return 0;
@@ -63,8 +63,8 @@ void cMenuState::OnRender()
 
 void cMenuState::OnUpdate()
 {
-    mp_fps->CheckFPS();
+    m_fps->CheckFPS();
 
-    mp_fps->GetNewTick();
+    m_fps->GetNewTick();
 return;
 }

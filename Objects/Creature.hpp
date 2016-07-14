@@ -10,6 +10,12 @@ cObject->cMovableObject->cCreature
 
 class cObject;
 
+typedef enum{
+    Move_NONE,
+    Move_LEFT,
+    Move_RIGHT
+}eMoveDirection;
+
 
 class cCreature: public cObject
 {
@@ -19,10 +25,17 @@ public:
 
 public:
     void Draw();
-    void Move(int xOffset);
+    void Update(int deltaTime);
     
-
+    void Move(eMoveDirection dir);
+    void Jump();
+    
+private:
+    int m_baseHeight;
+    bool m_bJump;
+    int m_jumpVelocity;
+    eMoveDirection m_eMoveDirection;
 };
 
-#endif
 
+#endif

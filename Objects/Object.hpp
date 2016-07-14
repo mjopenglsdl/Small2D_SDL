@@ -6,7 +6,10 @@ for example, human, wall, flower....
 
 #ifndef _OBJECT_HPP_
     #define _OBJECT_HPP_
+
 #include<SDL2/SDL.h>
+
+#define GRAVITY 10
 
 class cObject
 {

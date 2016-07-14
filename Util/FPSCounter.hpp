@@ -12,6 +12,9 @@ class cFPSCounter
         int m_init_time;
         int m_time_flag;
         int m_time_per_frame;
+    
+public:
+    int m_deltaTime;
 
     public:
          cFPSCounter(int fps=50){m_time_per_frame=1000/fps;}
