@@ -7,6 +7,10 @@ I started this project in 2011 and the origin purpose is to make a framework for
 I recently moved it to SDL2 and integrated with xCode.
 
 The current progress is that it includes 3 game states and you can move and jump the player in the game state
-![screenshot](http://domain.com/path/to/img.png)
+
+![screenshot](https://raw.githubusercontent.com/mjopenglsdl/Small2D_SDL/master/Images/screenshots/11.png)
+
+![screenshot](https://raw.githubusercontent.com/mjopenglsdl/Small2D_SDL/master/Images/screenshots/22.png)
+
 
 All the image/font resource is CC licensed
