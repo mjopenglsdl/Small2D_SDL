@@ -15,7 +15,6 @@
 		35AFD80D1D23733B003FAE93 /* IntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7ED1D23733B003FAE93 /* IntroState.cpp */; };
 		35AFD80E1D23733B003FAE93 /* MenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7EF1D23733B003FAE93 /* MenuState.cpp */; };
 		35AFD80F1D23733B003FAE93 /* PlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7F11D23733B003FAE93 /* PlayState.cpp */; };
-		35AFD8101D23733B003FAE93 /* CollisionObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7FA1D23733B003FAE93 /* CollisionObject.cpp */; };
 		35AFD8111D23733B003FAE93 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7FC1D23733B003FAE93 /* Creature.cpp */; };
 		35AFD8131D23733B003FAE93 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD8011D23733B003FAE93 /* Wall.cpp */; };
 		35AFD8151D23733B003FAE93 /* FPSCounter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD8051D23733B003FAE93 /* FPSCounter.cpp */; };
@@ -41,6 +40,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3518437B1D37B72500DF8268 /* intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro.png; sourceTree = "<group>"; };
+		3518437C1D37B72500DF8268 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		3518437D1D37B72500DF8268 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		3518437E1D37B72500DF8268 /* teddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teddy.png; sourceTree = "<group>"; };
 		355A022B1D2A476C00AEB41D /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = Widgets/Button.cpp; sourceTree = SOURCE_ROOT; };
 		355A022C1D2A476C00AEB41D /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Button.hpp; path = Widgets/Button.hpp; sourceTree = SOURCE_ROOT; };
 		35A0BD1A1D236FA000155656 /* Small2D_SDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Small2D_SDL; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,8 +66,6 @@
 		35AFD7F51D23733B003FAE93 /* URW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = URW.TTF; sourceTree = "<group>"; };
 		35AFD7F71D23733B003FAE93 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		35AFD7F81D23733B003FAE93 /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = SOURCE_ROOT; };
-		35AFD7FA1D23733B003FAE93 /* CollisionObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionObject.cpp; sourceTree = "<group>"; };
-		35AFD7FB1D23733B003FAE93 /* CollisionObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CollisionObject.hpp; sourceTree = "<group>"; };
 		35AFD7FC1D23733B003FAE93 /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
 		35AFD7FD1D23733B003FAE93 /* Creature.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Creature.hpp; sourceTree = "<group>"; };
 		35AFD8001D23733B003FAE93 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		35AFD81B1D2374A5003FAE93 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = /Library/Frameworks/SDL2_mixer.framework; sourceTree = "<absolute>"; };
 		35AFD81F1D23765B003FAE93 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		35AFD8361D23A47A003FAE93 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
-		35AFD8381D23AECB003FAE93 /* Tile32x32_seamless_brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tile32x32_seamless_brown.png; sourceTree = "<group>"; };
 		35EFCFBB1D361B2000F14859 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,7 +183,10 @@
 		35AFD7F61D23733B003FAE93 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				35AFD8381D23AECB003FAE93 /* Tile32x32_seamless_brown.png */,
+				3518437B1D37B72500DF8268 /* intro.png */,
+				3518437C1D37B72500DF8268 /* menu.png */,
+				3518437D1D37B72500DF8268 /* play.png */,
+				3518437E1D37B72500DF8268 /* teddy.png */,
 			);
 			path = Images;
 			sourceTree = SOURCE_ROOT;
@@ -193,8 +196,6 @@
 			children = (
 				35AFD8001D23733B003FAE93 /* Object.hpp */,
 				35EFCFBB1D361B2000F14859 /* Object.cpp */,
-				35AFD7FB1D23733B003FAE93 /* CollisionObject.hpp */,
-				35AFD7FA1D23733B003FAE93 /* CollisionObject.cpp */,
 				35AFD7FD1D23733B003FAE93 /* Creature.hpp */,
 				35AFD7FC1D23733B003FAE93 /* Creature.cpp */,
 				35AFD8021D23733B003FAE93 /* Wall.hpp */,
@@ -289,7 +290,6 @@
 				355A022D1D2A476C00AEB41D /* Button.cpp in Sources */,
 				35AFD80C1D23733B003FAE93 /* global.cpp in Sources */,
 				35AFD8131D23733B003FAE93 /* Wall.cpp in Sources */,
-				35AFD8101D23733B003FAE93 /* CollisionObject.cpp in Sources */,
 				35AFD8161D23733B003FAE93 /* image_func.cpp in Sources */,
 				35AFD8111D23733B003FAE93 /* Creature.cpp in Sources */,
 				35AFD80F1D23733B003FAE93 /* PlayState.cpp in Sources */,
