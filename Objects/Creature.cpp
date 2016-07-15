@@ -33,8 +33,13 @@ cCreature::cCreature()
 {
     m_baseHeight=UpperGridPositionY(2);     //  base height h=0
     m_bJump=false;
-    m_bCollided=false;
-    m_jumpVelocity=JUMP_VELO_INIT; // init jump velo
+    
+    m_bTopCollided=false;
+    m_bBtmCollided=true;
+    m_bLeftCollided=false;
+    m_bRightCollided=false;
+    
+    m_jumpVelocity=0;
     m_eMoveDirection=Move_NONE;
     
     m_tex=ImageFunc::LoadSprites("Images/teddy.png",true,255,0,0);
@@ -55,25 +60,38 @@ void cCreature::Draw()
 
 void cCreature::Update(int deltaTime)
 {
-    if (!m_bCollided) {
-        if (m_bJump) {
-            m_jumpVelocity=m_jumpVelocity-GRAVITY*deltaTime;
-            m_yPosi=m_yPosi-m_jumpVelocity*deltaTime;
-            
-            if (m_yPosi>=m_baseHeight) {
-                m_yPosi=m_baseHeight;
-                m_jumpVelocity=JUMP_VELO_INIT;
-                m_bJump=false;
+//    if (!m_bBtmCollided) {
+//        m_jumpVelocity=m_jumpVelocity-GRAVITY*deltaTime;
+//        m_yPosi=m_yPosi-m_jumpVelocity*deltaTime;
+//    }
+    
+//        if (m_bJump) {
+//            
+//            if (m_bBtmCollided) {
+//                
+//                m_yPosi=m_baseHeight;
+//                m_jumpVelocity=JUMP_VELO_INIT;
+//                m_bJump=false;
+//            }
+//        }
+    
+        if (Move_LEFT==m_eMoveDirection) {
+            if (!m_bLeftCollided) {
+                m_xPosi-=deltaTime*HORI_SPEED;
             }
         }
-        
-        if (Move_LEFT==m_eMoveDirection) {
-            m_xPosi-=deltaTime*HORI_SPEED;
-        }
+    
         else if(Move_RIGHT==m_eMoveDirection){
-            m_xPosi+=deltaTime*HORI_SPEED;
+            if (!m_bRightCollided) {
+                m_xPosi+=deltaTime*HORI_SPEED;
+            }
         }
-    }
+    
+    // reset collision
+    m_bTopCollided=false;
+    m_bRightCollided=false;
+    m_bBtmCollided=false;
+    m_bLeftCollided=false;
 }
 
 
@@ -97,27 +115,42 @@ void cCreature::CheckCollision(cObject *obj){
     int objRight=obj->m_xPosi+PLAYER_WIDTH;
 //    cout<<"Top: "<<objTop<<"Bottom: "<<objBtm<<"Left: "<<objLeft<<"Right: "<<objRight<<endl;
     
-    if (
-        // bottom-right
-        (m_xPosi+PLAYER_WIDTH >= objLeft && m_xPosi+PLAYER_WIDTH < objRight &&
-        m_yPosi+PLAYER_WIDTH >= objTop && m_yPosi+PLAYER_WIDTH < objBtm)
-        ||
-        // bottom-left
-        (m_xPosi >= objLeft && m_xPosi < objRight &&
-         m_yPosi+PLAYER_WIDTH >= objTop && m_yPosi+PLAYER_WIDTH < objBtm)
-        ||
-        // top-left
-        (m_xPosi >= objLeft && m_xPosi < objRight &&
-         m_yPosi >= objTop && m_yPosi < objBtm)
-        ||
-        // top-right
-        (m_xPosi+PLAYER_WIDTH >= objLeft && m_xPosi+PLAYER_WIDTH < objRight &&
-         m_yPosi >= objTop && m_yPosi < objBtm)
-        )
-    {
-        m_bCollided=true;
-    }else{
-        m_bCollided=false;
+    // bottom-right
+    if ((m_xPosi+PLAYER_WIDTH > objLeft && m_xPosi+PLAYER_WIDTH <= objRight &&
+         m_yPosi+PLAYER_WIDTH > objTop && m_yPosi+PLAYER_WIDTH <= objBtm)){
+        m_bRightCollided=true;
+        m_bBtmCollided=true;
+        
+        m_bLeftCollided=false;
+        m_bTopCollided=false;
     }
+    // bottom-left
+    else if(m_xPosi > objLeft && m_xPosi <= objRight &&
+             m_yPosi+PLAYER_WIDTH > objTop && m_yPosi+PLAYER_WIDTH <= objBtm){
+        m_bLeftCollided=true;
+        m_bBtmCollided=true;
+        
+        m_bRightCollided=false;
+        m_bTopCollided=false;
+    }
+    // top-left
+    else if(m_xPosi > objLeft && m_xPosi <= objRight &&
+            m_yPosi > objTop && m_yPosi <= objBtm){
+        m_bTopCollided=true;
+        m_bLeftCollided=true;
+        
+        m_bBtmCollided=false;
+        m_bRightCollided=false;
+    }
+    // top-right
+    else if(m_xPosi+PLAYER_WIDTH > objLeft && m_xPosi+PLAYER_WIDTH <= objRight &&
+            m_yPosi > objTop && m_yPosi <= objBtm){
+        m_bTopCollided=true;
+        m_bRightCollided=true;
+
+        m_bBtmCollided=false;
+        m_bLeftCollided=false;
+    }
+    
 }
 

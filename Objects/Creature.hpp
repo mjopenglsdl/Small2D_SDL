@@ -49,15 +49,20 @@ public:
 private:
     int m_baseHeight;
     bool m_bJump;
-    bool m_bCollided;
     int m_jumpVelocity;
     eMoveDirection m_eMoveDirection;
+    
+    // collison
+    bool m_bTopCollided;
+    bool m_bBtmCollided;
+    bool m_bLeftCollided;
+    bool m_bRightCollided;
     
 private:
     // const
     static const int JUMP_VELO_INIT=24;
     static const int HORI_SPEED=7;
-    static const int PLAYER_WIDTH=30;
+    static const int PLAYER_WIDTH=32;
 
 };
 

@@ -47,7 +47,7 @@ m_tex_bg=NULL;
     }
     
     for (int i=0; i<4 ; i++) {
-        cWall *wall=new cWall(i+4,4);
+        cWall *wall=new cWall(i+4,2);
         m_walls.push_back(wall);
     }
     
