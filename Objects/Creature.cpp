@@ -33,10 +33,9 @@ cCreature::cCreature()
 {
     m_baseHeight=UpperGridPositionY(2);     //  base height h=0
     m_bJump=false;
-    m_jumpVelocity=50; // init jump velo
+    m_bCollided=false;
+    m_jumpVelocity=JUMP_VELO_INIT; // init jump velo
     m_eMoveDirection=Move_NONE;
-
-    cout<<m_baseHeight<<endl;
     
     m_tex=ImageFunc::LoadSprites("Images/teddy.png",true,255,0,0);
     m_xPosi=0;
@@ -56,26 +55,25 @@ void cCreature::Draw()
 
 void cCreature::Update(int deltaTime)
 {
-    if (m_bJump) {
-        m_jumpVelocity=m_jumpVelocity-GRAVITY*deltaTime;
-        m_yPosi=m_yPosi-m_jumpVelocity*deltaTime;
+    if (!m_bCollided) {
+        if (m_bJump) {
+            m_jumpVelocity=m_jumpVelocity-GRAVITY*deltaTime;
+            m_yPosi=m_yPosi-m_jumpVelocity*deltaTime;
+            
+            if (m_yPosi>=m_baseHeight) {
+                m_yPosi=m_baseHeight;
+                m_jumpVelocity=JUMP_VELO_INIT;
+                m_bJump=false;
+            }
+        }
         
-        cout<<m_yPosi<<endl;
-
-        if (m_yPosi>=m_baseHeight) {
-            m_yPosi=m_baseHeight;
-            m_jumpVelocity=50;
-            m_bJump=false;
+        if (Move_LEFT==m_eMoveDirection) {
+            m_xPosi-=deltaTime*HORI_SPEED;
+        }
+        else if(Move_RIGHT==m_eMoveDirection){
+            m_xPosi+=deltaTime*HORI_SPEED;
         }
     }
-    
-    if (Move_LEFT==m_eMoveDirection) {
-        m_xPosi-=deltaTime*7;
-    }
-    else if(Move_RIGHT==m_eMoveDirection){
-        m_xPosi+=deltaTime*7;
-    }
-
 }
 
 
@@ -89,5 +87,37 @@ void cCreature::Move(eMoveDirection direction)
 void cCreature::Jump()
 {
     m_bJump=true;
+}
+
+void cCreature::CheckCollision(cObject *obj){
+    // check 4 corners
+    int objTop=obj->m_yPosi;
+    int objBtm=obj->m_yPosi+PLAYER_WIDTH;
+    int objLeft=obj->m_xPosi;
+    int objRight=obj->m_xPosi+PLAYER_WIDTH;
+//    cout<<"Top: "<<objTop<<"Bottom: "<<objBtm<<"Left: "<<objLeft<<"Right: "<<objRight<<endl;
+    
+    if (
+        // bottom-right
+        (m_xPosi+PLAYER_WIDTH >= objLeft && m_xPosi+PLAYER_WIDTH < objRight &&
+        m_yPosi+PLAYER_WIDTH >= objTop && m_yPosi+PLAYER_WIDTH < objBtm)
+        ||
+        // bottom-left
+        (m_xPosi >= objLeft && m_xPosi < objRight &&
+         m_yPosi+PLAYER_WIDTH >= objTop && m_yPosi+PLAYER_WIDTH < objBtm)
+        ||
+        // top-left
+        (m_xPosi >= objLeft && m_xPosi < objRight &&
+         m_yPosi >= objTop && m_yPosi < objBtm)
+        ||
+        // top-right
+        (m_xPosi+PLAYER_WIDTH >= objLeft && m_xPosi+PLAYER_WIDTH < objRight &&
+         m_yPosi >= objTop && m_yPosi < objBtm)
+        )
+    {
+        m_bCollided=true;
+    }else{
+        m_bCollided=false;
+    }
 }
 

@@ -8,9 +8,9 @@ I recently moved it to SDL2 and integrated with xCode.
 
 The current progress is that it includes 3 game states and you can move and jump the player in the game state
 
-![screenshot](https://raw.githubusercontent.com/mjopenglsdl/Small2D_SDL/master/Images/screenshots/11.png)
+![screenshot1](https://raw.githubusercontent.com/mjopenglsdl/Small2D_SDL/master/Images/screenshots/11.png)
 
-![screenshot](https://raw.githubusercontent.com/mjopenglsdl/Small2D_SDL/master/Images/screenshots/22.png)
+![screenshot2](https://raw.githubusercontent.com/mjopenglsdl/Small2D_SDL/master/Images/screenshots/22.png)
 
 
 All the image/font resource is CC licensed

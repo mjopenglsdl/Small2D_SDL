@@ -34,6 +34,15 @@ cWall::cWall()
     m_tex=ImageFunc::LoadSprites("Images/tile.png");
 }
 
+cWall::cWall(int xGrid, int yUpGrid){
+    m_tex=ImageFunc::LoadSprites("Images/tile.png");
+    m_xGrid=xGrid;
+    m_yUpGrid=yUpGrid;
+    
+    m_xPosi=m_xGrid*UNIT_X;
+    m_yPosi=(SCREEN_HEIGHT_GRIDS-m_yUpGrid)*UNIT_Y;
+}
+
 cWall::~cWall()
 {
     SDL_DestroyTexture(m_tex);
@@ -42,30 +51,5 @@ cWall::~cWall()
 
 void cWall::Draw()
 {
-    for (int i=0; i<SCREEN_WIDTH_GRIDS ; i++) {
-        ImageFunc::DrawTexture(UNIT_X*i, UpperGridPositionY(1) , m_tex);
-    }
-    
-//        for(int j=3;j<7;j++)
-//        {
-////            ImageFunc::BlitSprites(j*XSCALE,8*YSCALE,img,Global::screen);
-//        }
-//
-//        for(int j=4;j<8;j++)
-//        {
-////            ImageFunc::BlitSprites(j*XSCALE,14*YSCALE,img,Global::screen);
-//        }
-//
-//        for(int j=10;j<16;j++)
-//        {
-////            ImageFunc::BlitSprites(j*XSCALE,10*YSCALE,img,Global::screen);
-//        }
-//
-//    for(int i=0;i<2;i++)
-//    {
-//        for(int j=0;j<20;j++)
-//        {
-////            ImageFunc::BlitSprites(j*XSCALE,(18+i)*YSCALE,img,Global::screen);
-//        }
-//    }
+        ImageFunc::DrawTexture(UNIT_X*m_xGrid, UpperGridPositionY(m_yUpGrid) , m_tex);
 }

@@ -44,12 +44,21 @@ public:
     
     void Move(eMoveDirection dir);
     void Jump();
+    void CheckCollision(cObject *obj);
     
 private:
     int m_baseHeight;
     bool m_bJump;
+    bool m_bCollided;
     int m_jumpVelocity;
     eMoveDirection m_eMoveDirection;
+    
+private:
+    // const
+    static const int JUMP_VELO_INIT=24;
+    static const int HORI_SPEED=7;
+    static const int PLAYER_WIDTH=30;
+
 };
 
 

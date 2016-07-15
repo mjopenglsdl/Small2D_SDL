@@ -26,14 +26,17 @@
 
 #include "Object.hpp"
 
-class cWall:cObject
+class cWall:public cObject
 {
     public:
         cWall();
+        cWall(int xGrid, int yUpGrid);
+
         ~cWall();
 
     public:
         void Draw();
 };
+
 
 #endif

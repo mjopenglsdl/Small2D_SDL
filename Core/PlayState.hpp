@@ -26,6 +26,9 @@ cGameState->cPlayState
 
 #ifndef _PLAYSTATE_HPP_
     #define _PLAYSTATE_HPP_
+
+#include <vector>
+
 class cCreature;
 class cGameState;
 class cWall;
@@ -39,7 +42,7 @@ class cPlayState:public cGameState
     //other members
     
     private:
-        cWall *m_wall;
+        std::vector<cWall *> m_walls;
         cCreature *m_player;
 
     public:

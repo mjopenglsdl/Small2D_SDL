@@ -25,7 +25,7 @@
 
 #include<SDL2/SDL.h>
 
-#define GRAVITY 10
+#define GRAVITY 2
 
 class cObject
 {
@@ -33,6 +33,8 @@ class cObject
     //grid position of the object
         int m_xGrid;
         int m_yGrid;
+        int m_yUpGrid; // origin point is lower left corner
+
     int m_xPosi;
     int m_yPosi;
     
@@ -49,6 +51,8 @@ public:
     
     public:
 
+    
+    friend class cCreature;
 };
 
 #endif
