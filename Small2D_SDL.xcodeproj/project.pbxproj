@@ -100,8 +100,8 @@
 		355A02281D2A46D700AEB41D /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				355A022B1D2A476C00AEB41D /* Button.cpp */,
 				355A022C1D2A476C00AEB41D /* Button.hpp */,
+				355A022B1D2A476C00AEB41D /* Button.cpp */,
 			);
 			name = Widgets;
 			path = ../Objects;

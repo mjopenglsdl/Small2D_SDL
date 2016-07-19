@@ -110,10 +110,10 @@ void cPlayState::OnEvent()
                  
                 // movement
                 else if (event.key.keysym.sym==SDLK_LEFT) {
-                    m_player->Move(Move_LEFT);
+                    m_player->m_xVel=-10;
                 }
                 else if(event.key.keysym.sym==SDLK_RIGHT){
-                    m_player->Move(Move_RIGHT);
+                    m_player->m_xVel=10;
                 }
                     
                 // jump
@@ -126,10 +126,10 @@ void cPlayState::OnEvent()
             case SDL_KEYUP:
                 // movement
                 if (event.key.keysym.sym==SDLK_LEFT) {
-                    m_player->Move(Move_NONE);
+                    m_player->m_xVel=0;
                 }
                 else if(event.key.keysym.sym==SDLK_RIGHT){
-                    m_player->Move(Move_NONE);
+                    m_player->m_xVel=0;
                 }
                     break;
             }

@@ -25,12 +25,6 @@
 
 #include "Object.hpp"
 
-typedef enum{
-    Move_NONE,
-    Move_LEFT,
-    Move_RIGHT
-}eMoveDirection;
-
 
 class cCreature: public cObject
 {
@@ -42,7 +36,6 @@ public:
     void Draw();
     void Update(int deltaTime);
     
-    void Move(eMoveDirection dir);
     void Jump();
     void CheckCollision(cObject *obj);
     
@@ -50,13 +43,12 @@ private:
     int m_baseHeight;
     bool m_bJump;
     int m_jumpVelocity;
-    eMoveDirection m_eMoveDirection;
+    int m_bCollided;
     
-    // collison
-    bool m_bTopCollided;
-    bool m_bBtmCollided;
-    bool m_bLeftCollided;
-    bool m_bRightCollided;
+public:
+    // vel
+    int m_xVel;
+    int m_yVel;
     
 private:
     // const

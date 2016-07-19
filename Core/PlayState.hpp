@@ -55,7 +55,7 @@ class cPlayState:public cGameState
          void OnEvent();
          void OnRender();
          void OnUpdate();
-
 };
+
 
 #endif
