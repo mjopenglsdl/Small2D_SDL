@@ -23,7 +23,6 @@
 #ifndef _WALL_HPP_
     #define _WALL_HPP_
 
-
 #include "Object.hpp"
 
 class cWall:public cObject

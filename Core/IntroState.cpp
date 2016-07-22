@@ -28,6 +28,10 @@
 #include "IntroState.hpp"
 #include "PlayState.hpp"
 
+#include "Button.hpp"
+
+#include <iostream>
+
 
 int cIntroState::OnInit()
 {
@@ -35,6 +39,8 @@ m_tex_bg=NULL;
 m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
     m_fps=new cFPSCounter(25);
     m_fps->StartCount();
+    
+    m_btnStart = new cButton(Global::screen_width*0.5,Global::screen_height*0.2);
 
 return 0;
 }
@@ -43,6 +49,8 @@ return 0;
 int cIntroState::OnCleanUp()
 {
     delete m_fps;
+    delete m_btnStart;
+    
 SDL_DestroyTexture(m_tex_bg);
 return 0;
 }
@@ -75,6 +83,17 @@ void cIntroState::OnEvent()
                         }
                     }
                     break;
+                case SDL_MOUSEBUTTONDOWN:
+                {
+                    if(event.button.x>=m_btnStart->m_x&&event.button.x<=(m_btnStart->m_x+m_btnStart->m_width)
+                       &&event.button.y>=m_btnStart->m_y&&event.button.y<=(m_btnStart->m_y+m_btnStart->m_height
+                       )){
+                           cPlayState *p_play=new cPlayState;
+                           p_play->OnInit();
+                           Global::state.push_back(p_play);
+                    }
+                }
+                break;
             } //end of switch
 
         } //end of event
@@ -88,6 +107,7 @@ void cIntroState::OnRender()
     SDL_RenderClear(Global::renderer);
     
     ImageFunc::DrawTexture(0, 0, m_tex_bg);
+    m_btnStart->Draw();
     
     SDL_RenderPresent(Global::renderer);
 }

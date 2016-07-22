@@ -11,6 +11,13 @@ The current progress includes：
 * Move and jump the player
 * Basic collision detection
 
+My Short Plans:
+* Make UI element code more reusable (inheritance)
+* MVC architecture
+* Player jump
+* Put element into a list(ie. vector), relevant functions will be called automatically
+* Remove the namespace that I used before
+
 I hope this will help you learn the basic ideas behind game development.
 Any support would be highly appreciated :-)
 

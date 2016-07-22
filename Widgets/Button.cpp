@@ -20,3 +20,26 @@
  */
 
 #include "Button.hpp"
+#include "image_func.hpp"
+
+cButton::cButton(int x, int y):cBaseWidget(x,y)
+{
+    m_x=x;
+    m_y=y;
+    m_width=160;
+    m_height=30;
+    
+    m_tex=NULL;
+    m_tex=ImageFunc::LoadSprites("Images/btn.png",true,255,0,0);
+}
+
+cButton::~cButton(){
+    SDL_DestroyTexture(m_tex);
+}
+
+
+void cButton::Draw()
+{
+    ImageFunc::DrawTexture(m_x, m_y, m_tex);
+}
+

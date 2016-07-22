@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		355A022D1D2A476C00AEB41D /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 355A022B1D2A476C00AEB41D /* Button.cpp */; };
+		359CAB9B1D406AAD00C487C7 /* BaseWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 359CAB991D406AAD00C487C7 /* BaseWidget.cpp */; };
 		35AFD8091D23733B003FAE93 /* DisplayManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7E41D23733B003FAE93 /* DisplayManager.cpp */; };
 		35AFD80A1D23733B003FAE93 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7E61D23733B003FAE93 /* Game.cpp */; };
 		35AFD80B1D23733B003FAE93 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7E91D23733B003FAE93 /* GameState.cpp */; };
@@ -46,6 +47,10 @@
 		3518437E1D37B72500DF8268 /* teddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teddy.png; sourceTree = "<group>"; };
 		355A022B1D2A476C00AEB41D /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = Widgets/Button.cpp; sourceTree = SOURCE_ROOT; };
 		355A022C1D2A476C00AEB41D /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Button.hpp; path = Widgets/Button.hpp; sourceTree = SOURCE_ROOT; };
+		35703EDE1D420B41005DE841 /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn.png; sourceTree = "<group>"; };
+		35703EDF1D420B41005DE841 /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile.png; sourceTree = "<group>"; };
+		359CAB991D406AAD00C487C7 /* BaseWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseWidget.cpp; path = Widgets/BaseWidget.cpp; sourceTree = SOURCE_ROOT; };
+		359CAB9A1D406AAD00C487C7 /* BaseWidget.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BaseWidget.hpp; path = Widgets/BaseWidget.hpp; sourceTree = SOURCE_ROOT; };
 		35A0BD1A1D236FA000155656 /* Small2D_SDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Small2D_SDL; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AFD7E21D23733B003FAE93 /* config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.txt; sourceTree = "<group>"; };
 		35AFD7E41D23733B003FAE93 /* DisplayManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DisplayManager.cpp; sourceTree = "<group>"; };
@@ -100,6 +105,8 @@
 		355A02281D2A46D700AEB41D /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				359CAB9A1D406AAD00C487C7 /* BaseWidget.hpp */,
+				359CAB991D406AAD00C487C7 /* BaseWidget.cpp */,
 				355A022C1D2A476C00AEB41D /* Button.hpp */,
 				355A022B1D2A476C00AEB41D /* Button.cpp */,
 			);
@@ -183,6 +190,8 @@
 		35AFD7F61D23733B003FAE93 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				35703EDE1D420B41005DE841 /* btn.png */,
+				35703EDF1D420B41005DE841 /* tile.png */,
 				3518437B1D37B72500DF8268 /* intro.png */,
 				3518437C1D37B72500DF8268 /* menu.png */,
 				3518437D1D37B72500DF8268 /* play.png */,
@@ -281,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359CAB9B1D406AAD00C487C7 /* BaseWidget.cpp in Sources */,
 				35AFD8151D23733B003FAE93 /* FPSCounter.cpp in Sources */,
 				35AFD80E1D23733B003FAE93 /* MenuState.cpp in Sources */,
 				35EFCFBC1D361B2000F14859 /* Object.cpp in Sources */,

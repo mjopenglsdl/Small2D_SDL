@@ -28,10 +28,12 @@ cGameState->cIntroState
 
 #include "GameState.hpp"
 
+class cButton;
 class cIntroState:public cGameState
 {
     private:
         SDL_Texture* m_tex_bg;      //abbrev: member-surface-background
+        cButton *m_btnStart;
 
     public:
         cIntroState(){;}

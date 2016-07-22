@@ -19,30 +19,12 @@
  *
  */
 
-
-#ifndef Button_hpp
-#define Button_hpp
-
-#include<SDL2/SDL.h>
 #include "BaseWidget.hpp"
 
-class cButton: public cBaseWidget
-{
-public:
-    cButton(int x, int y);
-    ~cButton();
-    
-public:
-    int m_x;
-    int m_y;
-    
-    int m_width;
-    int m_height;
-    
-    SDL_Texture *m_tex;
-    
-public:
-    void virtual Draw();
-};
 
-#endif /* Button_hpp */
+cBaseWidget::cBaseWidget(int x, int y)
+{
+    m_x=x;
+    m_y=y;
+}
+
