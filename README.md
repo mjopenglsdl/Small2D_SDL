@@ -16,6 +16,7 @@ My Short Plans:
 * Player jump
 * Put element into a list(ie. vector), relevant functions will be called automatically
 * Remove the namespace that I used before
+* Singleton: FPS Counter
 
 I hope this will help you learn the basic ideas behind game development.
 Any support would be highly appreciated :-)
