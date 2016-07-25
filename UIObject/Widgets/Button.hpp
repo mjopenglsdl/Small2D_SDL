@@ -24,9 +24,9 @@
 #define Button_hpp
 
 #include<SDL2/SDL.h>
-#include "BaseWidget.hpp"
+#include "UIObject.hpp"
 
-class cButton: public cBaseWidget
+class cButton: public cUIObject
 {
 public:
     cButton(int x, int y);

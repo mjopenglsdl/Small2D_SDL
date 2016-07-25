@@ -37,8 +37,8 @@ cCreature::cCreature()
     m_jumpVelocity=0;
     
     m_tex=ImageFunc::LoadSprites("Images/teddy.png",true,255,0,0);
-    m_xPosi=0;
-    m_yPosi=m_baseHeight;
+    m_x=0;
+    m_y=m_baseHeight;
     
     m_xVel=0;
     m_yVel=0;
@@ -54,17 +54,17 @@ cCreature::~cCreature()
 
 void cCreature::Draw()
 {
-    ImageFunc::DrawTexture(m_xPosi, m_yPosi, m_tex);
+    ImageFunc::DrawTexture(m_x, m_y, m_tex);
 }
 
 void cCreature::Update(int deltaTime)
 {
-    m_xPosi+=m_xVel;
-    m_yPosi+=m_yVel;
+    m_x+=m_xVel;
+    m_y+=m_yVel;
     
-    if(m_xPosi<0 || m_xPosi+ PLAYER_WIDTH>Global::screen_width || m_bCollided)
+    if(m_x<0 || m_x+ PLAYER_WIDTH>Global::screen_width || m_bCollided)
     {
-        m_xPosi-=m_xVel;
+        m_x-=m_xVel;
     }
     
     m_bCollided=false;
@@ -79,15 +79,15 @@ void cCreature::Jump()
 
 void cCreature::CheckCollision(cUIObject *obj)
 {
-    int selfTop=m_yPosi;
-    int selfBtm=m_yPosi+PLAYER_WIDTH;
-    int selfLeft=m_xPosi;
-    int selfRight=m_xPosi+PLAYER_WIDTH;
+    int selfTop=m_y;
+    int selfBtm=m_y+PLAYER_WIDTH;
+    int selfLeft=m_x;
+    int selfRight=m_x+PLAYER_WIDTH;
     
-    int objTop=obj->m_yPosi;
-    int objBtm=obj->m_yPosi+PLAYER_WIDTH;
-    int objLeft=obj->m_xPosi;
-    int objRight=obj->m_xPosi+PLAYER_WIDTH;
+    int objTop=obj->m_y;
+    int objBtm=obj->m_y+PLAYER_WIDTH;
+    int objLeft=obj->m_x;
+    int objRight=obj->m_x+PLAYER_WIDTH;
     
 //    cout<<selfRight<<endl;
     

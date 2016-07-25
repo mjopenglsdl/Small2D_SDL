@@ -23,7 +23,6 @@
 		35BBAD791D45AC3D00355807 /* UIObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD711D45AAF900355807 /* UIObject.cpp */; };
 		35BBAD7A1D45AC3D00355807 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD6D1D45AAF900355807 /* Creature.cpp */; };
 		35BBAD7C1D45AC3D00355807 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD6F1D45AAF900355807 /* Wall.cpp */; };
-		35BBAD7E1D45AC3D00355807 /* BaseWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD741D45AAF900355807 /* BaseWidget.cpp */; };
 		35BBAD801D45AC3D00355807 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD761D45AAF900355807 /* Button.cpp */; };
 /* End PBXBuildFile section */
 
@@ -82,8 +81,6 @@
 		35BBAD701D45AAF900355807 /* Wall.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Wall.hpp; sourceTree = "<group>"; };
 		35BBAD711D45AAF900355807 /* UIObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UIObject.cpp; sourceTree = "<group>"; };
 		35BBAD721D45AAF900355807 /* UIObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UIObject.hpp; sourceTree = "<group>"; };
-		35BBAD741D45AAF900355807 /* BaseWidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseWidget.cpp; sourceTree = "<group>"; };
-		35BBAD751D45AAF900355807 /* BaseWidget.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseWidget.hpp; sourceTree = "<group>"; };
 		35BBAD761D45AAF900355807 /* Button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
 		35BBAD771D45AAF900355807 /* Button.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,8 +230,6 @@
 		35BBAD731D45AAF900355807 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				35BBAD741D45AAF900355807 /* BaseWidget.cpp */,
-				35BBAD751D45AAF900355807 /* BaseWidget.hpp */,
 				35BBAD761D45AAF900355807 /* Button.cpp */,
 				35BBAD771D45AAF900355807 /* Button.hpp */,
 			);
@@ -300,7 +295,6 @@
 				35BBAD791D45AC3D00355807 /* UIObject.cpp in Sources */,
 				35BBAD7A1D45AC3D00355807 /* Creature.cpp in Sources */,
 				35BBAD7C1D45AC3D00355807 /* Wall.cpp in Sources */,
-				35BBAD7E1D45AC3D00355807 /* BaseWidget.cpp in Sources */,
 				35BBAD801D45AC3D00355807 /* Button.cpp in Sources */,
 				35AFD8151D23733B003FAE93 /* FPSCounter.cpp in Sources */,
 				35AFD80E1D23733B003FAE93 /* MenuState.cpp in Sources */,

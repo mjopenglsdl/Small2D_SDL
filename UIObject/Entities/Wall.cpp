@@ -39,8 +39,8 @@ cWall::cWall(int xGrid, int yUpGrid){
     m_xGrid=xGrid;
     m_yUpGrid=yUpGrid;
     
-    m_xPosi=m_xGrid*UNIT_X;
-    m_yPosi=(SCREEN_HEIGHT_GRIDS-m_yUpGrid)*UNIT_Y;
+    m_x=m_xGrid*UNIT_X;
+    m_y=(SCREEN_HEIGHT_GRIDS-m_yUpGrid)*UNIT_Y;
 }
 
 cWall::~cWall()

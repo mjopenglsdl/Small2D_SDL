@@ -12,7 +12,6 @@ The current progress includes：
 * Basic collision detection
 
 My Short Plans:
-* Make UI element code more reusable (inheritance)
 * MVC architecture
 * Player jump
 * Put element into a list(ie. vector), relevant functions will be called automatically

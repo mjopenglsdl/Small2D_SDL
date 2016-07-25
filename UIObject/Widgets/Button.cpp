@@ -22,7 +22,7 @@
 #include "Button.hpp"
 #include "image_func.hpp"
 
-cButton::cButton(int x, int y):cBaseWidget(x,y)
+cButton::cButton(int x, int y)
 {
     m_x=x;
     m_y=y;

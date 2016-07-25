@@ -35,8 +35,10 @@ class cUIObject
         int m_yGrid;
         int m_yUpGrid; // origin point is lower left corner
 
-    int m_xPosi;
-    int m_yPosi;
+    int m_x;
+    int m_y;
+    int m_width;
+    int m_height;
     
     // util
     // let Y axis towards upper
