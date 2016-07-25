@@ -34,6 +34,17 @@ namespace Global
      int screen_width=cUIObject::UNIT_X*SCREEN_WIDTH_GRIDS;
      int screen_height=cUIObject::UNIT_Y*SCREEN_HEIGHT_GRIDS;
 
-std::vector<cGameState*> state;
 
+    std::vector<cGameState*> state;
+
+    
+    
+/////////// FUNCIONS //////////
+    void clearStates()
+    {
+        while (!Global::state.empty()) {
+            delete Global::state.back();
+            Global::state.pop_back();
+        }
+    }
 }

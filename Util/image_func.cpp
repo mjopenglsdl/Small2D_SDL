@@ -78,9 +78,3 @@ int ImageFunc::DrawTexture(int dx, int dy, SDL_Texture*tex, bool clip,int cx, in
         return 0;
 }
 
-
-
-
-
-
-

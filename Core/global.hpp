@@ -46,6 +46,8 @@ extern int screen_height;
 
 extern std::vector<cGameState*> state;
 
+    
+    extern void clearStates();
 }
 
 

@@ -90,9 +90,9 @@ void cPlayState::OnEvent()
             switch (event.type)
             {
             case SDL_QUIT:
-                // FIX: mem leak
-                Global::state.clear();
+                Global::clearStates();
                 break;
+                    
             case SDL_KEYDOWN:
                 if(event.key.keysym.sym==SDLK_ESCAPE)
                 {

@@ -53,8 +53,9 @@ void cMenuState::OnEvent()
             switch (event.type)
             {
             case SDL_QUIT:
-                Global::state.clear();
+                Global::clearStates();
                 break;
+                    
             case SDL_KEYDOWN:
                 if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
