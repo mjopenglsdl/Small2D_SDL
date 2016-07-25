@@ -26,10 +26,10 @@
 #include "../Util/image_func.hpp"
 #include "../Util/FPSCounter.hpp"
 
-#include "../Objects/Wall.hpp"
-#include "../Objects/Creature.hpp"
+#include "Wall.hpp"
+#include "Creature.hpp"
 
-#include "../Objects/Object.hpp"
+#include "UIObject.hpp"
 
 
 int cPlayState::OnInit()

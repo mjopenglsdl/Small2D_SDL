@@ -20,36 +20,13 @@
  */
 
 
-#include "Object.hpp"
-#include "Wall.hpp"
-
-#include "../Util/image_func.hpp"
-#include "../Core/global.hpp"
+#include "UIObject.hpp"
 
 #include "global.hpp"
 
 
-cWall::cWall()
-{
-    m_tex=ImageFunc::LoadSprites("Images/tile.png");
-}
-
-cWall::cWall(int xGrid, int yUpGrid){
-    m_tex=ImageFunc::LoadSprites("Images/tile.png");
-    m_xGrid=xGrid;
-    m_yUpGrid=yUpGrid;
+int cUIObject::UpperGridPositionY(int gridNum){
     
-    m_xPosi=m_xGrid*UNIT_X;
-    m_yPosi=(SCREEN_HEIGHT_GRIDS-m_yUpGrid)*UNIT_Y;
-}
-
-cWall::~cWall()
-{
-    SDL_DestroyTexture(m_tex);
-}
-
-
-void cWall::Draw()
-{
-        ImageFunc::DrawTexture(UNIT_X*m_xGrid, UpperGridPositionY(m_yUpGrid) , m_tex);
+    int finalPosiY=UNIT_Y*(SCREEN_HEIGHT_GRIDS-gridNum);
+    return finalPosiY;
 }

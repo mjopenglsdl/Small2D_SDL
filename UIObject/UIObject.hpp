@@ -20,22 +20,39 @@
  */
 
 
-#ifndef _WALL_HPP_
-    #define _WALL_HPP_
+#ifndef _UIOBJECT_HPP_
+    #define _UIOBJECT_HPP_
 
-#include "Object.hpp"
+#include<SDL2/SDL.h>
 
-class cWall:public cObject
+#define GRAVITY 2
+
+class cUIObject
 {
-    public:
-        cWall();
-        cWall(int xGrid, int yUpGrid);
+  protected:
+    //grid position of the object
+        int m_xGrid;
+        int m_yGrid;
+        int m_yUpGrid; // origin point is lower left corner
 
-        ~cWall();
+    int m_xPosi;
+    int m_yPosi;
+    
+    // util
+    // let Y axis towards upper
+    int UpperGridPositionY(int gridNum);
+    
+public:
+    //x position= xGrid*xScale;
+        static const int UNIT_X=32;
+        static const int UNIT_Y=32;
 
+        SDL_Texture *m_tex;
+    
     public:
-        void Draw();
+
+    
+    friend class cCreature;
 };
-
 
 #endif

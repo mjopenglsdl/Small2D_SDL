@@ -20,39 +20,36 @@
  */
 
 
-#ifndef _OBJECT_HPP_
-    #define _OBJECT_HPP_
+#include "UIObject.hpp"
+#include "Wall.hpp"
 
-#include<SDL2/SDL.h>
+#include "image_func.hpp"
+#include "global.hpp"
 
-#define GRAVITY 2
+#include "global.hpp"
 
-class cObject
+
+cWall::cWall()
 {
-  protected:
-    //grid position of the object
-        int m_xGrid;
-        int m_yGrid;
-        int m_yUpGrid; // origin point is lower left corner
+    m_tex=ImageFunc::LoadSprites("Images/tile.png");
+}
 
-    int m_xPosi;
-    int m_yPosi;
+cWall::cWall(int xGrid, int yUpGrid){
+    m_tex=ImageFunc::LoadSprites("Images/tile.png");
+    m_xGrid=xGrid;
+    m_yUpGrid=yUpGrid;
     
-    // util
-    // let Y axis towards upper
-    int UpperGridPositionY(int gridNum);
-    
-public:
-    //x position= xGrid*xScale;
-        static const int UNIT_X=32;
-        static const int UNIT_Y=32;
+    m_xPosi=m_xGrid*UNIT_X;
+    m_yPosi=(SCREEN_HEIGHT_GRIDS-m_yUpGrid)*UNIT_Y;
+}
 
-        SDL_Texture *m_tex;
-    
-    public:
+cWall::~cWall()
+{
+    SDL_DestroyTexture(m_tex);
+}
 
-    
-    friend class cCreature;
-};
 
-#endif
+void cWall::Draw()
+{
+        ImageFunc::DrawTexture(UNIT_X*m_xGrid, UpperGridPositionY(m_yUpGrid) , m_tex);
+}

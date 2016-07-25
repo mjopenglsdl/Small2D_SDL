@@ -20,42 +20,21 @@
  */
 
 
-#ifndef _CREATURE_HPP_
-    #define _CREATURE_HPP_
+#ifndef _WALL_HPP_
+    #define _WALL_HPP_
 
-#include "Object.hpp"
+#include "UIObject.hpp"
 
-
-class cCreature: public cObject
+class cWall:public cUIObject
 {
-public:
-    cCreature();
-    ~cCreature();
+    public:
+        cWall();
+        cWall(int xGrid, int yUpGrid);
 
-public:
-    void Draw();
-    void Update(int deltaTime);
-    
-    void Jump();
-    void CheckCollision(cObject *obj);
-    
-private:
-    int m_baseHeight;
-    bool m_bJump;
-    int m_jumpVelocity;
-    int m_bCollided;
-    
-public:
-    // vel
-    int m_xVel;
-    int m_yVel;
-    
-private:
-    // const
-    static const int JUMP_VELO_INIT=24;
-    static const int HORI_SPEED=7;
-    static const int PLAYER_WIDTH=32;
+        ~cWall();
 
+    public:
+        void Draw();
 };
 
 

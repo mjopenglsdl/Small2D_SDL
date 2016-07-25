@@ -20,11 +20,11 @@
  */
 
 
-#include "Object.hpp"
+#include "UIObject.hpp"
 #include "Creature.hpp"
 
-#include "../Util/image_func.hpp"
-#include "../Core/global.hpp"
+#include "image_func.hpp"
+#include "global.hpp"
 
 #include <iostream>
 using namespace std;
@@ -77,7 +77,7 @@ void cCreature::Jump()
     m_bJump=true;
 }
 
-void cCreature::CheckCollision(cObject *obj)
+void cCreature::CheckCollision(cUIObject *obj)
 {
     int selfTop=m_yPosi;
     int selfBtm=m_yPosi+PLAYER_WIDTH;
@@ -98,4 +98,3 @@ void cCreature::CheckCollision(cObject *obj)
     }
     
 }
-
