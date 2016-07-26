@@ -36,13 +36,10 @@ class cIntroState:public cGameState
         cButton *m_btnStart;
 
     public:
-        cIntroState(){;}
-        ~cIntroState(){;};
+        cIntroState();
+        ~cIntroState();
 
     public:
-         int OnInit();
-         int OnCleanUp();
-
          void OnEvent();
          void OnRender();
          void OnUpdate();

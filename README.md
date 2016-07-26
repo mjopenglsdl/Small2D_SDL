@@ -8,15 +8,19 @@ I recently moved it to **SDL2** with integration of **xCode**.
 
 The current progress includes：
 * 3 game states 
-* Move and jump the player
+* Move the player
 * Basic collision detection
 
 My Short Plans:
 * MVC architecture
 * Player jump
-* Put element into a list(ie. vector), relevant functions will be called automatically
 * Remove the namespace that I used before
-* Singleton: FPS Counter
+* Singleton: FPS Counter, game state manager
+* Lua Integration
+* The log system
+* Button bounding box code optimization
+* XML based configuration file and loading
+* Graphics improvement
 
 I hope this will help you learn the basic ideas behind game development.
 Any support would be highly appreciated :-)

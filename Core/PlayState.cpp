@@ -32,9 +32,10 @@
 #include "UIObject.hpp"
 
 
-int cPlayState::OnInit()
+#include <iostream>
+
+cPlayState::cPlayState()
 {
-m_tex_bg=NULL;
 //m_tex_bg=ImageFunc::LoadSprites("Images/play.png");
 
 //init other members
@@ -44,16 +45,19 @@ m_tex_bg=NULL;
     for (int i=0; i<SCREEN_WIDTH_GRIDS ; i++) {
         cWall *wall=new cWall(i,1);
         m_walls.push_back(wall);
+        m_DisplayList.push_back(wall);
     }
     
     for (int i=0; i<4 ; i++) {
         cWall *wall=new cWall(i+4,2);
         m_walls.push_back(wall);
+        m_DisplayList.push_back(wall);
     }
     
     for (int i=0; i<3 ; i++) {
         cWall *wall=new cWall(i+9,6);
         m_walls.push_back(wall);
+        m_DisplayList.push_back(wall);
     }
 ///////
     
@@ -61,23 +65,16 @@ m_player=new cCreature;
 
     m_fps=new cFPSCounter(60);
     m_fps->StartCount();
-return 0;
+    
+    // add to display list
+    m_DisplayList.push_back(m_player);
 }
 
 
-int cPlayState::OnCleanUp()
+cPlayState::~cPlayState()
 {
-    for (int i=0; i<m_walls.size(); i++) {
-        delete m_walls.back();
-        m_walls.pop_back();
-    }
-    
-    delete m_player;
-
     delete m_fps;
-    SDL_DestroyTexture(m_tex_bg);
-
-    return 0;
+//    SDL_DestroyTexture(m_tex_bg);
 }
 
 
@@ -96,14 +93,12 @@ void cPlayState::OnEvent()
             case SDL_KEYDOWN:
                 if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
-                    cMenuState *p_menu=new cMenuState;
-                    p_menu->OnInit();
+                    cMenuState *p_menu=new cMenuState();
                     Global::state.push_back(p_menu);
                 }
 
                 else if(event.key.keysym.sym==SDLK_q)
                 {
-                    Global::state.back()->OnCleanUp();
                     delete Global::state.back();
                     Global::state.pop_back();
                 }
@@ -142,12 +137,10 @@ void cPlayState::OnRender()
 {
     SDL_RenderClear(Global::renderer);
     
-    ImageFunc::DrawTexture(0, 0, m_tex_bg);
+//    ImageFunc::DrawTexture(0, 0, m_tex_bg);
     
-    m_player->Draw();
-    
-    for (int i=0; i<m_walls.size(); i++) {
-        m_walls[i]->Draw();
+    for (int i=0; i<m_DisplayList.size(); i++) {
+        m_DisplayList[i]->Draw();
     }
     
     SDL_RenderPresent(Global::renderer);

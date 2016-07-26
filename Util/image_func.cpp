@@ -41,7 +41,6 @@ SDL_Texture* ImageFunc::LoadSprites(const char* filemame,bool alpha,int r, int g
 //            SDL_SetColorKey( new_image, SDL_SRCCOLORKEY, SDL_MapRGB( new_image->format,r, g,b ) );
         }
 
-
         return tex;
 }
 
@@ -71,9 +70,7 @@ int ImageFunc::DrawTexture(int dx, int dy, SDL_Texture*tex, bool clip,int cx, in
 
         else{
             SDL_RenderCopy(Global::renderer, tex, 0, &rc_d);
-//             SDL_RenderCopy(Global::renderer, tex, 0, 0);
         }
-
 
         return 0;
 }

@@ -33,7 +33,7 @@ public:
     ~cCreature();
 
 public:
-    void Draw();
+    virtual void Draw();
     void Update(int deltaTime);
     
     void Jump();

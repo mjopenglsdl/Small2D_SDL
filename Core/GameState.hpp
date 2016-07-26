@@ -23,17 +23,18 @@
 #ifndef _GAMESTATE_HPP_
     #define _GAMESTATE_HPP_
 
+#include <vector>
+
 class cFPSCounter;
+class cUIObject;
 
 class cGameState
 {
     protected:
-       cFPSCounter *m_fps;
+        cFPSCounter *m_fps;
+        std::vector<cUIObject *> m_DisplayList;
 
     public:
-        virtual int OnInit()=0;
-        virtual int OnCleanUp()=0;
-
         virtual void OnEvent()=0;
         virtual void OnRender()=0;
         virtual void OnUpdate()=0;

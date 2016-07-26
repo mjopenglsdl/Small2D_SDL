@@ -31,28 +31,26 @@
 #include "Button.hpp"
 
 #include <iostream>
+#include <vector>
 
-
-int cIntroState::OnInit()
+cIntroState::cIntroState()
 {
-m_tex_bg=NULL;
 m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
     m_fps=new cFPSCounter(25);
     m_fps->StartCount();
     
     m_btnStart = new cButton(Global::screen_width*0.5,Global::screen_height*0.2);
-
-return 0;
+    
+    // add UI Object to the list
+    m_DisplayList.push_back(m_btnStart);
 }
 
 
-int cIntroState::OnCleanUp()
+cIntroState::~cIntroState()
 {
     delete m_fps;
-    delete m_btnStart;
     
 SDL_DestroyTexture(m_tex_bg);
-return 0;
 }
 
 
@@ -69,16 +67,8 @@ void cIntroState::OnEvent()
                     
                 case SDL_KEYDOWN:
                     {
-                        if(event.key.keysym.sym==SDLK_y)
-                        {
-                            cPlayState *p_play=new cPlayState;
-                            p_play->OnInit();
-                            Global::state.push_back(p_play);
-                        }
-
                        if(event.key.keysym.sym==SDLK_q)
                         {
-                                Global::state.back()->OnCleanUp();
                                 delete Global::state.back();
                                 Global::state.pop_back();
                         }
@@ -89,8 +79,7 @@ void cIntroState::OnEvent()
                     if(event.button.x>=m_btnStart->m_x&&event.button.x<=(m_btnStart->m_x+m_btnStart->m_width)
                        &&event.button.y>=m_btnStart->m_y&&event.button.y<=(m_btnStart->m_y+m_btnStart->m_height
                        )){
-                           cPlayState *p_play=new cPlayState;
-                           p_play->OnInit();
+                           cPlayState *p_play=new cPlayState();
                            Global::state.push_back(p_play);
                     }
                 }
@@ -98,8 +87,6 @@ void cIntroState::OnEvent()
             } //end of switch
 
         } //end of event
-
-
 }
 
 

@@ -45,6 +45,10 @@ class cUIObject
     int UpperGridPositionY(int gridNum);
     
 public:
+    cUIObject(){};
+    virtual ~cUIObject(){};
+    
+public:
     //x position= xGrid*xScale;
         static const int UNIT_X=32;
         static const int UNIT_Y=32;
@@ -52,7 +56,7 @@ public:
         SDL_Texture *m_tex;
     
     public:
-
+        virtual void Draw()=0;
     
     friend class cCreature;
 };

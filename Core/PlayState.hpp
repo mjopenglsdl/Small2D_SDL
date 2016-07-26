@@ -46,12 +46,10 @@ class cPlayState:public cGameState
         cCreature *m_player;
 
     public:
-      //  cPlayState();
-
+        cPlayState();
+        ~cPlayState();
+    
     public:
-         int OnInit();
-         int OnCleanUp();
-
          void OnEvent();
          void OnRender();
          void OnUpdate();

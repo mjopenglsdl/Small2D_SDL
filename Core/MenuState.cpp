@@ -26,22 +26,18 @@
 #include "../Util/FPSCounter.hpp"
 
 
-int cMenuState::OnInit()
+cMenuState::cMenuState()
 {
-m_tex_bg=NULL;
 m_tex_bg=ImageFunc::LoadSprites("Images/menu.png");
     m_fps=new cFPSCounter(25);
     m_fps->StartCount();
-return 0;
 }
 
 
-int cMenuState::OnCleanUp()
+ cMenuState::~cMenuState()
 {
         delete m_fps;
     SDL_DestroyTexture(m_tex_bg);
-
-return 0;
 }
 
 
@@ -59,7 +55,6 @@ void cMenuState::OnEvent()
             case SDL_KEYDOWN:
                 if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
-                    Global::state.back()->OnCleanUp();
                     delete Global::state.back();
                     Global::state.pop_back();
                 }

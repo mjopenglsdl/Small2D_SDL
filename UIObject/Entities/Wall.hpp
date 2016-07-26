@@ -34,7 +34,7 @@ class cWall:public cUIObject
         ~cWall();
 
     public:
-        void Draw();
+        virtual void Draw();
 };
 
 

@@ -154,10 +154,10 @@
 				35AFD7E91D23733B003FAE93 /* GameState.cpp */,
 				35AFD7EE1D23733B003FAE93 /* IntroState.hpp */,
 				35AFD7ED1D23733B003FAE93 /* IntroState.cpp */,
-				35AFD7F01D23733B003FAE93 /* MenuState.hpp */,
-				35AFD7EF1D23733B003FAE93 /* MenuState.cpp */,
 				35AFD7F21D23733B003FAE93 /* PlayState.hpp */,
 				35AFD7F11D23733B003FAE93 /* PlayState.cpp */,
+				35AFD7F01D23733B003FAE93 /* MenuState.hpp */,
+				35AFD7EF1D23733B003FAE93 /* MenuState.cpp */,
 			);
 			path = Core;
 			sourceTree = SOURCE_ROOT;
@@ -219,10 +219,10 @@
 		35BBAD6C1D45AAF900355807 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				35BBAD6D1D45AAF900355807 /* Creature.cpp */,
 				35BBAD6E1D45AAF900355807 /* Creature.hpp */,
-				35BBAD6F1D45AAF900355807 /* Wall.cpp */,
+				35BBAD6D1D45AAF900355807 /* Creature.cpp */,
 				35BBAD701D45AAF900355807 /* Wall.hpp */,
+				35BBAD6F1D45AAF900355807 /* Wall.cpp */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -230,8 +230,8 @@
 		35BBAD731D45AAF900355807 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				35BBAD761D45AAF900355807 /* Button.cpp */,
 				35BBAD771D45AAF900355807 /* Button.hpp */,
+				35BBAD761D45AAF900355807 /* Button.cpp */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";

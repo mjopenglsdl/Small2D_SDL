@@ -21,14 +21,18 @@
 
 
 #include "GameState.hpp"
+#include "UIObject.hpp"
 
 cGameState::cGameState()
 {
-
+    m_DisplayList.clear();
 }
 
 
 cGameState::~cGameState()
 {
-
+    while (!m_DisplayList.empty()) {
+        delete m_DisplayList.back();
+        m_DisplayList.pop_back();
+    }
 }

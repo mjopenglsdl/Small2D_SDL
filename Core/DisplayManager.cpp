@@ -30,8 +30,7 @@ cDisplayManager::cDisplayManager()
     Global::window=SDL_CreateWindow("Small2D_SDL", 100, 100, Global::screen_width, Global::screen_height, SDL_WINDOW_SHOWN);
     Global::renderer=SDL_CreateRenderer(Global::window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     
-    cIntroState *p_intro=new cIntroState;
-    p_intro->OnInit();
+    cIntroState *p_intro=new cIntroState();
     Global::state.push_back(p_intro);
 }
 

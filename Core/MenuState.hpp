@@ -36,16 +36,13 @@ class cMenuState:public cGameState
         SDL_Texture* m_tex_bg;
 
     public:
-        cMenuState(){m_tex_bg=NULL;}
-
+        cMenuState();
+        ~cMenuState();
+    
     public:
-         int OnInit();
-         int OnCleanUp();
-
          void OnEvent();
          void OnRender();
          void OnUpdate();
-
 };
 
 #endif
