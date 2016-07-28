@@ -38,6 +38,7 @@ class cIntroState:public cGameState
     public:
         cIntroState();
         ~cIntroState();
+    
 
     public:
          void OnEvent();

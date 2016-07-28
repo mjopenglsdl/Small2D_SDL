@@ -32,13 +32,9 @@ public:
     cButton(int x, int y);
     ~cButton();
     
+    bool IsClicked(int x, int y);
+    
 public:
-    int m_x;
-    int m_y;
-    
-    int m_width;
-    int m_height;
-    
     SDL_Texture *m_tex;
     
 public:

@@ -36,10 +36,9 @@ namespace Global
 
 
     std::vector<cGameState*> state;
-
     
     
-/////////// FUNCIONS //////////
+/// **************** FUNCTIONS ******************///
     void clearStates()
     {
         while (!Global::state.empty()) {

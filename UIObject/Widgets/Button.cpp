@@ -38,6 +38,21 @@ cButton::~cButton(){
 }
 
 
+bool cButton::IsClicked(int x, int y)
+{
+    if(x>=m_x&&x<=(m_x+m_width)
+       &&y>=m_y&&y<=(m_y+m_height))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+
+/// virtual
 void cButton::Draw()
 {
     ImageFunc::DrawTexture(m_x, m_y, m_tex);

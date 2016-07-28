@@ -76,11 +76,9 @@ void cIntroState::OnEvent()
                     break;
                 case SDL_MOUSEBUTTONDOWN:
                 {
-                    if(event.button.x>=m_btnStart->m_x&&event.button.x<=(m_btnStart->m_x+m_btnStart->m_width)
-                       &&event.button.y>=m_btnStart->m_y&&event.button.y<=(m_btnStart->m_y+m_btnStart->m_height
-                       )){
-                           cPlayState *p_play=new cPlayState();
-                           Global::state.push_back(p_play);
+                    if (m_btnStart->IsClicked(event.button.x, event.button.y)) {
+                        cPlayState *p_play=new cPlayState();
+                        Global::state.push_back(p_play);
                     }
                 }
                 break;
