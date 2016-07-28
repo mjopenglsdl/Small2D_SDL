@@ -24,6 +24,7 @@
 		35BBAD7A1D45AC3D00355807 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD6D1D45AAF900355807 /* Creature.cpp */; };
 		35BBAD7C1D45AC3D00355807 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD6F1D45AAF900355807 /* Wall.cpp */; };
 		35BBAD801D45AC3D00355807 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD761D45AAF900355807 /* Button.cpp */; };
+		35CE97451D49A14B008919D9 /* FontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35CE97431D49A14B008919D9 /* FontManager.cpp */; };
 		35EF25701D48C305000253AC /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35EF256E1D48C305000253AC /* Label.cpp */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		35BBAD721D45AAF900355807 /* UIObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UIObject.hpp; sourceTree = "<group>"; };
 		35BBAD761D45AAF900355807 /* Button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
 		35BBAD771D45AAF900355807 /* Button.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
+		35CE97431D49A14B008919D9 /* FontManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontManager.cpp; sourceTree = "<group>"; };
+		35CE97441D49A14B008919D9 /* FontManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FontManager.hpp; sourceTree = "<group>"; };
 		35EF256E1D48C305000253AC /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
 		35EF256F1D48C305000253AC /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Label.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +197,8 @@
 				35AFD8051D23733B003FAE93 /* FPSCounter.cpp */,
 				35AFD8081D23733B003FAE93 /* image_func.hpp */,
 				35AFD8071D23733B003FAE93 /* image_func.cpp */,
+				35CE97431D49A14B008919D9 /* FontManager.cpp */,
+				35CE97441D49A14B008919D9 /* FontManager.hpp */,
 			);
 			path = Util;
 			sourceTree = SOURCE_ROOT;
@@ -235,8 +240,8 @@
 			children = (
 				35BBAD771D45AAF900355807 /* Button.hpp */,
 				35BBAD761D45AAF900355807 /* Button.cpp */,
-				35EF256E1D48C305000253AC /* Label.cpp */,
 				35EF256F1D48C305000253AC /* Label.hpp */,
+				35EF256E1D48C305000253AC /* Label.cpp */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 			files = (
 				35BBAD791D45AC3D00355807 /* UIObject.cpp in Sources */,
 				35BBAD7A1D45AC3D00355807 /* Creature.cpp in Sources */,
+				35CE97451D49A14B008919D9 /* FontManager.cpp in Sources */,
 				35BBAD7C1D45AC3D00355807 /* Wall.cpp in Sources */,
 				35BBAD801D45AC3D00355807 /* Button.cpp in Sources */,
 				35AFD8151D23733B003FAE93 /* FPSCounter.cpp in Sources */,

@@ -1,8 +1,8 @@
 Small SDL 2D Game Engine (C++)
 ===========
 
-A skeleton of  C++ 2D framework with SDL2 library.
-I started this project in 2011 and the origin purpose is to make a framework for fast game development in desktop environment.
+A skeleton of C++ 2D framework with SDL2 library.
+I started this project in 2011 and the origin purpose is to make an easy-to-use framework for fast game development in desktop environment.
 
 I recently moved it to **SDL2** with integration of **xCode**.
 
@@ -21,8 +21,8 @@ My Short Plans:
 * The log system
 * XML based configuration file and loading
 * Graphic improvement
-* font support
-* shared ptr
+* Font support
+* Shared pointer
 
 I hope this will help you learn the basic ideas behind game development.
 Any support would be highly appreciated :-)

@@ -9,6 +9,21 @@
 #ifndef Label_hpp
 #define Label_hpp
 
-#include <stdio.h>
+#include<SDL2/SDL.h>
+#include "UIObject.hpp"
+
+class cLabel: public cUIObject
+{
+public:
+    cLabel(int x, int y);
+    ~cLabel();
+    
+public:
+    
+private:
+    SDL_Texture *m_tex;
+
+};
+
 
 #endif /* Label_hpp */

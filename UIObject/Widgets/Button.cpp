@@ -33,7 +33,8 @@ cButton::cButton(int x, int y)
     m_tex=ImageFunc::LoadSprites("Images/btn.png",true,255,0,0);
 }
 
-cButton::~cButton(){
+cButton::~cButton()
+{
     SDL_DestroyTexture(m_tex);
 }
 

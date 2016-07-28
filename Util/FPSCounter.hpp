@@ -39,7 +39,6 @@ public:
          void StartCount();
          void CheckFPS();
          void GetNewTick();
-
 };
 
 
