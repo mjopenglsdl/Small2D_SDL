@@ -24,7 +24,8 @@
 		35BBAD7A1D45AC3D00355807 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD6D1D45AAF900355807 /* Creature.cpp */; };
 		35BBAD7C1D45AC3D00355807 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD6F1D45AAF900355807 /* Wall.cpp */; };
 		35BBAD801D45AC3D00355807 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BBAD761D45AAF900355807 /* Button.cpp */; };
-		35CE97451D49A14B008919D9 /* FontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35CE97431D49A14B008919D9 /* FontManager.cpp */; };
+		35CE97481D49FE7A008919D9 /* FontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35CE97461D49FE7A008919D9 /* FontManager.cpp */; };
+		35CE974A1D4A03D2008919D9 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CE97491D4A03D2008919D9 /* SDL2_ttf.framework */; };
 		35EF25701D48C305000253AC /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35EF256E1D48C305000253AC /* Label.cpp */; };
 /* End PBXBuildFile section */
 
@@ -85,8 +86,9 @@
 		35BBAD721D45AAF900355807 /* UIObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UIObject.hpp; sourceTree = "<group>"; };
 		35BBAD761D45AAF900355807 /* Button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
 		35BBAD771D45AAF900355807 /* Button.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
-		35CE97431D49A14B008919D9 /* FontManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontManager.cpp; sourceTree = "<group>"; };
-		35CE97441D49A14B008919D9 /* FontManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FontManager.hpp; sourceTree = "<group>"; };
+		35CE97461D49FE7A008919D9 /* FontManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontManager.cpp; sourceTree = "<group>"; };
+		35CE97471D49FE7A008919D9 /* FontManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FontManager.hpp; sourceTree = "<group>"; };
+		35CE97491D4A03D2008919D9 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = /Library/Frameworks/SDL2_ttf.framework; sourceTree = "<absolute>"; };
 		35EF256E1D48C305000253AC /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
 		35EF256F1D48C305000253AC /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Label.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CE974A1D4A03D2008919D9 /* SDL2_ttf.framework in Frameworks */,
 				35AFD8201D23765B003FAE93 /* SDL2_image.framework in Frameworks */,
 				35AFD8181D23739C003FAE93 /* SDL2.framework in Frameworks */,
 				35AFD81D1D2374A5003FAE93 /* SDL2_mixer.framework in Frameworks */,
@@ -197,8 +200,8 @@
 				35AFD8051D23733B003FAE93 /* FPSCounter.cpp */,
 				35AFD8081D23733B003FAE93 /* image_func.hpp */,
 				35AFD8071D23733B003FAE93 /* image_func.cpp */,
-				35CE97431D49A14B008919D9 /* FontManager.cpp */,
-				35CE97441D49A14B008919D9 /* FontManager.hpp */,
+				35CE97471D49FE7A008919D9 /* FontManager.hpp */,
+				35CE97461D49FE7A008919D9 /* FontManager.cpp */,
 			);
 			path = Util;
 			sourceTree = SOURCE_ROOT;
@@ -206,6 +209,7 @@
 		35AFD8191D237477003FAE93 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				35CE97491D4A03D2008919D9 /* SDL2_ttf.framework */,
 				35AFD81F1D23765B003FAE93 /* SDL2_image.framework */,
 				35AFD81B1D2374A5003FAE93 /* SDL2_mixer.framework */,
 				35AFD8171D23739C003FAE93 /* SDL2.framework */,
@@ -304,7 +308,7 @@
 			files = (
 				35BBAD791D45AC3D00355807 /* UIObject.cpp in Sources */,
 				35BBAD7A1D45AC3D00355807 /* Creature.cpp in Sources */,
-				35CE97451D49A14B008919D9 /* FontManager.cpp in Sources */,
+				35CE97481D49FE7A008919D9 /* FontManager.cpp in Sources */,
 				35BBAD7C1D45AC3D00355807 /* Wall.cpp in Sources */,
 				35BBAD801D45AC3D00355807 /* Button.cpp in Sources */,
 				35AFD8151D23733B003FAE93 /* FPSCounter.cpp in Sources */,

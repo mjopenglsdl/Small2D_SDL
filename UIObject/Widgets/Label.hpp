@@ -19,6 +19,7 @@ public:
     ~cLabel();
     
 public:
+    virtual void Draw();
     
 private:
     SDL_Texture *m_tex;

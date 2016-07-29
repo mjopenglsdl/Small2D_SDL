@@ -29,6 +29,7 @@
 #include "PlayState.hpp"
 
 #include "Button.hpp"
+#include "Label.hpp"
 
 #include <iostream>
 #include <vector>
@@ -40,9 +41,11 @@ m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
     m_fps->StartCount();
     
     m_btnStart = new cButton(Global::screen_width*0.5,Global::screen_height*0.2);
+    m_lblHello=new cLabel(Global::screen_width*0.5,Global::screen_height*0.2+80);
     
     // add UI Object to the list
     m_DisplayList.push_back(m_btnStart);
+    m_DisplayList.push_back(m_lblHello);
 }
 
 
@@ -93,7 +96,10 @@ void cIntroState::OnRender()
     SDL_RenderClear(Global::renderer);
     
     ImageFunc::DrawTexture(0, 0, m_tex_bg);
-    m_btnStart->Draw();
+    
+    for (int i=0; i<m_DisplayList.size(); i++) {
+        m_DisplayList[i]->Draw();
+    }
     
     SDL_RenderPresent(Global::renderer);
 }

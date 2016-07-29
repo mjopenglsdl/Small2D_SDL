@@ -22,14 +22,13 @@
 #include "Button.hpp"
 #include "image_func.hpp"
 
-cButton::cButton(int x, int y)
+cButton::cButton(int x, int y):m_tex(nullptr)
 {
     m_x=x;
     m_y=y;
     m_width=160;
     m_height=30;
     
-    m_tex=NULL;
     m_tex=ImageFunc::LoadSprites("Images/btn.png",true,255,0,0);
 }
 

@@ -8,6 +8,9 @@
 
 #include "Label.hpp"
 
+#include "FontManager.hpp"
+#include "image_func.hpp"
+
 
 cLabel::cLabel(int x, int y)
 {
@@ -16,11 +19,18 @@ cLabel::cLabel(int x, int y)
     m_width=160;
     m_height=30;
     
-//    m_tex=NULL;
-//    m_tex=ImageFunc::LoadSprites("Images/btn.png",true,255,0,0);
+    m_tex=NULL;
+    m_tex=cFontManager::GetInstance()->GetTextureText("Hello World");
 }
 
 cLabel::~cLabel()
 {
-    
+    SDL_DestroyTexture(m_tex);
+}
+
+
+/// virtual
+void cLabel::Draw()
+{
+    ImageFunc::DrawTexture(m_x, m_y, m_tex);
 }

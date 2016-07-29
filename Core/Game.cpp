@@ -22,6 +22,7 @@
 
 #include "Game.hpp"
 #include "DisplayManager.hpp"
+#include "FontManager.hpp"
 
 #include <SDL2_image/SDL_image.h>
 
@@ -36,9 +37,10 @@ cGame::cGame()
 
 cGame::~cGame()
 {
+    cFontManager::GetInstance()->CleanUp();
+    IMG_Quit();
     SDL_Quit();
     
-    IMG_Quit();
     printf("Exited cleanly\n");
 }
 
