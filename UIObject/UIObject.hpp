@@ -45,8 +45,8 @@ class cUIObject
     int UpperGridPositionY(int gridNum);
     
 public:
-    cUIObject(){};
-    virtual ~cUIObject(){};
+    cUIObject();
+    virtual ~cUIObject();
     
 public:
     //x position= xGrid*xScale;

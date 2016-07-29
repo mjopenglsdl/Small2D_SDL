@@ -35,7 +35,6 @@ public:
     bool IsClicked(int x, int y);
     
 public:
-    SDL_Texture *m_tex;
     
 public:
     void virtual Draw();

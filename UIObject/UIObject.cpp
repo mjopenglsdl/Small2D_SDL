@@ -30,3 +30,16 @@ int cUIObject::UpperGridPositionY(int gridNum){
     int finalPosiY=UNIT_Y*(SCREEN_HEIGHT_GRIDS-gridNum);
     return finalPosiY;
 }
+
+
+cUIObject::cUIObject()
+{
+    m_tex=nullptr;
+}
+
+cUIObject::~cUIObject()
+{
+    if (m_tex) {
+        SDL_DestroyTexture(m_tex);
+    }
+}

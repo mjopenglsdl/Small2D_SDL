@@ -48,7 +48,7 @@ cCreature::cCreature()
 
 cCreature::~cCreature()
 {
-    SDL_DestroyTexture(m_tex);
+
 }
 
 

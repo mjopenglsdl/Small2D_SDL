@@ -22,7 +22,7 @@
 #include "Button.hpp"
 #include "image_func.hpp"
 
-cButton::cButton(int x, int y):m_tex(nullptr)
+cButton::cButton(int x, int y)
 {
     m_x=x;
     m_y=y;
@@ -34,7 +34,7 @@ cButton::cButton(int x, int y):m_tex(nullptr)
 
 cButton::~cButton()
 {
-    SDL_DestroyTexture(m_tex);
+
 }
 
 

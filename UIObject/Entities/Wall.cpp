@@ -34,7 +34,8 @@ cWall::cWall()
     m_tex=ImageFunc::LoadSprites("Images/tile.png");
 }
 
-cWall::cWall(int xGrid, int yUpGrid){
+cWall::cWall(int xGrid, int yUpGrid)
+{
     m_tex=ImageFunc::LoadSprites("Images/tile.png");
     m_xGrid=xGrid;
     m_yUpGrid=yUpGrid;
@@ -45,7 +46,7 @@ cWall::cWall(int xGrid, int yUpGrid){
 
 cWall::~cWall()
 {
-    SDL_DestroyTexture(m_tex);
+
 }
 
 

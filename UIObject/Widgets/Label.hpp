@@ -20,9 +20,6 @@ public:
     
 public:
     virtual void Draw();
-    
-private:
-    SDL_Texture *m_tex;
 
 };
 

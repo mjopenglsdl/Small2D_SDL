@@ -25,7 +25,7 @@ cLabel::cLabel(int x, int y)
 
 cLabel::~cLabel()
 {
-    SDL_DestroyTexture(m_tex);
+
 }
 
 
