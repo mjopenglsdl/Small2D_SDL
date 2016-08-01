@@ -28,9 +28,9 @@ cGameState->cPlayState
     #define _PLAYSTATE_HPP_
 
 #include <vector>
+#include "GameState.hpp"
 
 class cCreature;
-class cGameState;
 class cWall;
 
 class cPlayState:public cGameState

@@ -24,10 +24,7 @@
 #include "Wall.hpp"
 
 #include "image_func.hpp"
-#include "global.hpp"
-
-#include "global.hpp"
-
+#include "DisplayManager.hpp"
 
 cWall::cWall()
 {
@@ -41,7 +38,7 @@ cWall::cWall(int xGrid, int yUpGrid)
     m_yUpGrid=yUpGrid;
     
     m_x=m_xGrid*UNIT_X;
-    m_y=(SCREEN_HEIGHT_GRIDS-m_yUpGrid)*UNIT_Y;
+    m_y=(cDisplayManager::SCREEN_HEIGHT_GRIDS-m_yUpGrid)*UNIT_Y;
 }
 
 cWall::~cWall()

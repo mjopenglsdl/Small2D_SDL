@@ -24,7 +24,7 @@
 #include "Creature.hpp"
 
 #include "image_func.hpp"
-#include "global.hpp"
+#include "DisplayManager.hpp"
 
 #include <iostream>
 using namespace std;
@@ -62,7 +62,7 @@ void cCreature::Update(int deltaTime)
     m_x+=m_xVel;
     m_y+=m_yVel;
     
-    if(m_x<0 || m_x+ PLAYER_WIDTH>Global::screen_width || m_bCollided)
+    if(m_x<0 || m_x+ PLAYER_WIDTH>cDisplayManager::SCREEN_WIDTH || m_bCollided)
     {
         m_x-=m_xVel;
     }

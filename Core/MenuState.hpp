@@ -19,7 +19,8 @@
  *
  */
 
-/* the state class when player enters the menu (like press ESC)
+/*
+ the state class when player enters the menu (like pressing ESC)
 cGameState->cMenuState
 */
 
@@ -44,5 +45,6 @@ class cMenuState:public cGameState
          void OnRender();
          void OnUpdate();
 };
+
 
 #endif

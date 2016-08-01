@@ -19,12 +19,12 @@
  *
  */
 
-
-#include "global.hpp"
+#include "DisplayManager.hpp"
 #include "PlayState.hpp"
 #include "MenuState.hpp"
 #include "../Util/image_func.hpp"
 #include "FPSManager.hpp"
+#include "GameManager.hpp"
 
 #include "Wall.hpp"
 #include "Creature.hpp"
@@ -42,7 +42,7 @@ cPlayState::cPlayState()
     m_walls.clear();
     
 // wall
-    for (int i=0; i<SCREEN_WIDTH_GRIDS ; i++) {
+    for (int i=0; i<cDisplayManager::SCREEN_WIDTH_GRIDS ; i++) {
         cWall *wall=new cWall(i,1);
         m_walls.push_back(wall);
         m_DisplayList.push_back(wall);
@@ -85,20 +85,19 @@ void cPlayState::OnEvent()
             switch (event.type)
             {
             case SDL_QUIT:
-                Global::clearStates();
+                cGameManager::GetInstance()->ClearStates();
                 break;
                     
             case SDL_KEYDOWN:
                 if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
                     cMenuState *p_menu=new cMenuState();
-                    Global::state.push_back(p_menu);
+                    cGameManager::GetInstance()->PushState(p_menu);
                 }
 
                 else if(event.key.keysym.sym==SDLK_q)
                 {
-                    delete Global::state.back();
-                    Global::state.pop_back();
+                    cGameManager::GetInstance()->PopState();
                 }
                  
                 // movement
@@ -133,7 +132,7 @@ void cPlayState::OnEvent()
 
 void cPlayState::OnRender()
 {
-    SDL_RenderClear(Global::renderer);
+    SDL_RenderClear(cDisplayManager::GetInstance()->GetRenderer());
     
 //    ImageFunc::DrawTexture(0, 0, m_tex_bg);
     
@@ -141,7 +140,7 @@ void cPlayState::OnRender()
         m_DisplayList[i]->Draw();
     }
     
-    SDL_RenderPresent(Global::renderer);
+    SDL_RenderPresent(cDisplayManager::GetInstance()->GetRenderer());
 }
 
 

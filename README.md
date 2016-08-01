@@ -6,6 +6,11 @@ I started this project in 2011 and the origin purpose is to make an easy-to-use 
 
 I recently moved it to **SDL2** with integration of **xCode**.
 
+The library you need in order to compile & link:
+* SDL2: https://www.libsdl.org/download-2.0.php
+* SDL2_image: https://www.libsdl.org/projects/SDL_image/
+* SDL2_ttf: https://www.libsdl.org/projects/SDL_ttf/
+
 The current features include:
 * Concise code
 * 3 game states 
@@ -16,12 +21,14 @@ The current features include:
 My Short Plans:
 * MVC architecture
 * Player jump
-* Remove the namespace that I used before
 * Lua Integration
 * The log system
 * XML based configuration file and loading
 * Graphic improvement
 * Shared pointer
+
+Further Considerations:
+* OpenGL integration
 
 I hope this will help you learn the basic ideas behind game development.
 Any support would be highly appreciated :-)

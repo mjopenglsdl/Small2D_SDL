@@ -21,9 +21,10 @@
 
 
 #include <SDL2/SDL.h>
-#include "global.hpp"
 #include "../Util/image_func.hpp"
 #include "FPSManager.hpp"
+#include "GameManager.hpp"
+#include "DisplayManager.hpp"
 
 #include "IntroState.hpp"
 #include "PlayState.hpp"
@@ -41,8 +42,8 @@ cIntroState::cIntroState()
     cFPSManager::GetInstance()->StartCount();
     
     /// ui
-    m_btnStart = new cButton(Global::screen_width*0.5,Global::screen_height*0.2);
-    m_lblHello=new cLabel(Global::screen_width*0.5,Global::screen_height*0.2+80);
+    m_btnStart = new cButton(cDisplayManager::SCREEN_WIDTH*0.5,cDisplayManager::SCREEN_HEIGHT*0.2);
+    m_lblHello=new cLabel(cDisplayManager::SCREEN_WIDTH*0.5,cDisplayManager::SCREEN_HEIGHT*0.2+80);
     
     // add UI Object to the list
     m_DisplayList.push_back(m_btnStart);
@@ -64,15 +65,14 @@ void cIntroState::OnEvent()
             switch (event.type)
             {
                 case SDL_QUIT:
-                    Global::clearStates();
+                    cGameManager::GetInstance()->ClearStates();
                     break;
                     
                 case SDL_KEYDOWN:
                     {
                        if(event.key.keysym.sym==SDLK_q)
                         {
-                                delete Global::state.back();
-                                Global::state.pop_back();
+                            cGameManager::GetInstance()->PopState();
                         }
                     }
                     break;
@@ -80,7 +80,7 @@ void cIntroState::OnEvent()
                 {
                     if (m_btnStart->IsClicked(event.button.x, event.button.y)) {
                         cPlayState *p_play=new cPlayState();
-                        Global::state.push_back(p_play);
+                        cGameManager::GetInstance()->PushState(p_play);
                     }
                 }
                 break;
@@ -92,7 +92,7 @@ void cIntroState::OnEvent()
 
 void cIntroState::OnRender()
 {
-    SDL_RenderClear(Global::renderer);
+    SDL_RenderClear(cDisplayManager::GetInstance()->GetRenderer());
     
     ImageFunc::DrawTexture(0, 0, m_tex_bg);
     
@@ -100,7 +100,7 @@ void cIntroState::OnRender()
         m_DisplayList[i]->Draw();
     }
     
-    SDL_RenderPresent(Global::renderer);
+    SDL_RenderPresent(cDisplayManager::GetInstance()->GetRenderer());
 }
 
 

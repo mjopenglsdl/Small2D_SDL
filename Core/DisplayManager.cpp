@@ -21,8 +21,7 @@
 
 
 #include "DisplayManager.hpp"
-#include "global.hpp"
-#include "IntroState.hpp"
+
 
 /// STATIC
 cDisplayManager *cDisplayManager::s_displayManager=nullptr;
@@ -37,49 +36,18 @@ cDisplayManager *cDisplayManager::GetInstance()
 ///
 
 
-cDisplayManager::cDisplayManager()
+
+void cDisplayManager::InitRes()
 {
-    Global::window=SDL_CreateWindow("Small2D_SDL", 100, 100, Global::screen_width, Global::screen_height, SDL_WINDOW_SHOWN);
-    Global::renderer=SDL_CreateRenderer(Global::window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-    
-    cIntroState *p_intro=new cIntroState();
-    Global::state.push_back(p_intro);
+    m_window=SDL_CreateWindow("Small2D_SDL", 100, 100, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    m_renderer=SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 }
 
-
-cDisplayManager::~cDisplayManager(){
-    SDL_DestroyRenderer(Global::renderer);
-    SDL_DestroyWindow(Global::window);
-}
-
-
-// Iterate through each game states
-// don't modify this function
-// you should focus on each function in specific states
-int cDisplayManager::Display()
+void cDisplayManager::ClearRes()
 {
-    while (!Global::state.empty())
-    {
-            Global::state.back()->OnEvent();
-        if (!Global::state.empty())
-            Global::state.back()->OnRender();
-        if (!Global::state.empty())
-            Global::state.back()->OnUpdate();
-    }
-
-   return 0;
+    SDL_DestroyRenderer(m_renderer); m_renderer=nullptr;
+    SDL_DestroyWindow(m_window); m_window=nullptr;
 }
 
 
-int cDisplayManager::PushScreen()
-{
 
-return 0;
-}
-
-
-int cDisplayManager::PopScreen()
-{
-
-return 0;
-}

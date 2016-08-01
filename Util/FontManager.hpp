@@ -28,15 +28,11 @@
 
 class cFontManager
 {
-public:
-    static cFontManager *GetInstance();
+
     
 private:
     cFontManager();
     ~cFontManager(){};
-    
-    static cFontManager *s_fontManager;
-    static const int DEFAULT_FONT_SIZE=24;
     
 public:
     SDL_Texture *GetTextureText(const char *text);
@@ -44,6 +40,15 @@ public:
     
 private:
     TTF_Font *m_defaultFont;
+    
+    
+/// STATIC
+public:
+    static cFontManager *GetInstance();
+    
+private:
+    static cFontManager *s_fontManager;
+    static const int DEFAULT_FONT_SIZE=24;
 };
 
 

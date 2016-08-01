@@ -21,23 +21,22 @@
 
 
 #include "FontManager.hpp"
-#include "global.hpp"
+#include "DisplayManager.hpp"
 
-// static
+
+/// STATIC
 cFontManager *cFontManager::s_fontManager=nullptr;
-
 
 cFontManager *cFontManager::GetInstance()
 {
     
-    if (!cFontManager::s_fontManager) {
+    if (nullptr==cFontManager::s_fontManager) {
         cFontManager::s_fontManager=new cFontManager();
     }
     
     return cFontManager::s_fontManager;
 }
-//
-
+///////
 
 
 
@@ -61,7 +60,7 @@ SDL_Texture *cFontManager::GetTextureText(const char *text)
     fg.r=0; fg.g=0; fg.b=255; fg.a=255;
     surf_text=TTF_RenderText_Solid(m_defaultFont, text, fg);
     
-    SDL_Texture *tex_text=SDL_CreateTextureFromSurface(Global::renderer , surf_text);
+    SDL_Texture *tex_text=SDL_CreateTextureFromSurface(cDisplayManager::GetInstance()->GetRenderer() , surf_text);
     SDL_FreeSurface(surf_text);
     
     // tex needs to be freeed externally

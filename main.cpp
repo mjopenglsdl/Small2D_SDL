@@ -19,13 +19,9 @@
  *
  */
 
-
-#include <SDL2/SDL.h>
-#include "Core/game.hpp"
-
+#include "Core/GameManager.hpp"
 
 int main ( int argc, char** argv )
 {
-    cGame theGame;
-    return theGame.Run();
+    return cGameManager::GetInstance()->Run();
 }

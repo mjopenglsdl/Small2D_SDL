@@ -21,13 +21,12 @@
 
 
 #include "UIObject.hpp"
-
-#include "global.hpp"
+#include "DisplayManager.hpp"
 
 
 int cUIObject::UpperGridPositionY(int gridNum){
     
-    int finalPosiY=UNIT_Y*(SCREEN_HEIGHT_GRIDS-gridNum);
+    int finalPosiY=UNIT_Y*(cDisplayManager::SCREEN_HEIGHT_GRIDS-gridNum);
     return finalPosiY;
 }
 

@@ -27,23 +27,38 @@
 #ifndef _DISPLAY_MANAGER_HPP_
     #define _DISPLAY_MANAGER_HPP_
 
+#include <SDL2/SDL.h>
+#include "UIObject.hpp"
+
+
 class cDisplayManager
 {
     private:
-        cDisplayManager();
-        ~cDisplayManager();
+        cDisplayManager(){m_window=nullptr; m_renderer=nullptr;}
+        ~cDisplayManager(){};
+    
+        SDL_Window *m_window;
+        SDL_Renderer *m_renderer;
     
     public:
-        int PushScreen();
-        int PopScreen();
-        int Display();  //game enters here from cGame::Run()
+        void InitRes();
+        void ClearRes();
     
+    SDL_Renderer *GetRenderer(){return m_renderer;}
+    SDL_Window *GetWindow(){return m_window;}
     
-    /// STATIC
+/// STATIC
 private:
     static cDisplayManager* s_displayManager;
 public:
     static cDisplayManager* GetInstance();
+
+/// CONST
+    static const int SCREEN_WIDTH_GRIDS=24;
+    static const int SCREEN_HEIGHT_GRIDS=16;
+    
+    static const int SCREEN_WIDTH=cUIObject::UNIT_X*SCREEN_WIDTH_GRIDS;
+    static const int SCREEN_HEIGHT=cUIObject::UNIT_Y*SCREEN_HEIGHT_GRIDS;
 };
 
 

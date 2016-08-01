@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		35AFD8091D23733B003FAE93 /* DisplayManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7E41D23733B003FAE93 /* DisplayManager.cpp */; };
-		35AFD80A1D23733B003FAE93 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7E61D23733B003FAE93 /* Game.cpp */; };
+		35AFD80A1D23733B003FAE93 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7E61D23733B003FAE93 /* GameManager.cpp */; };
 		35AFD80B1D23733B003FAE93 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7E91D23733B003FAE93 /* GameState.cpp */; };
-		35AFD80C1D23733B003FAE93 /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7EB1D23733B003FAE93 /* global.cpp */; };
 		35AFD80D1D23733B003FAE93 /* IntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7ED1D23733B003FAE93 /* IntroState.cpp */; };
 		35AFD80E1D23733B003FAE93 /* MenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7EF1D23733B003FAE93 /* MenuState.cpp */; };
 		35AFD80F1D23733B003FAE93 /* PlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35AFD7F11D23733B003FAE93 /* PlayState.cpp */; };
@@ -53,12 +52,10 @@
 		35AFD7E21D23733B003FAE93 /* config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.txt; sourceTree = "<group>"; };
 		35AFD7E41D23733B003FAE93 /* DisplayManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DisplayManager.cpp; sourceTree = "<group>"; };
 		35AFD7E51D23733B003FAE93 /* DisplayManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DisplayManager.hpp; sourceTree = "<group>"; };
-		35AFD7E61D23733B003FAE93 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		35AFD7E71D23733B003FAE93 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		35AFD7E61D23733B003FAE93 /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameManager.cpp; sourceTree = "<group>"; };
+		35AFD7E71D23733B003FAE93 /* GameManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameManager.hpp; sourceTree = "<group>"; };
 		35AFD7E91D23733B003FAE93 /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
 		35AFD7EA1D23733B003FAE93 /* GameState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
-		35AFD7EB1D23733B003FAE93 /* global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = global.cpp; sourceTree = "<group>"; };
-		35AFD7EC1D23733B003FAE93 /* global.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = global.hpp; sourceTree = "<group>"; };
 		35AFD7ED1D23733B003FAE93 /* IntroState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntroState.cpp; sourceTree = "<group>"; };
 		35AFD7EE1D23733B003FAE93 /* IntroState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntroState.hpp; sourceTree = "<group>"; };
 		35AFD7EF1D23733B003FAE93 /* MenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuState.cpp; sourceTree = "<group>"; };
@@ -153,12 +150,10 @@
 		35AFD7E31D23733B003FAE93 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				35AFD7EC1D23733B003FAE93 /* global.hpp */,
-				35AFD7EB1D23733B003FAE93 /* global.cpp */,
+				35AFD7E71D23733B003FAE93 /* GameManager.hpp */,
+				35AFD7E61D23733B003FAE93 /* GameManager.cpp */,
 				35AFD7E51D23733B003FAE93 /* DisplayManager.hpp */,
 				35AFD7E41D23733B003FAE93 /* DisplayManager.cpp */,
-				35AFD7E71D23733B003FAE93 /* Game.hpp */,
-				35AFD7E61D23733B003FAE93 /* Game.cpp */,
 				35AFD7EA1D23733B003FAE93 /* GameState.hpp */,
 				35AFD7E91D23733B003FAE93 /* GameState.cpp */,
 				35AFD7EE1D23733B003FAE93 /* IntroState.hpp */,
@@ -209,10 +204,10 @@
 		35AFD8191D237477003FAE93 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				35AFD8171D23739C003FAE93 /* SDL2.framework */,
 				35CE97491D4A03D2008919D9 /* SDL2_ttf.framework */,
 				35AFD81F1D23765B003FAE93 /* SDL2_image.framework */,
 				35AFD81B1D2374A5003FAE93 /* SDL2_mixer.framework */,
-				35AFD8171D23739C003FAE93 /* SDL2.framework */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -317,11 +312,10 @@
 				35AFD8091D23733B003FAE93 /* DisplayManager.cpp in Sources */,
 				35AFD80B1D23733B003FAE93 /* GameState.cpp in Sources */,
 				35AFD8371D23A47A003FAE93 /* main.cpp in Sources */,
-				35AFD80C1D23733B003FAE93 /* global.cpp in Sources */,
 				35AFD8161D23733B003FAE93 /* image_func.cpp in Sources */,
 				35AFD80F1D23733B003FAE93 /* PlayState.cpp in Sources */,
 				35AFD80D1D23733B003FAE93 /* IntroState.cpp in Sources */,
-				35AFD80A1D23733B003FAE93 /* Game.cpp in Sources */,
+				35AFD80A1D23733B003FAE93 /* GameManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
