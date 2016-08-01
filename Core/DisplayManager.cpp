@@ -24,6 +24,18 @@
 #include "global.hpp"
 #include "IntroState.hpp"
 
+/// STATIC
+cDisplayManager *cDisplayManager::s_displayManager=nullptr;
+
+cDisplayManager *cDisplayManager::GetInstance()
+{
+    if (cDisplayManager::s_displayManager==nullptr) {
+        cDisplayManager::s_displayManager=new cDisplayManager();
+    }
+    return cDisplayManager::s_displayManager;
+}
+///
+
 
 cDisplayManager::cDisplayManager()
 {

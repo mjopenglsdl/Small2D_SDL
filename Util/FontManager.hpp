@@ -35,7 +35,7 @@ private:
     cFontManager();
     ~cFontManager(){};
     
-    static cFontManager *s_FontManager;
+    static cFontManager *s_fontManager;
     static const int DEFAULT_FONT_SIZE=24;
     
 public:

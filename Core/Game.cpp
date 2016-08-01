@@ -65,9 +65,7 @@ int cGame::Run()
 
 
     //display code
-    cDisplayManager display_manager;
-    display_manager.Display();
-
+    cDisplayManager::GetInstance()->Display();
 
 return 0;
 }

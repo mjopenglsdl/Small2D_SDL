@@ -6,7 +6,8 @@ I started this project in 2011 and the origin purpose is to make an easy-to-use 
 
 I recently moved it to **SDL2** with integration of **xCode**.
 
-The current progress includes：
+The current features include:
+* Concise code
 * 3 game states 
 * Move the player
 * Basic collision detection
@@ -16,12 +17,10 @@ My Short Plans:
 * MVC architecture
 * Player jump
 * Remove the namespace that I used before
-* Singleton: FPS Counter, game state manager
 * Lua Integration
 * The log system
 * XML based configuration file and loading
 * Graphic improvement
-* Font support
 * Shared pointer
 
 I hope this will help you learn the basic ideas behind game development.

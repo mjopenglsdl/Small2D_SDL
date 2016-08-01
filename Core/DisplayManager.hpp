@@ -19,30 +19,31 @@
  *
  */
 
-/* This class manages the display when play enters the game
+/*
+    This class manages the display when the player enters the game
 */
 
 
 #ifndef _DISPLAY_MANAGER_HPP_
     #define _DISPLAY_MANAGER_HPP_
 
-#include<SDL2/SDL.h>
-#include <vector>
-#include "global.hpp"
-#include "GameState.hpp"
-
-
 class cDisplayManager
 {
     private:
-
-    public:
         cDisplayManager();
         ~cDisplayManager();
-
+    
+    public:
         int PushScreen();
         int PopScreen();
         int Display();  //game enters here from cGame::Run()
+    
+    
+    /// STATIC
+private:
+    static cDisplayManager* s_displayManager;
+public:
+    static cDisplayManager* GetInstance();
 };
 
 

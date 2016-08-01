@@ -25,13 +25,11 @@
 
 #include <vector>
 
-class cFPSCounter;
 class cUIObject;
 
 class cGameState
 {
     protected:
-        cFPSCounter *m_fps;
         std::vector<cUIObject *> m_DisplayList;
 
     public:

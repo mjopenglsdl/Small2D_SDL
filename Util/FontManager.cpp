@@ -24,17 +24,17 @@
 #include "global.hpp"
 
 // static
-cFontManager *cFontManager::s_FontManager=nullptr;
+cFontManager *cFontManager::s_fontManager=nullptr;
 
 
 cFontManager *cFontManager::GetInstance()
 {
     
-    if (!cFontManager::s_FontManager) {
-        cFontManager::s_FontManager=new cFontManager();
+    if (!cFontManager::s_fontManager) {
+        cFontManager::s_fontManager=new cFontManager();
     }
     
-    return cFontManager::s_FontManager;
+    return cFontManager::s_fontManager;
 }
 //
 

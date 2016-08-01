@@ -23,7 +23,7 @@
 #include <SDL2/SDL.h>
 #include "global.hpp"
 #include "../Util/image_func.hpp"
-#include "../Util/FPSCounter.hpp"
+#include "FPSManager.hpp"
 
 #include "IntroState.hpp"
 #include "PlayState.hpp"
@@ -36,10 +36,11 @@
 
 cIntroState::cIntroState()
 {
-m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
-    m_fps=new cFPSCounter(25);
-    m_fps->StartCount();
+    m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
+
+    cFPSManager::GetInstance()->StartCount();
     
+    /// ui
     m_btnStart = new cButton(Global::screen_width*0.5,Global::screen_height*0.2);
     m_lblHello=new cLabel(Global::screen_width*0.5,Global::screen_height*0.2+80);
     
@@ -51,9 +52,7 @@ m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
 
 cIntroState::~cIntroState()
 {
-    delete m_fps;
-    
-SDL_DestroyTexture(m_tex_bg);
+    SDL_DestroyTexture(m_tex_bg);
 }
 
 
@@ -107,8 +106,8 @@ void cIntroState::OnRender()
 
 void cIntroState::OnUpdate()
 {
-    m_fps->CheckFPS();
+    cFPSManager::GetInstance()->CheckFPS();
 
-    m_fps->GetNewTick();
+    cFPSManager::GetInstance()->GetNewTick();
 return;
 }

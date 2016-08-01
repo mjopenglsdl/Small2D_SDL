@@ -23,20 +23,18 @@
 #include "MenuState.hpp"
 #include "global.hpp"
 #include "../Util/image_func.hpp"
-#include "../Util/FPSCounter.hpp"
+#include "FPSManager.hpp"
 
 
 cMenuState::cMenuState()
 {
-m_tex_bg=ImageFunc::LoadSprites("Images/menu.png");
-    m_fps=new cFPSCounter(25);
-    m_fps->StartCount();
+    m_tex_bg=ImageFunc::LoadSprites("Images/menu.png");
+    cFPSManager::GetInstance()->StartCount();
 }
 
 
  cMenuState::~cMenuState()
 {
-        delete m_fps;
     SDL_DestroyTexture(m_tex_bg);
 }
 
@@ -76,8 +74,8 @@ void cMenuState::OnRender()
 
 void cMenuState::OnUpdate()
 {
-    m_fps->CheckFPS();
+    cFPSManager::GetInstance()->CheckFPS();
 
-    m_fps->GetNewTick();
+    cFPSManager::GetInstance()->GetNewTick();
 return;
 }

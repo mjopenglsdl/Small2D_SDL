@@ -20,26 +20,41 @@
  */
 
 
-#include "FPSCounter.hpp"
+#include "FPSManager.hpp"
 #include <SDL2/SDL.h>
 
 
-void cFPSCounter::StartCount()
+//// static
+cFPSManager *cFPSManager::s_FPSManager=nullptr;
+
+cFPSManager *cFPSManager::GetInstance()
 {
-m_init_time=SDL_GetTicks();
+    if (nullptr==s_FPSManager) {
+        cFPSManager::s_FPSManager= new cFPSManager(DEFAULT_FPS_COUNT);
+    }
+    return cFPSManager::s_FPSManager;
 }
+/////
 
 
-void cFPSCounter::CheckFPS()
-{
-m_time_flag=SDL_GetTicks();
-m_deltaTime=m_time_flag-m_init_time;
-
-if(m_deltaTime<m_time_per_frame)
-    SDL_Delay(m_time_per_frame-m_deltaTime);
-}
-
-void cFPSCounter::GetNewTick()
+void cFPSManager::StartCount() 
 {
     m_init_time=SDL_GetTicks();
 }
+
+
+void cFPSManager::CheckFPS()
+{
+    m_time_flag=SDL_GetTicks();
+    m_deltaTime=m_time_flag-m_init_time;
+
+    if(m_deltaTime<m_time_per_frame){
+        SDL_Delay(m_time_per_frame-m_deltaTime);
+    }
+}
+
+void cFPSManager::GetNewTick()
+{
+    m_init_time=SDL_GetTicks();
+}
+

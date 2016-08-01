@@ -24,7 +24,7 @@
 #include "PlayState.hpp"
 #include "MenuState.hpp"
 #include "../Util/image_func.hpp"
-#include "../Util/FPSCounter.hpp"
+#include "FPSManager.hpp"
 
 #include "Wall.hpp"
 #include "Creature.hpp"
@@ -63,8 +63,7 @@ cPlayState::cPlayState()
     
 m_player=new cCreature;
 
-    m_fps=new cFPSCounter(60);
-    m_fps->StartCount();
+    cFPSManager::GetInstance()->StartCount();
     
     // add to display list
     m_DisplayList.push_back(m_player);
@@ -73,7 +72,6 @@ m_player=new cCreature;
 
 cPlayState::~cPlayState()
 {
-    delete m_fps;
 //    SDL_DestroyTexture(m_tex_bg);
 }
 
@@ -149,13 +147,13 @@ void cPlayState::OnRender()
 
 void cPlayState::OnUpdate()
 {
-    m_fps->CheckFPS();
+    cFPSManager::GetInstance()->CheckFPS();
     
-    m_player->Update(m_fps->m_deltaTime);
+    m_player->Update(cFPSManager::GetInstance()->m_deltaTime);
     for (int i=0; i<m_walls.size(); i++) {
         m_player->CheckCollision(m_walls[i]);
     }
     
-    m_fps->GetNewTick();
+    cFPSManager::GetInstance()->GetNewTick();
 }
 

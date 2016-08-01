@@ -20,25 +20,34 @@
  */
 
 
-#ifndef _FPSCOUNTER_HPP_
-    #define _FPSCOUNTER_HPP_
+#ifndef _FPSMANAGER_HPP_
+    #define _FPSMANAGER_HPP_
 
-class cFPSCounter
+class cFPSManager
 {
     private:
         int m_init_time;
         int m_time_flag;
         int m_time_per_frame;
+        cFPSManager(int fps){m_time_per_frame=1000/fps;}
+        ~cFPSManager(){};
     
-public:
-    int m_deltaTime;
+    public:
+        int m_deltaTime;
 
     public:
-         cFPSCounter(int fps=50){m_time_per_frame=1000/fps;}
-
-         void StartCount();
-         void CheckFPS();
-         void GetNewTick();
+        void StartCount();
+        void CheckFPS();
+        void GetNewTick();
+    
+    /// static
+public:
+    static cFPSManager *GetInstance();
+    
+private:
+    static cFPSManager *s_FPSManager;
+    static const int DEFAULT_FPS_COUNT=60;
+    
 };
 
 
