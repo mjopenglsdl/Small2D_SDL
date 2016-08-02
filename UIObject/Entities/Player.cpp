@@ -21,7 +21,7 @@
 
 
 #include "UIObject.hpp"
-#include "Creature.hpp"
+#include "Player.hpp"
 
 #include "image_func.hpp"
 #include "DisplayManager.hpp"
@@ -29,7 +29,7 @@
 #include <iostream>
 using namespace std;
 
-cCreature::cCreature()
+cPlayer::cPlayer()
 {
     m_baseHeight=UpperGridPositionY(2);     //  base height h=0
     m_bJump=false;
@@ -43,41 +43,44 @@ cCreature::cCreature()
     m_xVel=0;
     m_yVel=0;
     
-    m_bCollided=false;
+    m_bCollided_X=false;
+    m_bCollided_Y=false;
 }
 
-cCreature::~cCreature()
+cPlayer::~cPlayer()
 {
 
 }
 
 
-void cCreature::Draw()
+void cPlayer::Draw()
 {
     ImageFunc::DrawTexture(m_x, m_y, m_tex);
 }
 
-void cCreature::Update(int deltaTime)
+void cPlayer::Update(int deltaTime)
 {
     m_x+=m_xVel;
     m_y+=m_yVel;
     
-    if(m_x<0 || m_x+ PLAYER_WIDTH>cDisplayManager::SCREEN_WIDTH || m_bCollided)
+    if(m_x<0 || m_x+ PLAYER_WIDTH>cDisplayManager::SCREEN_WIDTH || m_bCollided_X)
     {
         m_x-=m_xVel;
     }
     
-    m_bCollided=false;
+    // reset
+    m_bCollided_X=false;
+    m_bCollided_Y=false;
 }
 
 
 // util
-void cCreature::Jump()
+void cPlayer::Jump()
 {
     m_bJump=true;
 }
 
-void cCreature::CheckCollision(cUIObject *obj)
+void cPlayer::CheckCollision(cUIObject *obj)
 {
     int selfTop=m_y;
     int selfBtm=m_y+PLAYER_WIDTH;
@@ -91,10 +94,11 @@ void cCreature::CheckCollision(cUIObject *obj)
     
 //    cout<<selfRight<<endl;
     
-    if ( selfRight+m_xVel<=objLeft  || (selfLeft+m_xVel>= objRight) || (selfBtm+m_yVel<=objTop) || (selfTop+m_yVel>=objBtm)) {
-        ;
-    }else{
-        m_bCollided=true;
+    // fix y axis, check x axis
+    if (!(selfBtm<=objTop || selfTop >objBtm)) {
+        if (!(selfRight+m_xVel<objLeft || selfLeft+m_xVel>objRight)) {
+            m_bCollided_X=true;
+        }
     }
-    
+
 }

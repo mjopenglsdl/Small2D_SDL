@@ -58,7 +58,7 @@ public:
     public:
         virtual void Draw()=0;
     
-    friend class cCreature;
+    friend class cPlayer;
 };
 
 #endif

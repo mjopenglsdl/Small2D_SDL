@@ -20,17 +20,17 @@
  */
 
 
-#ifndef _CREATURE_HPP_
-    #define _CREATURE_HPP_
+#ifndef _PLAYER_HPP_
+    #define _PLAYER_HPP_
 
 #include "UIObject.hpp"
 
 
-class cCreature: public cUIObject
+class cPlayer: public cUIObject
 {
 public:
-    cCreature();
-    ~cCreature();
+    cPlayer();
+    ~cPlayer();
 
 public:
     virtual void Draw();
@@ -43,8 +43,10 @@ private:
     int m_baseHeight;
     bool m_bJump;
     int m_jumpVelocity;
-    int m_bCollided;
     
+    int m_bCollided_X;
+    int m_bCollided_Y;
+
 public:
     // vel
     int m_xVel;
@@ -55,7 +57,6 @@ private:
     static const int JUMP_VELO_INIT=24;
     static const int HORI_SPEED=7;
     static const int PLAYER_WIDTH=32;
-
 };
 
 

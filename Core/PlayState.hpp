@@ -30,7 +30,7 @@ cGameState->cPlayState
 #include <vector>
 #include "GameState.hpp"
 
-class cCreature;
+class cPlayer;
 class cWall;
 
 class cPlayState:public cGameState
@@ -43,7 +43,7 @@ class cPlayState:public cGameState
     
     private:
         std::vector<cWall *> m_walls;
-        cCreature *m_player;
+        cPlayer *m_player;
 
     public:
         cPlayState();

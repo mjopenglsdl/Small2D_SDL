@@ -6,7 +6,7 @@ I started this project in 2011 and the origin purpose is to make an easy-to-use 
 
 I recently moved it to **SDL2** with integration of **xCode**.
 
-The library you need in order to compile & link:
+Library that you will need in order to compile & link:
 * SDL2: https://www.libsdl.org/download-2.0.php
 * SDL2_image: https://www.libsdl.org/projects/SDL_image/
 * SDL2_ttf: https://www.libsdl.org/projects/SDL_ttf/
@@ -16,7 +16,7 @@ The current features include:
 * 3 game states 
 * Move the player
 * Basic collision detection
-* Basic UI widgets
+* Basic UI widgets: button, label
 
 My Short Plans:
 * MVC architecture

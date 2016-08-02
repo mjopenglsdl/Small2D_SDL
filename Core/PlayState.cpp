@@ -27,7 +27,7 @@
 #include "GameManager.hpp"
 
 #include "Wall.hpp"
-#include "Creature.hpp"
+#include "Player.hpp"
 
 #include "UIObject.hpp"
 
@@ -61,7 +61,7 @@ cPlayState::cPlayState()
     }
 ///////
     
-m_player=new cCreature;
+m_player=new cPlayer;
 
     cFPSManager::GetInstance()->StartCount();
     
@@ -123,7 +123,7 @@ void cPlayState::OnEvent()
                 else if(event.key.keysym.sym==SDLK_RIGHT){
                     m_player->m_xVel=0;
                 }
-                    break;
+                break;
             }
 
         }
