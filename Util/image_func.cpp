@@ -24,14 +24,14 @@
 #include <iostream>
 
 #include "image_func.hpp"
-#include "DisplayManager.hpp"
+#include "../Core/DisplayManager.hpp"
 
 
 // load images from file to the SDL_surface memory
 SDL_Texture* ImageFunc::LoadSprites(const char* filemame,bool alpha,int r, int g, int b)
 {
     SDL_Texture *tex=IMG_LoadTexture(cDisplayManager::GetInstance()->GetRenderer(), filemame);
-    
+
     if (!tex) {
         std::cout <<  " error: " << SDL_GetError() << std::endl;
     }
@@ -54,7 +54,7 @@ int ImageFunc::DrawTexture(int dx, int dy, SDL_Texture*tex, bool clip,int cx, in
         SDL_Rect rc_d;
         rc_d.x=dx;
         rc_d.y=dy;
-    
+
     rc_d.w=w;
     rc_d.h=h;
 

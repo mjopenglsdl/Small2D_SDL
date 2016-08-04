@@ -8,8 +8,8 @@
 
 #include "Label.hpp"
 
-#include "FontManager.hpp"
-#include "image_func.hpp"
+#include "../../Util/FontManager.hpp"
+#include "../../Util/image_func.hpp"
 
 
 cLabel::cLabel(int x, int y)
@@ -18,7 +18,7 @@ cLabel::cLabel(int x, int y)
     m_y=y;
     m_width=160;
     m_height=30;
-    
+
     m_tex=NULL;
     m_tex=cFontManager::GetInstance()->GetTextureText("Hello World");
 }

@@ -22,11 +22,11 @@
 
 #include "GameManager.hpp"
 #include "DisplayManager.hpp"
-#include "FontManager.hpp"
+#include "../Util/FontManager.hpp"
 #include "IntroState.hpp"
 
 #include <SDL2_image/SDL_image.h>
-
+#include <stdio.h>
 
 /// STATIC
 cGameManager *cGameManager::s_gameManager=nullptr;
@@ -45,10 +45,10 @@ cGameManager *cGameManager::GetInstance()
 cGameManager::cGameManager()
 {
     SDL_Init( SDL_INIT_EVERYTHING);
-    
+
     // other libs
     IMG_Init(IMG_INIT_PNG);
-    
+
     // vari
     m_states.clear();
 }
@@ -60,7 +60,7 @@ cGameManager::~cGameManager()
     cDisplayManager::GetInstance()->ClearRes();
     IMG_Quit();
     SDL_Quit();
-    
+
     printf("Exited cleanly\n");
 }
 
@@ -70,14 +70,14 @@ int cGameManager::Run()
     //init, cmd_line stuff
 
 //init other global vari
-    
+
 
     cDisplayManager::GetInstance()->InitRes();
     // push first state
     cIntroState *p_intro=new cIntroState();
     m_states.push_back(p_intro);
-    
-    
+
+
     //states loop
     while (!m_states.empty())
     {
@@ -87,7 +87,7 @@ int cGameManager::Run()
         if (!m_states.empty())
             m_states.back()->OnUpdate();
     }
-    
+
 return 0;
 }
 

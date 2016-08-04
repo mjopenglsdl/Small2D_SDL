@@ -28,7 +28,7 @@
     #define _DISPLAY_MANAGER_HPP_
 
 #include <SDL2/SDL.h>
-#include "UIObject.hpp"
+#include "../UIObject/UIObject.hpp"
 
 
 class cDisplayManager
@@ -36,17 +36,17 @@ class cDisplayManager
     private:
         cDisplayManager(){m_window=nullptr; m_renderer=nullptr;}
         ~cDisplayManager(){};
-    
+
         SDL_Window *m_window;
         SDL_Renderer *m_renderer;
-    
+
     public:
         void InitRes();
         void ClearRes();
-    
+
     SDL_Renderer *GetRenderer(){return m_renderer;}
     SDL_Window *GetWindow(){return m_window;}
-    
+
 /// STATIC
 private:
     static cDisplayManager* s_displayManager;
@@ -56,7 +56,7 @@ public:
 /// CONST
     static const int SCREEN_WIDTH_GRIDS=24;
     static const int SCREEN_HEIGHT_GRIDS=16;
-    
+
     static const int SCREEN_WIDTH=cUIObject::UNIT_X*SCREEN_WIDTH_GRIDS;
     static const int SCREEN_HEIGHT=cUIObject::UNIT_Y*SCREEN_HEIGHT_GRIDS;
 };

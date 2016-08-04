@@ -23,13 +23,13 @@
 #include "PlayState.hpp"
 #include "MenuState.hpp"
 #include "../Util/image_func.hpp"
-#include "FPSManager.hpp"
+#include "../Util/FPSManager.hpp"
 #include "GameManager.hpp"
 
-#include "Wall.hpp"
-#include "Player.hpp"
+#include "../UIObject/Entities/Wall.hpp"
+#include "../UIObject/Entities/Player.hpp"
 
-#include "UIObject.hpp"
+#include "../UIObject/UIObject.hpp"
 
 
 #include <iostream>
@@ -40,31 +40,31 @@ cPlayState::cPlayState()
 
 //init other members
     m_walls.clear();
-    
+
 // wall
     for (int i=0; i<cDisplayManager::SCREEN_WIDTH_GRIDS ; i++) {
         cWall *wall=new cWall(i,1);
         m_walls.push_back(wall);
         m_DisplayList.push_back(wall);
     }
-    
+
     for (int i=0; i<4 ; i++) {
         cWall *wall=new cWall(i+4,2);
         m_walls.push_back(wall);
         m_DisplayList.push_back(wall);
     }
-    
+
     for (int i=0; i<3 ; i++) {
         cWall *wall=new cWall(i+9,6);
         m_walls.push_back(wall);
         m_DisplayList.push_back(wall);
     }
 ///////
-    
+
 m_player=new cPlayer;
 
     cFPSManager::GetInstance()->StartCount();
-    
+
     // add to display list
     m_DisplayList.push_back(m_player);
 }
@@ -87,7 +87,7 @@ void cPlayState::OnEvent()
             case SDL_QUIT:
                 cGameManager::GetInstance()->ClearStates();
                 break;
-                    
+
             case SDL_KEYDOWN:
                 if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
@@ -99,7 +99,7 @@ void cPlayState::OnEvent()
                 {
                     cGameManager::GetInstance()->PopState();
                 }
-                 
+
                 // movement
                 else if (event.key.keysym.sym==SDLK_LEFT) {
                     m_player->m_xVel=-10;
@@ -107,14 +107,14 @@ void cPlayState::OnEvent()
                 else if(event.key.keysym.sym==SDLK_RIGHT){
                     m_player->m_xVel=10;
                 }
-                    
+
                 // jump
                 else if(event.key.keysym.sym==SDLK_SPACE){
                     m_player->Jump();
                 }
-                    
+
                 break;
-                    
+
             case SDL_KEYUP:
                 // movement
                 if (event.key.keysym.sym==SDLK_LEFT) {
@@ -133,13 +133,13 @@ void cPlayState::OnEvent()
 void cPlayState::OnRender()
 {
     SDL_RenderClear(cDisplayManager::GetInstance()->GetRenderer());
-    
+
 //    ImageFunc::DrawTexture(0, 0, m_tex_bg);
-    
+
     for (int i=0; i<m_DisplayList.size(); i++) {
         m_DisplayList[i]->Draw();
     }
-    
+
     SDL_RenderPresent(cDisplayManager::GetInstance()->GetRenderer());
 }
 
@@ -147,12 +147,12 @@ void cPlayState::OnRender()
 void cPlayState::OnUpdate()
 {
     cFPSManager::GetInstance()->CheckFPS();
-    
+
     m_player->Update(cFPSManager::GetInstance()->m_deltaTime);
     for (int i=0; i<m_walls.size(); i++) {
         m_player->CheckCollision(m_walls[i]);
     }
-    
+
     cFPSManager::GetInstance()->GetNewTick();
 }
 

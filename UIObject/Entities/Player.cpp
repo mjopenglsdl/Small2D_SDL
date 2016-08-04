@@ -20,11 +20,11 @@
  */
 
 
-#include "UIObject.hpp"
+#include "../UIObject.hpp"
 #include "Player.hpp"
 
-#include "image_func.hpp"
-#include "DisplayManager.hpp"
+#include "../../Util/image_func.hpp"
+#include "../../Core/DisplayManager.hpp"
 
 #include <iostream>
 using namespace std;
@@ -33,16 +33,16 @@ cPlayer::cPlayer()
 {
     m_baseHeight=UpperGridPositionY(2);     //  base height h=0
     m_bJump=false;
-    
+
     m_jumpVelocity=0;
-    
+
     m_tex=ImageFunc::LoadSprites("Images/teddy.png",true,255,0,0);
     m_x=0;
     m_y=m_baseHeight;
-    
+
     m_xVel=0;
     m_yVel=0;
-    
+
     m_bCollided_X=false;
     m_bCollided_Y=false;
 }
@@ -62,12 +62,12 @@ void cPlayer::Update(int deltaTime)
 {
     m_x+=m_xVel;
     m_y+=m_yVel;
-    
+
     if(m_x<0 || m_x+ PLAYER_WIDTH>cDisplayManager::SCREEN_WIDTH || m_bCollided_X)
     {
         m_x-=m_xVel;
     }
-    
+
     // reset
     m_bCollided_X=false;
     m_bCollided_Y=false;
@@ -86,14 +86,14 @@ void cPlayer::CheckCollision(cUIObject *obj)
     int selfBtm=m_y+PLAYER_WIDTH;
     int selfLeft=m_x;
     int selfRight=m_x+PLAYER_WIDTH;
-    
+
     int objTop=obj->m_y;
     int objBtm=obj->m_y+PLAYER_WIDTH;
     int objLeft=obj->m_x;
     int objRight=obj->m_x+PLAYER_WIDTH;
-    
+
 //    cout<<selfRight<<endl;
-    
+
     // fix y axis, check x axis
     if (!(selfBtm<=objTop || selfTop >objBtm)) {
         if (!(selfRight+m_xVel<objLeft || selfLeft+m_xVel>objRight)) {

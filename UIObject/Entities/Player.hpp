@@ -23,7 +23,7 @@
 #ifndef _PLAYER_HPP_
     #define _PLAYER_HPP_
 
-#include "UIObject.hpp"
+#include "../UIObject.hpp"
 
 
 class cPlayer: public cUIObject
@@ -35,15 +35,15 @@ public:
 public:
     virtual void Draw();
     void Update(int deltaTime);
-    
+
     void Jump();
     void CheckCollision(cUIObject *obj);
-    
+
 private:
     int m_baseHeight;
     bool m_bJump;
     int m_jumpVelocity;
-    
+
     int m_bCollided_X;
     int m_bCollided_Y;
 
@@ -51,7 +51,7 @@ public:
     // vel
     int m_xVel;
     int m_yVel;
-    
+
 private:
     // const
     static const int JUMP_VELO_INIT=24;

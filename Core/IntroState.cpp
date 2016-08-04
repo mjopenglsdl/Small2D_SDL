@@ -22,15 +22,15 @@
 
 #include <SDL2/SDL.h>
 #include "../Util/image_func.hpp"
-#include "FPSManager.hpp"
+#include "../Util/FPSManager.hpp"
 #include "GameManager.hpp"
 #include "DisplayManager.hpp"
 
 #include "IntroState.hpp"
 #include "PlayState.hpp"
 
-#include "Button.hpp"
-#include "Label.hpp"
+#include "../UIObject/Widgets/Button.hpp"
+#include "../UIObject/Widgets/Label.hpp"
 
 #include <iostream>
 #include <vector>
@@ -40,11 +40,11 @@ cIntroState::cIntroState()
     m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
 
     cFPSManager::GetInstance()->StartCount();
-    
+
     /// ui
     m_btnStart = new cButton(cDisplayManager::SCREEN_WIDTH*0.5,cDisplayManager::SCREEN_HEIGHT*0.2);
     m_lblHello=new cLabel(cDisplayManager::SCREEN_WIDTH*0.5,cDisplayManager::SCREEN_HEIGHT*0.2+80);
-    
+
     // add UI Object to the list
     m_DisplayList.push_back(m_btnStart);
     m_DisplayList.push_back(m_lblHello);
@@ -67,7 +67,7 @@ void cIntroState::OnEvent()
                 case SDL_QUIT:
                     cGameManager::GetInstance()->ClearStates();
                     break;
-                    
+
                 case SDL_KEYDOWN:
                     {
                        if(event.key.keysym.sym==SDLK_q)
@@ -93,13 +93,13 @@ void cIntroState::OnEvent()
 void cIntroState::OnRender()
 {
     SDL_RenderClear(cDisplayManager::GetInstance()->GetRenderer());
-    
+
     ImageFunc::DrawTexture(0, 0, m_tex_bg);
-    
+
     for (int i=0; i<m_DisplayList.size(); i++) {
         m_DisplayList[i]->Draw();
     }
-    
+
     SDL_RenderPresent(cDisplayManager::GetInstance()->GetRenderer());
 }
 

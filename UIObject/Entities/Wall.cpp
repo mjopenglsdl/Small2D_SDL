@@ -20,11 +20,10 @@
  */
 
 
-#include "UIObject.hpp"
 #include "Wall.hpp"
 
-#include "image_func.hpp"
-#include "DisplayManager.hpp"
+#include "../../Util/image_func.hpp"
+#include "../../Core/DisplayManager.hpp"
 
 cWall::cWall()
 {
@@ -36,7 +35,7 @@ cWall::cWall(int xGrid, int yUpGrid)
     m_tex=ImageFunc::LoadSprites("Images/tile.png");
     m_xGrid=xGrid;
     m_yUpGrid=yUpGrid;
-    
+
     m_x=m_xGrid*UNIT_X;
     m_y=(cDisplayManager::SCREEN_HEIGHT_GRIDS-m_yUpGrid)*UNIT_Y;
 }

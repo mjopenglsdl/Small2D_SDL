@@ -24,7 +24,7 @@
 #include "../Util/image_func.hpp"
 
 #include "GameManager.hpp"
-#include "FPSManager.hpp"
+#include "../Util/FPSManager.hpp"
 #include "DisplayManager.hpp"
 
 
@@ -51,7 +51,7 @@ void cMenuState::OnEvent()
             case SDL_QUIT:
                 cGameManager::GetInstance()->ClearStates();
                 break;
-                    
+
             case SDL_KEYDOWN:
                 if(event.key.keysym.sym==SDLK_ESCAPE)
                 {
@@ -66,9 +66,9 @@ void cMenuState::OnEvent()
 void cMenuState::OnRender()
 {
     SDL_RenderClear(cDisplayManager::GetInstance()->GetRenderer());
-    
+
     ImageFunc::DrawTexture(0, 0, m_tex_bg);
-    
+
     SDL_RenderPresent(cDisplayManager::GetInstance()->GetRenderer());
 }
 

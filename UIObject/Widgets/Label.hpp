@@ -10,14 +10,14 @@
 #define Label_hpp
 
 #include<SDL2/SDL.h>
-#include "UIObject.hpp"
+#include "../UIObject.hpp"
 
 class cLabel: public cUIObject
 {
 public:
     cLabel(int x, int y);
     ~cLabel();
-    
+
 public:
     virtual void Draw();
 

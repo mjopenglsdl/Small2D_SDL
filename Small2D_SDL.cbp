@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Small2D_SDL" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Small2D_SDL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Small2D_SDL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="D:/Libs/SDL2-2.0.4/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="D:/Libs/SDL2-2.0.4/lib/x64" />
+		</Linker>
+		<Unit filename="Core/DisplayManager.cpp" />
+		<Unit filename="Core/DisplayManager.hpp" />
+		<Unit filename="Core/GameState.cpp" />
+		<Unit filename="Core/GameState.hpp" />
+		<Unit filename="Core/IntroState.cpp" />
+		<Unit filename="Core/IntroState.hpp" />
+		<Unit filename="Core/MenuState.cpp" />
+		<Unit filename="Core/MenuState.hpp" />
+		<Unit filename="Core/PlayState.cpp" />
+		<Unit filename="Core/PlayState.hpp" />
+		<Unit filename="UIObject/Entities/Creature.hpp" />
+		<Unit filename="UIObject/Entities/Wall.cpp" />
+		<Unit filename="UIObject/Entities/Wall.hpp" />
+		<Unit filename="UIObject/UIObject.cpp" />
+		<Unit filename="UIObject/UIObject.hpp" />
+		<Unit filename="UIObject/Widgets/Button.cpp" />
+		<Unit filename="UIObject/Widgets/Button.hpp" />
+		<Unit filename="UIObject/Widgets/Label.cpp" />
+		<Unit filename="UIObject/Widgets/Label.hpp" />
+		<Unit filename="Util/FPSManager.cpp" />
+		<Unit filename="Util/FPSManager.hpp" />
+		<Unit filename="Util/FontManager.cpp" />
+		<Unit filename="Util/FontManager.hpp" />
+		<Unit filename="Util/Logger.cpp" />
+		<Unit filename="Util/Logger.hpp" />
+		<Unit filename="Util/image_func.cpp" />
+		<Unit filename="Util/image_func.hpp" />
+		<Unit filename="Util/portable_SDL2.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

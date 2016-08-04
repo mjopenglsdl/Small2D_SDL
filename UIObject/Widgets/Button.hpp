@@ -24,18 +24,18 @@
 #define Button_hpp
 
 #include<SDL2/SDL.h>
-#include "UIObject.hpp"
+#include "../UIObject.hpp"
 
 class cButton: public cUIObject
 {
 public:
     cButton(int x, int y);
     ~cButton();
-    
+
     bool IsClicked(int x, int y);
-    
+
 public:
-    
+
 public:
     void virtual Draw();
 };
