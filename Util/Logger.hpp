@@ -22,21 +22,28 @@
 #ifndef _LOGGER_HPP_
     #define _LOGGER_HPP_
 
-
 typedef enum{
-    LOG_INFO,
-    LOG_WARN,
-    LOG_DEBUG
+    LogLevel_INFO,
+    LogLevel_ERROR,
+    LogLevel_WARN,
+    LogLevel_DEBUG
 }eLogLevel;
 
 
 class cLogger
 {
 public:
-    cLogger();
-    ~cLogger();
-    
-    
+    void PrintLog(eLogLevel level, const char *msg);
+
+private:
+    cLogger(){};
+    ~cLogger(){};
+
+/// STATIC
+private:
+    static cLogger *s_logger;
+public:
+    static cLogger *GetInstance();
 };
 
 #endif /* _LOGGER_HPP_ */

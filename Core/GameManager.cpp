@@ -25,6 +25,8 @@
 #include "../Util/FontManager.hpp"
 #include "IntroState.hpp"
 
+#include "../Util/Logger.hpp"
+
 #include <SDL2_image/SDL_image.h>
 #include <stdio.h>
 
@@ -44,6 +46,8 @@ cGameManager *cGameManager::GetInstance()
 
 cGameManager::cGameManager()
 {
+    cLogger::GetInstance()->PrintLog(LogLevel_INFO, "SDL Start init...");
+
     SDL_Init( SDL_INIT_EVERYTHING);
 
     // other libs

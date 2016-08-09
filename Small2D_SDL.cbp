@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="D:/Libs/SDL2-2.0.4/include/SDL2" />
+					<Add directory="D:/Libs/SDL2-2.0.4/include/" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -33,10 +35,14 @@
 			<Add directory="D:/Libs/SDL2-2.0.4/include" />
 		</Compiler>
 		<Linker>
-			<Add directory="D:/Libs/SDL2-2.0.4/lib/x64" />
+			<Add option="-lSDL2_image -lSDL2_ttf" />
+			<Add option="-lmingw32 -lSDL2 -lSDL2main" />
+			<Add directory="D:/Libs/SDL2-2.0.4/lib" />
 		</Linker>
 		<Unit filename="Core/DisplayManager.cpp" />
 		<Unit filename="Core/DisplayManager.hpp" />
+		<Unit filename="Core/GameManager.cpp" />
+		<Unit filename="Core/GameManager.hpp" />
 		<Unit filename="Core/GameState.cpp" />
 		<Unit filename="Core/GameState.hpp" />
 		<Unit filename="Core/IntroState.cpp" />
@@ -46,6 +52,8 @@
 		<Unit filename="Core/PlayState.cpp" />
 		<Unit filename="Core/PlayState.hpp" />
 		<Unit filename="UIObject/Entities/Creature.hpp" />
+		<Unit filename="UIObject/Entities/Player.cpp" />
+		<Unit filename="UIObject/Entities/Player.hpp" />
 		<Unit filename="UIObject/Entities/Wall.cpp" />
 		<Unit filename="UIObject/Entities/Wall.hpp" />
 		<Unit filename="UIObject/UIObject.cpp" />
@@ -62,7 +70,9 @@
 		<Unit filename="Util/Logger.hpp" />
 		<Unit filename="Util/image_func.cpp" />
 		<Unit filename="Util/image_func.hpp" />
-		<Unit filename="Util/portable_SDL2.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.hpp" />
+		<Unit filename="pch.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

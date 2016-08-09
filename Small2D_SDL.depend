@@ -444,16 +444,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1470316769 source:c:\users\mj\documents\github\small2d_sdl\util\logger.cpp
+1470746502 source:c:\users\mj\documents\github\small2d_sdl\util\logger.cpp
 	"Logger.hpp"
+	<iostream>
 
-1470316769 c:\users\mj\documents\github\small2d_sdl\util\logger.hpp
+1470746506 c:\users\mj\documents\github\small2d_sdl\util\logger.hpp
 
-1470319418 source:c:\users\mj\documents\github\small2d_sdl\core\gamemanager.cpp
+1470746467 source:c:\users\mj\documents\github\small2d_sdl\core\gamemanager.cpp
 	"GameManager.hpp"
 	"DisplayManager.hpp"
 	"../Util/FontManager.hpp"
 	"IntroState.hpp"
+	"../Util/Logger.hpp"
 	<SDL2_image/SDL_image.h>
 	<stdio.h>
 
@@ -463,4 +465,7 @@
 	"../../Util/image_func.hpp"
 	"../../Core/DisplayManager.hpp"
 	<iostream>
+
+1470316769 source:c:\users\mj\documents\github\small2d_sdl\main.cpp
+	"Core/GameManager.hpp"
 

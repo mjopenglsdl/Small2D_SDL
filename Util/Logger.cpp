@@ -20,3 +20,41 @@
  */
 
 #include "Logger.hpp"
+
+#include <iostream>
+using namespace std;
+
+/// STATIC
+cLogger *cLogger::s_logger=nullptr;
+
+cLogger *cLogger::GetInstance()
+{
+    if(nullptr==cLogger::s_logger)
+    {
+        cLogger::s_logger=new cLogger();
+    }
+    return cLogger::s_logger;
+}
+////////////////
+
+
+void cLogger::PrintLog(eLogLevel level, const char *msg)
+{
+    if(LogLevel_INFO==level)
+    {
+        cout<<"INFO: "<<msg<<endl;
+    }
+    else if(LogLevel_ERROR==level)
+    {
+        cout<<"ERR: "<<msg<<endl;
+    }
+    else if(LogLevel_WARN==level)
+    {
+        cout<<"WARN: "<<msg<<endl;
+    }
+    else if(LogLevel_DEBUG==level)
+    {
+        cout<<"DEBUG: "<<msg<<endl;
+    }
+}
+
