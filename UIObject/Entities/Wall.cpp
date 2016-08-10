@@ -48,5 +48,5 @@ cWall::~cWall()
 
 void cWall::Draw()
 {
-        ImageFunc::DrawTexture(UNIT_X*m_xGrid, UpperGridPositionY(m_yUpGrid) , m_tex);
+    ImageFunc::DrawTexture(UNIT_X*m_xGrid, UpperGridPositionY(m_yUpGrid) , m_tex);
 }

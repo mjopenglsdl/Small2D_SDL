@@ -41,7 +41,7 @@ cIntroState::cIntroState()
 
     cFPSManager::GetInstance()->StartCount();
 
-    /// ui
+    /// UI
     m_btnStart = new cButton(cDisplayManager::SCREEN_WIDTH*0.5,cDisplayManager::SCREEN_HEIGHT*0.2);
     m_lblHello=new cLabel(cDisplayManager::SCREEN_WIDTH*0.5,cDisplayManager::SCREEN_HEIGHT*0.2+80);
 
