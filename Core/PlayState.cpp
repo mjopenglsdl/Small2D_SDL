@@ -22,12 +22,12 @@
 #include "DisplayManager.hpp"
 #include "PlayState.hpp"
 #include "MenuState.hpp"
-#include "../Util/image_func.hpp"
-#include "../Util/FPSManager.hpp"
+#include "image_func.hpp"
+#include "FPSManager.hpp"
 #include "GameManager.hpp"
 
-#include "../UIObject/Entities/Wall.hpp"
-#include "../UIObject/Entities/Player.hpp"
+#include "Wall.hpp"
+#include "Player.hpp"
 
 #include "../UIObject/UIObject.hpp"
 

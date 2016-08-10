@@ -28,7 +28,7 @@
     #define _DISPLAY_MANAGER_HPP_
 
 #include <SDL2/SDL.h>
-#include "../UIObject/UIObject.hpp"
+#include "UIObject.hpp"
 
 
 class cDisplayManager

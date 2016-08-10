@@ -21,7 +21,7 @@
 
 
 #include "FontManager.hpp"
-#include "../Core/DisplayManager.hpp"
+#include "DisplayManager.hpp"
 
 
 /// STATIC

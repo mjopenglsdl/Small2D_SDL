@@ -22,7 +22,6 @@
 
 #include "DisplayManager.hpp"
 
-
 /// STATIC
 cDisplayManager *cDisplayManager::s_displayManager=nullptr;
 
@@ -40,6 +39,10 @@ cDisplayManager *cDisplayManager::GetInstance()
 void cDisplayManager::InitRes()
 {
     m_window=SDL_CreateWindow("Small2D_SDL", 100, 100, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    if(!m_window)
+    {
+
+    }
     m_renderer=SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 }
 

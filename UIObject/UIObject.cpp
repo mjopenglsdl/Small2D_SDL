@@ -21,7 +21,7 @@
 
 
 #include "UIObject.hpp"
-#include "../Core/DisplayManager.hpp"
+#include "DisplayManager.hpp"
 
 
 int cUIObject::UpperGridPositionY(int gridNum){

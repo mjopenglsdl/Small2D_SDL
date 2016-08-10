@@ -24,7 +24,7 @@ My Short Plans:
 * MVC architecture
 * Player jump
 * Lua Integration
-* The log system
+* pch header (less header inclusion)
 * XML based configuration file and loading
 * Graphic improvement
 * Shared pointer

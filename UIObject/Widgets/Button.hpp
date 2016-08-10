@@ -24,7 +24,7 @@
 #define Button_hpp
 
 #include<SDL2/SDL.h>
-#include "../UIObject.hpp"
+#include "UIObject.hpp"
 
 class cButton: public cUIObject
 {

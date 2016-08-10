@@ -23,7 +23,7 @@
 #ifndef _WALL_HPP_
     #define _WALL_HPP_
 
-#include "../UIObject.hpp"
+#include "UIObject.hpp"
 
 class cWall:public cUIObject
 {

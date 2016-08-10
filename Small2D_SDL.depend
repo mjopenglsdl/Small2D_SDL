@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1470316768 source:c:\users\mj\documents\github\small2d_sdl\core\displaymanager.cpp
+1470826458 source:c:\users\mj\documents\github\small2d_sdl\core\displaymanager.cpp
 	"DisplayManager.hpp"
 
-1470317182 c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp
+1470826657 c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp
 	<SDL2/SDL.h>
-	"../UIObject/UIObject.hpp"
+	"UIObject.hpp"
 
 1394253593 d:\libs\sdl2-2.0.4\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -324,23 +324,23 @@
 1470318130 c:\users\mj\documents\github\small2d_sdl\uiobject\uiobject.hpp
 	<SDL2/SDL.h>
 
-1470317232 source:c:\users\mj\documents\github\small2d_sdl\core\gamestate.cpp
+1470826512 source:c:\users\mj\documents\github\small2d_sdl\core\gamestate.cpp
 	"GameState.hpp"
-	"../UIObject/UIObject.hpp"
+	"UIObject.hpp"
 
 1470316768 c:\users\mj\documents\github\small2d_sdl\core\gamestate.hpp
 	<vector>
 
-1470317338 source:c:\users\mj\documents\github\small2d_sdl\core\introstate.cpp
+1470826657 source:c:\users\mj\documents\github\small2d_sdl\core\introstate.cpp
 	<SDL2/SDL.h>
-	"../Util/image_func.hpp"
-	"../Util/FPSManager.hpp"
+	"image_func.hpp"
+	"FPSManager.hpp"
 	"GameManager.hpp"
 	"DisplayManager.hpp"
 	"IntroState.hpp"
 	"PlayState.hpp"
-	"../UIObject/Widgets/Button.hpp"
-	"../UIObject/Widgets/Label.hpp"
+	"Button.hpp"
+	"Label.hpp"
 	<iostream>
 	<vector>
 
@@ -360,42 +360,42 @@
 	<vector>
 	"GameState.hpp"
 
-1470317320 c:\users\mj\documents\github\small2d_sdl\uiobject\widgets\button.hpp
+1470826657 c:\users\mj\documents\github\small2d_sdl\uiobject\widgets\button.hpp
 	<SDL2/SDL.h>
-	"../UIObject.hpp"
+	"UIObject.hpp"
 
-1470317346 c:\users\mj\documents\github\small2d_sdl\uiobject\widgets\label.hpp
+1470826657 c:\users\mj\documents\github\small2d_sdl\uiobject\widgets\label.hpp
 	<SDL2/SDL.h>
-	"../UIObject.hpp"
+	"UIObject.hpp"
 
-1470317362 source:c:\users\mj\documents\github\small2d_sdl\core\menustate.cpp
+1470826657 source:c:\users\mj\documents\github\small2d_sdl\core\menustate.cpp
 	"MenuState.hpp"
-	"../Util/image_func.hpp"
+	"image_func.hpp"
 	"GameManager.hpp"
-	"../Util/FPSManager.hpp"
+	"FPSManager.hpp"
 	"DisplayManager.hpp"
 
 1470316768 c:\users\mj\documents\github\small2d_sdl\core\menustate.hpp
 	"GameState.hpp"
 	<SDL2/SDL.h>
 
-1470317408 source:c:\users\mj\documents\github\small2d_sdl\core\playstate.cpp
+1470826657 source:c:\users\mj\documents\github\small2d_sdl\core\playstate.cpp
 	"DisplayManager.hpp"
 	"PlayState.hpp"
 	"MenuState.hpp"
-	"../Util/image_func.hpp"
-	"../Util/FPSManager.hpp"
+	"image_func.hpp"
+	"FPSManager.hpp"
 	"GameManager.hpp"
-	"../UIObject/Entities/Wall.hpp"
-	"../UIObject/Entities/Player.hpp"
+	"Wall.hpp"
+	"Player.hpp"
 	"../UIObject/UIObject.hpp"
 	<iostream>
 
-1470317415 c:\users\mj\documents\github\small2d_sdl\uiobject\entities\wall.hpp
-	"../UIObject.hpp"
+1470826657 c:\users\mj\documents\github\small2d_sdl\uiobject\entities\wall.hpp
+	"UIObject.hpp"
 
-1470317496 c:\users\mj\documents\github\small2d_sdl\uiobject\entities\player.hpp
-	"../UIObject.hpp"
+1470826657 c:\users\mj\documents\github\small2d_sdl\uiobject\entities\player.hpp
+	"UIObject.hpp"
 
 1470317531 source:c:\users\mj\documents\github\small2d_sdl\uiobject\entities\wall.cpp
 	"Wall.hpp"
@@ -448,24 +448,26 @@
 	"Logger.hpp"
 	<iostream>
 
-1470746506 c:\users\mj\documents\github\small2d_sdl\util\logger.hpp
+1470816347 c:\users\mj\documents\github\small2d_sdl\util\logger.hpp
 
-1470746467 source:c:\users\mj\documents\github\small2d_sdl\core\gamemanager.cpp
+1470826512 source:c:\users\mj\documents\github\small2d_sdl\core\gamemanager.cpp
 	"GameManager.hpp"
 	"DisplayManager.hpp"
-	"../Util/FontManager.hpp"
+	"FontManager.hpp"
 	"IntroState.hpp"
-	"../Util/Logger.hpp"
+	"Logger.hpp"
 	<SDL2_image/SDL_image.h>
-	<stdio.h>
 
-1470319545 source:c:\users\mj\documents\github\small2d_sdl\uiobject\entities\player.cpp
-	"../UIObject.hpp"
+1470826657 source:c:\users\mj\documents\github\small2d_sdl\uiobject\entities\player.cpp
+	"UIObject.hpp"
 	"Player.hpp"
-	"../../Util/image_func.hpp"
-	"../../Core/DisplayManager.hpp"
+	"image_func.hpp"
+	"DisplayManager.hpp"
 	<iostream>
 
-1470316769 source:c:\users\mj\documents\github\small2d_sdl\main.cpp
-	"Core/GameManager.hpp"
+1470826657 source:c:\users\mj\documents\github\small2d_sdl\main.cpp
+	"GameManager.hpp"
+
+1470817545 source:c:\users\mj\documents\github\small2d_sdl\pch.h
+	"Logger.hpp"
 

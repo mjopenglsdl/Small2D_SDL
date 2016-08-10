@@ -22,8 +22,8 @@
 
 #include "Wall.hpp"
 
-#include "../../Util/image_func.hpp"
-#include "../../Core/DisplayManager.hpp"
+#include "image_func.hpp"
+#include "DisplayManager.hpp"
 
 cWall::cWall()
 {

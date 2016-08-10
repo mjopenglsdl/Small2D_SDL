@@ -21,10 +21,10 @@
 
 
 #include "MenuState.hpp"
-#include "../Util/image_func.hpp"
+#include "image_func.hpp"
 
 #include "GameManager.hpp"
-#include "../Util/FPSManager.hpp"
+#include "FPSManager.hpp"
 #include "DisplayManager.hpp"
 
 

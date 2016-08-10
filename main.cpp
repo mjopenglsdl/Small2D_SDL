@@ -19,7 +19,7 @@
  *
  */
 
-#include "Core/GameManager.hpp"
+#include "GameManager.hpp"
 
 int main ( int argc, char** argv )
 {

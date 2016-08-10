@@ -22,6 +22,12 @@
 #ifndef _LOGGER_HPP_
     #define _LOGGER_HPP_
 
+/// Shorter macro interfaces
+#define LOG_INFO(msg) (cLogger::GetInstance()->PrintLog(LogLevel_INFO, msg))
+#define LOG_ERROR(msg) (cLogger::GetInstance()->PrintLog(LogLevel_ERROR, msg))
+#define LOG_WARN(msg) (cLogger::GetInstance()->PrintLog(LogLevel_WARN, msg))
+#define LOG_DEBUG(msg) (cLogger::GetInstance()->PrintLog(LogLevel_DEBUG, msg))
+
 typedef enum{
     LogLevel_INFO,
     LogLevel_ERROR,

@@ -23,7 +23,7 @@
 #ifndef _PLAYER_HPP_
     #define _PLAYER_HPP_
 
-#include "../UIObject.hpp"
+#include "UIObject.hpp"
 
 
 class cPlayer: public cUIObject

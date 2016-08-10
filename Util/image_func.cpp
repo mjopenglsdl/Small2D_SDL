@@ -24,7 +24,7 @@
 #include <iostream>
 
 #include "image_func.hpp"
-#include "../Core/DisplayManager.hpp"
+#include "DisplayManager.hpp"
 
 
 // load images from file to the SDL_surface memory

@@ -22,13 +22,12 @@
 
 #include "GameManager.hpp"
 #include "DisplayManager.hpp"
-#include "../Util/FontManager.hpp"
+#include "FontManager.hpp"
 #include "IntroState.hpp"
 
-#include "../Util/Logger.hpp"
+#include "Logger.hpp"
 
 #include <SDL2_image/SDL_image.h>
-#include <stdio.h>
 
 /// STATIC
 cGameManager *cGameManager::s_gameManager=nullptr;
@@ -46,7 +45,8 @@ cGameManager *cGameManager::GetInstance()
 
 cGameManager::cGameManager()
 {
-    cLogger::GetInstance()->PrintLog(LogLevel_INFO, "SDL Start init...");
+
+LOG_INFO("SDL Start init...");
 
     SDL_Init( SDL_INIT_EVERYTHING);
 
@@ -65,7 +65,7 @@ cGameManager::~cGameManager()
     IMG_Quit();
     SDL_Quit();
 
-    printf("Exited cleanly\n");
+LOG_INFO("Exited cleanly");
 }
 
 

@@ -21,7 +21,7 @@
 
 
 #include "GameState.hpp"
-#include "../UIObject/UIObject.hpp"
+#include "UIObject.hpp"
 
 cGameState::cGameState()
 {

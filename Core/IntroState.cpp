@@ -21,16 +21,16 @@
 
 
 #include <SDL2/SDL.h>
-#include "../Util/image_func.hpp"
-#include "../Util/FPSManager.hpp"
+#include "image_func.hpp"
+#include "FPSManager.hpp"
 #include "GameManager.hpp"
 #include "DisplayManager.hpp"
 
 #include "IntroState.hpp"
 #include "PlayState.hpp"
 
-#include "../UIObject/Widgets/Button.hpp"
-#include "../UIObject/Widgets/Label.hpp"
+#include "Button.hpp"
+#include "Label.hpp"
 
 #include <iostream>
 #include <vector>

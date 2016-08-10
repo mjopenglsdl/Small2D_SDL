@@ -13,8 +13,15 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-Winvalid-pch" />
+					<Add option='-include &quot;pch.h&quot;' />
 					<Add directory="D:/Libs/SDL2-2.0.4/include/SDL2" />
 					<Add directory="D:/Libs/SDL2-2.0.4/include/" />
+					<Add directory="Util" />
+					<Add directory="Core" />
+					<Add directory="UIObject" />
+					<Add directory="UIObject/Entities" />
+					<Add directory="UIObject/Widgets" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -51,7 +58,6 @@
 		<Unit filename="Core/MenuState.hpp" />
 		<Unit filename="Core/PlayState.cpp" />
 		<Unit filename="Core/PlayState.hpp" />
-		<Unit filename="UIObject/Entities/Creature.hpp" />
 		<Unit filename="UIObject/Entities/Player.cpp" />
 		<Unit filename="UIObject/Entities/Player.hpp" />
 		<Unit filename="UIObject/Entities/Wall.cpp" />
@@ -72,7 +78,10 @@
 		<Unit filename="Util/image_func.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="main.hpp" />
-		<Unit filename="pch.h" />
+		<Unit filename="pch.h">
+			<Option compile="1" />
+			<Option weight="0" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
