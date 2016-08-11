@@ -96,7 +96,7 @@ void cIntroState::OnRender()
 
     ImageFunc::DrawTexture(0, 0, m_tex_bg);
 
-    for (int i=0; i<m_DisplayList.size(); i++) {
+    for (unsigned int i=0; i<m_DisplayList.size(); i++) {
         m_DisplayList[i]->Draw();
     }
 

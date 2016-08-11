@@ -28,6 +28,7 @@ My Short Plans:
 * Graphic improvement
 * Shared pointer
 * makefile and cmake
+* separated engine code
 
 Further Considerations:
 * OpenGL integration

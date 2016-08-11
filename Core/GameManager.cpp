@@ -37,15 +37,15 @@ cGameManager *cGameManager::GetInstance()
     if(nullptr==cGameManager::s_gameManager)
     {
         cGameManager::s_gameManager=new cGameManager();
+        cGameManager::s_gameManager->Init();
     }
     return cGameManager::s_gameManager;
 }
 ////
 
 
-cGameManager::cGameManager()
+int cGameManager::Init()
 {
-
 LOG_INFO("SDL Start init...");
 
     SDL_Init( SDL_INIT_EVERYTHING);
@@ -55,10 +55,11 @@ LOG_INFO("SDL Start init...");
 
     // vari
     m_states.clear();
+
+return 0;
 }
 
-
-cGameManager::~cGameManager()
+void cGameManager::CleanUp()
 {
     cFontManager::GetInstance()->CleanUp();
     cDisplayManager::GetInstance()->ClearRes();
@@ -91,6 +92,8 @@ int cGameManager::Run()
         if (!m_states.empty())
             m_states.back()->OnUpdate();
     }
+
+    this->CleanUp();
 
 return 0;
 }

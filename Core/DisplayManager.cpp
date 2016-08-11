@@ -50,5 +50,3 @@ void cDisplayManager::ClearRes()
     SDL_DestroyWindow(m_window); m_window=nullptr;
 }
 
-
-

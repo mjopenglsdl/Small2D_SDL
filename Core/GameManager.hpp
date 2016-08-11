@@ -32,18 +32,20 @@ you can manage the whole game, do cmd stuffs here
 class cGameManager
 {
     private:
-        cGameManager();
-        ~cGameManager();
-    
+        cGameManager(){};
+        ~cGameManager(){};
+
         std::vector<cGameState*> m_states;
-    
+
     public:
         void PushState(cGameState *state);
         void PopState();
         void ClearStates();
-    
-        int Run();   //NOTE: from main, it enters here
-    
+
+        int Init();
+        int Run();   // From main, it enters here
+        void CleanUp();
+
 
 /// STATIC
 private:

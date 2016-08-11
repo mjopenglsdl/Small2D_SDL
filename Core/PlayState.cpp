@@ -136,7 +136,7 @@ void cPlayState::OnRender()
 
 //    ImageFunc::DrawTexture(0, 0, m_tex_bg);
 
-    for (int i=0; i<m_DisplayList.size(); i++) {
+    for (unsigned int i=0; i<m_DisplayList.size(); i++) {
         m_DisplayList[i]->Draw();
     }
 
@@ -149,7 +149,7 @@ void cPlayState::OnUpdate()
     cFPSManager::GetInstance()->CheckFPS();
 
     m_player->Update(cFPSManager::GetInstance()->m_deltaTime);
-    for (int i=0; i<m_walls.size(); i++) {
+    for (unsigned int i=0; i<m_walls.size(); i++) {
         m_player->CheckCollision(m_walls[i]);
     }
 
