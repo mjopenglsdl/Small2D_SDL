@@ -2,139 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="UIObject\Widgets\Button.hpp" open="0" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1008" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="UIObject\UIObject.hpp" open="0" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="975" topLine="16" />
-		</Cursor>
-	</File>
-	<File name="UIObject\Widgets\Button.cpp" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="991" topLine="2" />
-		</Cursor>
-	</File>
-	<File name="Util\image_func.cpp" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1029" topLine="17" />
-		</Cursor>
-	</File>
-	<File name="Util\image_func.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="pch.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UIObject\Widgets\Label.hpp" open="0" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="206" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Util\Logger.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="930" topLine="17" />
-		</Cursor>
-	</File>
-	<File name="UIObject\Widgets\Label.cpp" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="233" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Core\GameState.hpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="Util\FPSManager.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="928" topLine="39" />
-		</Cursor>
-	</File>
-	<File name="UIObject\Entities\Wall.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1471" topLine="25" />
-		</Cursor>
-	</File>
-	<File name="Core\DisplayManager.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1749" topLine="31" />
-		</Cursor>
-	</File>
-	<File name="Core\IntroState.hpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="18" />
-		</Cursor>
-	</File>
 	<File name="Core\MenuState.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1027" topLine="61" />
-		</Cursor>
-	</File>
-	<File name="Core\GameManager.hpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1479" topLine="26" />
-		</Cursor>
-	</File>
-	<File name="Util\FontManager.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1124" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="UIObject\Entities\Player.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1021" topLine="83" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="960" topLine="4" />
-		</Cursor>
-	</File>
-	<File name="UIObject\Entities\Player.hpp" open="0" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="994" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="Util\FontManager.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="972" topLine="46" />
-		</Cursor>
-	</File>
-	<File name="Core\DisplayManager.hpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1130" topLine="35" />
-		</Cursor>
-	</File>
-	<File name="Core\GameManager.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2088" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Core\IntroState.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2903" topLine="88" />
-		</Cursor>
-	</File>
-	<File name="Core\MenuState.hpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="Core\PlayState.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3922" topLine="135" />
-		</Cursor>
-	</File>
-	<File name="UIObject\Entities\Wall.hpp" open="0" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="990" topLine="8" />
 		</Cursor>
 	</File>
 	<File name="Core\GameState.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -142,9 +12,39 @@
 			<Cursor1 position="985" topLine="14" />
 		</Cursor>
 	</File>
+	<File name="Core\GameState.hpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="24" />
+		</Cursor>
+	</File>
 	<File name="Util\Logger.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1000" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="UIObject\Entities\Player.hpp" open="0" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="994" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="UIObject\Entities\Wall.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1471" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="Core\DisplayManager.hpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1130" topLine="35" />
+		</Cursor>
+	</File>
+	<File name="UIObject\Widgets\Button.cpp" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="991" topLine="2" />
+		</Cursor>
+	</File>
+	<File name="Core\GameManager.hpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1479" topLine="26" />
 		</Cursor>
 	</File>
 	<File name="Core\PlayState.hpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -152,9 +52,109 @@
 			<Cursor1 position="1113" topLine="15" />
 		</Cursor>
 	</File>
+	<File name="UIObject\Entities\Player.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1021" topLine="83" />
+		</Cursor>
+	</File>
 	<File name="UIObject\UIObject.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="969" topLine="23" />
+		</Cursor>
+	</File>
+	<File name="Util\FPSManager.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="928" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="UIObject\Widgets\Button.hpp" open="0" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1008" topLine="13" />
+		</Cursor>
+	</File>
+	<File name="UIObject\Widgets\Label.cpp" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="233" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Util\FontManager.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1468" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="Util\Logger.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="930" topLine="17" />
+		</Cursor>
+	</File>
+	<File name="UIObject\Entities\Wall.hpp" open="0" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="990" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="Core\IntroState.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2903" topLine="88" />
+		</Cursor>
+	</File>
+	<File name="pch.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Core\DisplayManager.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1639" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="Util\FontManager.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1124" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="UIObject\Widgets\Label.hpp" open="0" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="206" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Core\IntroState.hpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="UIObject\UIObject.hpp" open="0" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="975" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="Core\MenuState.hpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="Util\image_func.cpp" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1029" topLine="17" />
+		</Cursor>
+	</File>
+	<File name="Core\PlayState.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3922" topLine="135" />
+		</Cursor>
+	</File>
+	<File name="Util\image_func.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="Core\GameManager.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2088" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="960" topLine="4" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

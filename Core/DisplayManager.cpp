@@ -39,9 +39,9 @@ cDisplayManager *cDisplayManager::GetInstance()
 void cDisplayManager::InitRes()
 {
     m_window=SDL_CreateWindow("Small2D_SDL", 100, 100, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-    if(!m_window){LOG_ERROR("SDL_CreateWindow failed!");}
+    if(!m_window){LOG_ERROR("SDL_CreateWindow() failed!");}
     m_renderer=SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-    if(!m_renderer){LOG_ERROR("SDL_CreateRenderer failed!");}
+    if(!m_renderer){LOG_ERROR("SDL_CreateRenderer() failed!");}
 }
 
 void cDisplayManager::ClearRes()
