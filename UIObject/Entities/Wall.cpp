@@ -22,17 +22,20 @@
 
 #include "Wall.hpp"
 
-#include "image_func.hpp"
 #include "DisplayManager.hpp"
+#include "Texture.hpp"
 
 cWall::cWall()
 {
-    m_tex=ImageFunc::LoadSprites("Images/tile.png");
+    m_tex=new cTexture();
+    m_tex->LoadSprite("Images/tile.png");
 }
 
 cWall::cWall(int xGrid, int yUpGrid)
 {
-    m_tex=ImageFunc::LoadSprites("Images/tile.png");
+    m_tex=new cTexture();
+    m_tex->LoadSprite("Images/tile.png");
+
     m_xGrid=xGrid;
     m_yUpGrid=yUpGrid;
 
@@ -48,5 +51,5 @@ cWall::~cWall()
 
 void cWall::Draw()
 {
-    ImageFunc::DrawTexture(UNIT_X*m_xGrid, UpperGridPositionY(m_yUpGrid) , m_tex);
+    m_tex->Draw(UNIT_X*m_xGrid, UpperGridPositionY(m_yUpGrid));
 }

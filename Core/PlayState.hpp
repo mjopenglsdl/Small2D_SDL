@@ -32,15 +32,16 @@ cGameState->cPlayState
 
 class cPlayer;
 class cWall;
+class cTexture;
 
 class cPlayState:public cGameState
 {
     //core members
     private:
-        SDL_Texture* m_tex_bg;
+        cTexture* m_tex_bg;
 
     //other members
-    
+
     private:
         std::vector<cWall *> m_walls;
         cPlayer *m_player;
@@ -48,7 +49,7 @@ class cPlayState:public cGameState
     public:
         cPlayState();
         ~cPlayState();
-    
+
     public:
          void OnEvent();
          void OnRender();

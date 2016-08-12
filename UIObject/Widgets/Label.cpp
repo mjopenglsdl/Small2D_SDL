@@ -8,9 +8,8 @@
 
 #include "Label.hpp"
 
-#include "../../Util/FontManager.hpp"
-#include "../../Util/image_func.hpp"
-
+#include "FontManager.hpp"
+#include "Texture.hpp"
 
 cLabel::cLabel(int x, int y)
 {
@@ -19,8 +18,8 @@ cLabel::cLabel(int x, int y)
     m_width=160;
     m_height=30;
 
-    m_tex=NULL;
-    m_tex=cFontManager::GetInstance()->GetTextureText("Hello World");
+    m_tex=new cTexture();
+    m_tex->m_tex=cFontManager::GetInstance()->GetTextureText("Hello World");
 }
 
 cLabel::~cLabel()
@@ -32,5 +31,5 @@ cLabel::~cLabel()
 /// virtual
 void cLabel::Draw()
 {
-    ImageFunc::DrawTexture(m_x, m_y, m_tex);
+    m_tex->Draw(m_x, m_y);
 }

@@ -21,7 +21,6 @@
 
 
 #include <SDL2/SDL.h>
-#include "image_func.hpp"
 #include "FPSManager.hpp"
 #include "GameManager.hpp"
 #include "DisplayManager.hpp"
@@ -31,13 +30,14 @@
 
 #include "Button.hpp"
 #include "Label.hpp"
+#include "Texture.hpp"
 
-#include <iostream>
 #include <vector>
 
 cIntroState::cIntroState()
 {
-    m_tex_bg=ImageFunc::LoadSprites("Images/intro.png");
+    m_tex_bg=new cTexture();
+    m_tex_bg->LoadSprite("Images/intro.png");
 
     cFPSManager::GetInstance()->StartCount();
 
@@ -53,7 +53,7 @@ cIntroState::cIntroState()
 
 cIntroState::~cIntroState()
 {
-    SDL_DestroyTexture(m_tex_bg);
+    delete m_tex_bg;
 }
 
 
@@ -94,7 +94,7 @@ void cIntroState::OnRender()
 {
     SDL_RenderClear(cDisplayManager::GetInstance()->GetRenderer());
 
-    ImageFunc::DrawTexture(0, 0, m_tex_bg);
+    m_tex_bg->Draw(0, 0);
 
     for (unsigned int i=0; i<m_DisplayList.size(); i++) {
         m_DisplayList[i]->Draw();

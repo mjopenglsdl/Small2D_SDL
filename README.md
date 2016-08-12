@@ -2,9 +2,10 @@ Small SDL 2D Game Framework (C++)
 ===========
 
 A small C++ 2D framework with SDL2 library.
-I started this project in 2011 and the origin purpose is to make an easy-to-use framework for fast game development in desktop environment.
+I started this project in 2011 and the origin purpose is to make an easy-to-use framework for fast game development in desktop environment. 
+I will make the code simple with minimal use of external libraries.
 
-I have added support for both Windows<**Code::Block**> and Mac_OSX<**xCode**>.
+Currently I have added support for both Windows<**Code::Block**> and Mac_OSX<**xCode**>. The better way to make it would be using **cmake** which I will integrate in furture releases.
 
 Library that you will need in order to compile & link:
 * SDL2: https://www.libsdl.org/download-2.0.php
@@ -29,9 +30,11 @@ My Short Plans:
 * Shared pointer
 * makefile and cmake
 * separated engine code
+* Doxygen comments 
 
 Further Considerations:
 * OpenGL integration
+* Unit Tests
 
 I hope this will help you learn the basic ideas behind game development.
 Any support would be highly appreciated :-)

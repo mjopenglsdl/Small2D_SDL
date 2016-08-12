@@ -30,17 +30,18 @@ cGameState->cIntroState
 
 class cButton;
 class cLabel;
+class cTexture;
+
 class cIntroState:public cGameState
 {
     private:
-        SDL_Texture* m_tex_bg;      //abbrev: member-surface-background
+        cTexture* m_tex_bg;      //abbrev: member-surface-background
         cButton *m_btnStart;
         cLabel *m_lblHello;
 
     public:
         cIntroState();
         ~cIntroState();
-    
 
     public:
          void OnEvent();

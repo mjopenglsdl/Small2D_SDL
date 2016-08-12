@@ -22,12 +22,10 @@
 
 #include "UIObject.hpp"
 #include "Player.hpp"
+#include "Texture.hpp"
 
-#include "image_func.hpp"
 #include "DisplayManager.hpp"
 
-#include <iostream>
-using namespace std;
 
 cPlayer::cPlayer()
 {
@@ -36,7 +34,9 @@ cPlayer::cPlayer()
 
     m_jumpVelocity=0;
 
-    m_tex=ImageFunc::LoadSprites("Images/teddy.png",true,255,0,0);
+    m_tex=new cTexture();
+    m_tex->LoadSprite("Images/teddy.png",true,255,0,0);
+
     m_x=0;
     m_y=m_baseHeight;
 
@@ -55,7 +55,7 @@ cPlayer::~cPlayer()
 
 void cPlayer::Draw()
 {
-    ImageFunc::DrawTexture(m_x, m_y, m_tex);
+    m_tex->Draw(m_x, m_y);
 }
 
 void cPlayer::Update(int deltaTime)
@@ -92,7 +92,6 @@ void cPlayer::CheckCollision(cUIObject *obj)
     int objLeft=obj->m_x;
     int objRight=obj->m_x+PLAYER_WIDTH;
 
-//    cout<<selfRight<<endl;
 
     // fix y axis, check x axis
     if (!(selfBtm<=objTop || selfTop >objBtm)) {

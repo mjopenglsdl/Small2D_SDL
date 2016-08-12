@@ -31,15 +31,17 @@ cGameState->cMenuState
 #include "GameState.hpp"
 #include<SDL2/SDL.h>
 
+class cTexture;
+
 class cMenuState:public cGameState
 {
     private:
-        SDL_Texture* m_tex_bg;
+        cTexture* m_tex_bg;
 
     public:
         cMenuState();
         ~cMenuState();
-    
+
     public:
          void OnEvent();
          void OnRender();

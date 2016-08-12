@@ -75,8 +75,8 @@
 		<Unit filename="Util/FontManager.hpp" />
 		<Unit filename="Util/Logger.cpp" />
 		<Unit filename="Util/Logger.hpp" />
-		<Unit filename="Util/image_func.cpp" />
-		<Unit filename="Util/image_func.hpp" />
+		<Unit filename="Util/Texture.cpp" />
+		<Unit filename="Util/Texture.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="main.hpp" />
 		<Unit filename="pch.h">

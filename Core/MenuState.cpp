@@ -21,23 +21,26 @@
 
 
 #include "MenuState.hpp"
-#include "image_func.hpp"
 
 #include "GameManager.hpp"
 #include "FPSManager.hpp"
 #include "DisplayManager.hpp"
 
+#include "Texture.hpp"
+
 
 cMenuState::cMenuState()
 {
-    m_tex_bg=ImageFunc::LoadSprites("Images/menu.png");
+    m_tex_bg=new cTexture();
+    m_tex_bg->LoadSprite("Images/menu.png");
+
     cFPSManager::GetInstance()->StartCount();
 }
 
 
  cMenuState::~cMenuState()
 {
-    SDL_DestroyTexture(m_tex_bg);
+    delete m_tex_bg;
 }
 
 
@@ -67,7 +70,7 @@ void cMenuState::OnRender()
 {
     SDL_RenderClear(cDisplayManager::GetInstance()->GetRenderer());
 
-    ImageFunc::DrawTexture(0, 0, m_tex_bg);
+    m_tex_bg->Draw(0,0);
 
     SDL_RenderPresent(cDisplayManager::GetInstance()->GetRenderer());
 }

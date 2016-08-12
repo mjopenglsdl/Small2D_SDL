@@ -20,7 +20,7 @@
  */
 
 #include "Button.hpp"
-#include "../../Util/image_func.hpp"
+#include "Texture.hpp"
 
 cButton::cButton(int x, int y)
 {
@@ -29,7 +29,8 @@ cButton::cButton(int x, int y)
     m_width=160;
     m_height=30;
 
-    m_tex=ImageFunc::LoadSprites("Images/btn.png",true,255,0,0);
+    m_tex=new cTexture();
+    m_tex->LoadSprite("Images/btn.png",true,255,0,0);
 }
 
 cButton::~cButton()
@@ -55,6 +56,6 @@ bool cButton::IsClicked(int x, int y)
 /// virtual
 void cButton::Draw()
 {
-    ImageFunc::DrawTexture(m_x, m_y, m_tex);
+    m_tex->Draw(m_x, m_y);
 }
 

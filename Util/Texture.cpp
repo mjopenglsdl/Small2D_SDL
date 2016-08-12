@@ -21,35 +21,44 @@
 
 
 #include <SDL2_image/SDL_image.h>
-#include <iostream>
-
-#include "image_func.hpp"
 #include "DisplayManager.hpp"
+#include "Texture.hpp"
 
 
-// load images from file to the SDL_surface memory
-SDL_Texture* ImageFunc::LoadSprites(const char* filemame,bool alpha,int r, int g, int b)
+/// constr
+cTexture::cTexture()
 {
-    SDL_Texture *tex=IMG_LoadTexture(cDisplayManager::GetInstance()->GetRenderer(), filemame);
+    m_tex=nullptr;
+}
 
-    if (!tex) {
-        std::cout <<  " error: " << SDL_GetError() << std::endl;
-    }
+cTexture::~cTexture()
+{
+    SDL_DestroyTexture(m_tex);
+}
+///
+
+
+void cTexture::LoadSprite(const char* filemame, bool alpha, int r, int g, int b)
+{
+      SDL_Texture *tex=IMG_LoadTexture(cDisplayManager::GetInstance()->GetRenderer(), filemame);
+
+      if(!tex)
+      {
+        LOG_ERROR("IMG_LoadTexture() fail");
+      }
 
         if(alpha)
         {
 //            SDL_SetColorKey( new_image, SDL_SRCCOLORKEY, SDL_MapRGB( new_image->format,r, g,b ) );
         }
 
-        return tex;
+         m_tex=tex;
 }
 
-
-
-int ImageFunc::DrawTexture(int dx, int dy, SDL_Texture*tex, bool clip,int cx, int cy,int cw, int ch)
+int cTexture::Draw(int dx, int dy, bool clip,int cx, int cy,int cw, int ch)
 {
     int w,h;
-    SDL_QueryTexture(tex, 0, 0, &w, &h);
+    SDL_QueryTexture(m_tex, 0, 0, &w, &h);
 
         SDL_Rect rc_d;
         rc_d.x=dx;
@@ -65,13 +74,12 @@ int ImageFunc::DrawTexture(int dx, int dy, SDL_Texture*tex, bool clip,int cx, in
             rc_s.y=cy;
             rc_s.w=cw;
             rc_s.h=ch;
-            SDL_RenderCopy(cDisplayManager::GetInstance()->GetRenderer() , tex, &rc_s, &rc_d);
+            SDL_RenderCopy(cDisplayManager::GetInstance()->GetRenderer() , m_tex, &rc_s, &rc_d);
         }
 
         else{
-            SDL_RenderCopy(cDisplayManager::GetInstance()->GetRenderer() , tex, 0, &rc_d);
+            SDL_RenderCopy(cDisplayManager::GetInstance()->GetRenderer() , m_tex, 0, &rc_d);
         }
 
         return 0;
 }
-

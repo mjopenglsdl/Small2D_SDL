@@ -20,22 +20,23 @@
  */
 
 
-#ifndef _IMAGE_FUNC_HPP_
-    #define _IMAGE_FUNC_HPP_
+#ifndef _TEXTURE_HPP_
+    #define _TEXTURE_HPP_
 
 #include<SDL2/SDL.h>
 
-namespace ImageFunc
+class cTexture
 {
+public:
+    cTexture();
+    ~cTexture();
 
-SDL_Texture* LoadSprites(const char* filemame,bool alpha=false,
-                         int r=0, int g=0, int b=0);
+    void LoadSprite(const char* filemame, bool alpha=false, int r=0, int g=0, int b=0);
+    int Draw(int dx, int dy, bool clip=false, int cx=0, int cy=0,int cw=0, int ch=0);
 
-int DrawTexture(int dx, int dy, SDL_Texture*tex,
-                bool clip=false,int cx=0, int cy=0,int cw=0, int ch=0);
-
-}
-
+public:
+    SDL_Texture *m_tex;
+};
 
 
 #endif

@@ -39,6 +39,6 @@ cUIObject::cUIObject()
 cUIObject::~cUIObject()
 {
     if (m_tex) {
-        SDL_DestroyTexture(m_tex);
+        delete m_tex;
     }
 }

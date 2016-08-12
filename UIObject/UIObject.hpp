@@ -27,6 +27,8 @@
 
 #define GRAVITY 2
 
+class cTexture;
+
 class cUIObject
 {
   protected:
@@ -39,25 +41,25 @@ class cUIObject
     int m_y;
     int m_width;
     int m_height;
-    
+
     // util
     // let Y axis towards upper
     int UpperGridPositionY(int gridNum);
-    
+
 public:
     cUIObject();
     virtual ~cUIObject();
-    
+
 public:
     //x position= xGrid*xScale;
         static const int UNIT_X=32;
         static const int UNIT_Y=32;
 
-        SDL_Texture *m_tex;
-    
+        cTexture *m_tex;
+
     public:
         virtual void Draw()=0;
-    
+
     friend class cPlayer;
 };
 
