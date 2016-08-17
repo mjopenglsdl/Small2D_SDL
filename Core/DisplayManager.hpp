@@ -44,8 +44,8 @@ class cDisplayManager
         void InitRes();
         void ClearRes();
 
-    SDL_Renderer *GetRenderer(){return m_renderer;}
-    SDL_Window *GetWindow(){return m_window;}
+    SDL_Renderer *GetRenderer() const {return m_renderer;}
+    SDL_Window *GetWindow() const {return m_window;}
 
 /// STATIC
 private:

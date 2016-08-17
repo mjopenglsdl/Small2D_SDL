@@ -2,7 +2,7 @@
 1470900959 source:c:\users\mj\documents\github\small2d_sdl\core\displaymanager.cpp
 	"DisplayManager.hpp"
 
-1470900788 c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp
+1471417670 c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp
 	<SDL2/SDL.h>
 	"UIObject.hpp"
 

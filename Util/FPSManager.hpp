@@ -31,7 +31,7 @@ class cFPSManager
         int m_time_per_frame;
         cFPSManager(int fps){m_time_per_frame=1000/fps;}
         ~cFPSManager(){};
-    
+
     public:
         int m_deltaTime;
 
@@ -39,15 +39,14 @@ class cFPSManager
         void StartCount();
         void CheckFPS();
         void GetNewTick();
-    
+
     /// static
 public:
     static cFPSManager *GetInstance();
-    
+
 private:
     static cFPSManager *s_FPSManager;
     static const int DEFAULT_FPS_COUNT=60;
-    
 };
 
 
