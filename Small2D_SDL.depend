@@ -2,7 +2,7 @@
 1470900959 source:c:\users\mj\documents\github\small2d_sdl\core\displaymanager.cpp
 	"DisplayManager.hpp"
 
-1471417670 c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp
+1471418118 c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp
 	<SDL2/SDL.h>
 	"UIObject.hpp"
 
@@ -346,7 +346,7 @@
 1469708676 c:\users\mj\documents\github\small2d_sdl\util\image_func.hpp
 	<SDL2/SDL.h>
 
-1470900791 c:\users\mj\documents\github\small2d_sdl\util\fpsmanager.hpp
+1471418087 c:\users\mj\documents\github\small2d_sdl\util\fpsmanager.hpp
 
 1470900788 c:\users\mj\documents\github\small2d_sdl\core\gamemanager.hpp
 	<vector>
@@ -359,7 +359,7 @@
 	<vector>
 	"GameState.hpp"
 
-1470900791 c:\users\mj\documents\github\small2d_sdl\uiobject\widgets\button.hpp
+1471418347 c:\users\mj\documents\github\small2d_sdl\uiobject\widgets\button.hpp
 	<SDL2/SDL.h>
 	"UIObject.hpp"
 
@@ -378,7 +378,7 @@
 	"GameState.hpp"
 	<SDL2/SDL.h>
 
-1470986313 source:c:\users\mj\documents\github\small2d_sdl\core\playstate.cpp
+1471420508 source:c:\users\mj\documents\github\small2d_sdl\core\playstate.cpp
 	"DisplayManager.hpp"
 	"PlayState.hpp"
 	"MenuState.hpp"
@@ -386,8 +386,7 @@
 	"GameManager.hpp"
 	"Wall.hpp"
 	"Player.hpp"
-	"../UIObject/UIObject.hpp"
-	<iostream>
+	"UIObject.hpp"
 
 1470900791 c:\users\mj\documents\github\small2d_sdl\uiobject\entities\wall.hpp
 	"UIObject.hpp"
@@ -404,7 +403,7 @@
 	"UIObject.hpp"
 	"DisplayManager.hpp"
 
-1470986959 source:c:\users\mj\documents\github\small2d_sdl\uiobject\widgets\button.cpp
+1471418360 source:c:\users\mj\documents\github\small2d_sdl\uiobject\widgets\button.cpp
 	"Button.hpp"
 	"Texture.hpp"
 
@@ -456,7 +455,7 @@
 	"Logger.hpp"
 	<SDL2_image/SDL_image.h>
 
-1470986927 source:c:\users\mj\documents\github\small2d_sdl\uiobject\entities\player.cpp
+1471421639 source:c:\users\mj\documents\github\small2d_sdl\uiobject\entities\player.cpp
 	"UIObject.hpp"
 	"Player.hpp"
 	"Texture.hpp"

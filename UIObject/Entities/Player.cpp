@@ -29,7 +29,7 @@
 
 cPlayer::cPlayer()
 {
-    m_baseHeight=UpperGridPositionY(2);     //  base height h=0
+    m_baseHeight=UpperGridPositionY(3);     //  base height h=0
     m_bJump=false;
 
     m_jumpVelocity=0;
@@ -60,12 +60,26 @@ void cPlayer::Draw()
 
 void cPlayer::Update(int deltaTime)
 {
+/// X
     m_x+=m_xVel;
-    m_y+=m_yVel;
 
     if(m_x<0 || m_x+ PLAYER_WIDTH>cDisplayManager::SCREEN_WIDTH || m_bCollided_X)
     {
         m_x-=m_xVel;
+    }
+
+
+/// Y
+    if(m_bJump)
+    {
+        m_yVel+=GRAVITY*2;
+    }
+
+    m_y+=m_yVel;
+
+    if(m_y<0 || m_y+ PLAYER_WIDTH>cDisplayManager::SCREEN_HEIGHT || m_bCollided_Y)
+    {
+        m_y-=m_yVel;
     }
 
     // reset
@@ -77,6 +91,7 @@ void cPlayer::Update(int deltaTime)
 // util
 void cPlayer::Jump()
 {
+    m_yVel=-JUMP_VELO_INIT;
     m_bJump=true;
 }
 
@@ -100,4 +115,10 @@ void cPlayer::CheckCollision(cUIObject *obj)
         }
     }
 
+    // fix x axis, check y axis
+    if (!(selfRight<=objLeft || selfLeft >objRight)) {
+        if (!(selfTop+m_yVel>objBtm || selfBtm+m_yVel<objTop)) {
+            m_bCollided_Y=true;
+        }
+    }
 }

@@ -32,7 +32,7 @@ public:
     cButton(int x, int y);
     ~cButton();
 
-    bool IsClicked const(int x, int y);
+    bool IsClicked(int x, int y) const;
 
 public:
 

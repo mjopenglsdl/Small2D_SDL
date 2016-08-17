@@ -28,10 +28,8 @@
 #include "Wall.hpp"
 #include "Player.hpp"
 
-#include "../UIObject/UIObject.hpp"
+#include "UIObject.hpp"
 
-
-#include <iostream>
 
 cPlayState::cPlayState()
 {

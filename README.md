@@ -16,21 +16,22 @@ Library that you will need in order to compile & link:
 
 The current features include:
 * Concise code
-* 3 game states 
+* 3 stack-based game states 
 * Move the player
 * Basic collision detection
 * Basic UI widgets: button, label
 
 My Short Plans:
 * MVC architecture
-* Player jump
 * Lua Integration
 * XML based configuration file and loading
 * Graphic improvement
 * Shared pointer
-* makefile and cmake
-* separated engine code
+* Makefile and cmake
+* Separated engine code
 * Doxygen comments 
+* Optimize player jump
+* Delta-time based timing
 
 Further Considerations:
 * OpenGL integration

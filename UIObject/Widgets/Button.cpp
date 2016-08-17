@@ -39,7 +39,7 @@ cButton::~cButton()
 }
 
 
-bool cButton::IsClicked(int x, int y)
+bool cButton::IsClicked(int x, int y) const
 {
     if(x>=m_x&&x<=(m_x+m_width)
        &&y>=m_y&&y<=(m_y+m_height))
