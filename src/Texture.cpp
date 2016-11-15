@@ -23,7 +23,7 @@
 #include <SDL2_image/SDL_image.h>
 #include "DisplayManager.hpp"
 #include "Texture.hpp"
-
+#include "Logger.hpp"
 
 /// constr
 cTexture::cTexture()

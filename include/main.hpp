@@ -23,9 +23,10 @@
 #ifndef _MAIN_HPP_
     #define _MAIN_HPP_
 
-//  put related headers together here
-
-
+//#if defined(__WIN32__)
+// for MSVC
+#include <SDL2/SDL_main.h>
+//#endif
 
 #endif
 

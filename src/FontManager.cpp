@@ -22,6 +22,7 @@
 
 #include "FontManager.hpp"
 #include "DisplayManager.hpp"
+#include "Logger.hpp"
 
 
 /// STATIC

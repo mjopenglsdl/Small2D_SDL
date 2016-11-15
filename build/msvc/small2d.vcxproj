@@ -18,6 +18,42 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Button.cpp" />
+    <ClCompile Include="..\..\src\DisplayManager.cpp" />
+    <ClCompile Include="..\..\src\FontManager.cpp" />
+    <ClCompile Include="..\..\src\FPSManager.cpp" />
+    <ClCompile Include="..\..\src\GameManager.cpp" />
+    <ClCompile Include="..\..\src\GameState.cpp" />
+    <ClCompile Include="..\..\src\IntroState.cpp" />
+    <ClCompile Include="..\..\src\Label.cpp" />
+    <ClCompile Include="..\..\src\Logger.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\MenuState.cpp" />
+    <ClCompile Include="..\..\src\Player.cpp" />
+    <ClCompile Include="..\..\src\PlayState.cpp" />
+    <ClCompile Include="..\..\src\Texture.cpp" />
+    <ClCompile Include="..\..\src\UIObject.cpp" />
+    <ClCompile Include="..\..\src\Wall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\Button.hpp" />
+    <ClInclude Include="..\..\include\DisplayManager.hpp" />
+    <ClInclude Include="..\..\include\FontManager.hpp" />
+    <ClInclude Include="..\..\include\FPSManager.hpp" />
+    <ClInclude Include="..\..\include\GameManager.hpp" />
+    <ClInclude Include="..\..\include\GameState.hpp" />
+    <ClInclude Include="..\..\include\IntroState.hpp" />
+    <ClInclude Include="..\..\include\Label.hpp" />
+    <ClInclude Include="..\..\include\Logger.hpp" />
+    <ClInclude Include="..\..\include\main.hpp" />
+    <ClInclude Include="..\..\include\MenuState.hpp" />
+    <ClInclude Include="..\..\include\Player.hpp" />
+    <ClInclude Include="..\..\include\PlayState.hpp" />
+    <ClInclude Include="..\..\include\Texture.hpp" />
+    <ClInclude Include="..\..\include\UIObject.hpp" />
+    <ClInclude Include="..\..\include\Wall.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8F7ECB1F-8703-4102-A141-1C42F01A1DC7}</ProjectGuid>
     <RootNamespace>Project1</RootNamespace>
@@ -70,8 +106,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\mj\Documents\GitHub\Small2D_SDL\ThirdParty\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\mj\Documents\GitHub\Small2D_SDL\ThirdParty\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\..\ThirdParty\include\SDL2;$(ProjectDir)..\..\include;$(ProjectDir)..\..\ThirdParty\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\ThirdParty\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -79,6 +115,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -113,40 +153,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Core\DisplayManager.cpp" />
-    <ClCompile Include="Core\GameManager.cpp" />
-    <ClCompile Include="Core\GameState.cpp" />
-    <ClCompile Include="Core\IntroState.cpp" />
-    <ClCompile Include="Core\MenuState.cpp" />
-    <ClCompile Include="Core\PlayState.cpp" />
-    <ClCompile Include="UIObject\Button.cpp" />
-    <ClCompile Include="UIObject\Label.cpp" />
-    <ClCompile Include="UIObject\Player.cpp" />
-    <ClCompile Include="UIObject\UIObject.cpp" />
-    <ClCompile Include="UIObject\Wall.cpp" />
-    <ClCompile Include="Util\FontManager.cpp" />
-    <ClCompile Include="Util\FPSManager.cpp" />
-    <ClCompile Include="Util\Logger.cpp" />
-    <ClCompile Include="Util\Texture.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Core\DisplayManager.hpp" />
-    <ClInclude Include="Core\GameManager.hpp" />
-    <ClInclude Include="Core\GameState.hpp" />
-    <ClInclude Include="Core\IntroState.hpp" />
-    <ClInclude Include="Core\MenuState.hpp" />
-    <ClInclude Include="Core\PlayState.hpp" />
-    <ClInclude Include="UIObject\Button.hpp" />
-    <ClInclude Include="UIObject\Label.hpp" />
-    <ClInclude Include="UIObject\Player.hpp" />
-    <ClInclude Include="UIObject\UIObject.hpp" />
-    <ClInclude Include="UIObject\Wall.hpp" />
-    <ClInclude Include="Util\FontManager.hpp" />
-    <ClInclude Include="Util\FPSManager.hpp" />
-    <ClInclude Include="Util\Logger.hpp" />
-    <ClInclude Include="Util\Texture.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
