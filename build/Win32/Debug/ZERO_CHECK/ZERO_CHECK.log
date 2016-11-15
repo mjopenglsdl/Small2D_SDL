@@ -1,9 +1,0 @@
-﻿  Checking Build System
-  CMake is re-running because C:/Users/mj/Documents/GitHub/Small2D_SDL/build/CMakeFiles/generate.stamp is out-of-date.
-    the file 'C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt'
-    is newer than 'C:/Users/mj/Documents/GitHub/Small2D_SDL/build/CMakeFiles/generate.stamp.depend'
-    result='-1'
-  -- Found SDL2_ttf: C:/Users/mj/Documents/GitHub/Small2D_SDL/deps/lib/SDL2_ttf.lib  
-  -- Configuring done
-  -- Generating done
-  -- Build files have been written to: C:/Users/mj/Documents/GitHub/Small2D_SDL/build
