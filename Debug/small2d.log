@@ -1,0 +1,27 @@
+﻿  Texture.cpp
+c:\users\mj\documents\github\small2d_sdl\thirdparty\include\sdl2_image\sdl_image.h(27): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  FontManager.cpp
+c:\users\mj\documents\github\small2d_sdl\thirdparty\include\sdl2_ttf\sdl_ttf.h(34): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Wall.cpp
+c:\users\mj\documents\github\small2d_sdl\uiobject\wall.cpp(25): fatal error C1083: Cannot open include file: 'DisplayManager.hpp': No such file or directory
+  UIObject.cpp
+c:\users\mj\documents\github\small2d_sdl\uiobject\uiobject.cpp(24): fatal error C1083: Cannot open include file: 'DisplayManager.hpp': No such file or directory
+  Player.cpp
+c:\users\mj\documents\github\small2d_sdl\uiobject\player.cpp(25): fatal error C1083: Cannot open include file: 'Texture.hpp': No such file or directory
+  Label.cpp
+c:\users\mj\documents\github\small2d_sdl\uiobject\label.cpp(11): fatal error C1083: Cannot open include file: 'FontManager.hpp': No such file or directory
+  Button.cpp
+c:\users\mj\documents\github\small2d_sdl\uiobject\button.cpp(23): fatal error C1083: Cannot open include file: 'Texture.hpp': No such file or directory
+  PlayState.cpp
+c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp(31): fatal error C1083: Cannot open include file: 'UIObject.hpp': No such file or directory
+  MenuState.cpp
+c:\users\mj\documents\github\small2d_sdl\core\menustate.cpp(26): fatal error C1083: Cannot open include file: 'FPSManager.hpp': No such file or directory
+  IntroState.cpp
+c:\users\mj\documents\github\small2d_sdl\core\introstate.cpp(24): fatal error C1083: Cannot open include file: 'FPSManager.hpp': No such file or directory
+  GameState.cpp
+c:\users\mj\documents\github\small2d_sdl\core\gamestate.cpp(24): fatal error C1083: Cannot open include file: 'UIObject.hpp': No such file or directory
+  GameManager.cpp
+c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp(31): fatal error C1083: Cannot open include file: 'UIObject.hpp': No such file or directory
+  DisplayManager.cpp
+c:\users\mj\documents\github\small2d_sdl\core\displaymanager.hpp(31): fatal error C1083: Cannot open include file: 'UIObject.hpp': No such file or directory
+  Generating Code...

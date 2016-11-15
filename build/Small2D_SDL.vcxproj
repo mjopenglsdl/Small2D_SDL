@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{620C966D-855B-3282-998B-54D4E03CE78E}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>Small2D_SDL</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\mj\Documents\GitHub\Small2D_SDL\build\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Small2D_SDL.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Small2D_SDL</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\mj\Documents\GitHub\Small2D_SDL\build\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Small2D_SDL.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Small2D_SDL</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\mj\Documents\GitHub\Small2D_SDL\build\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Small2D_SDL.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Small2D_SDL</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\mj\Documents\GitHub\Small2D_SDL\build\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Small2D_SDL.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Small2D_SDL</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mj/Documents/GitHub/Small2D_SDL/build/Debug/Small2D_SDL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/mj/Documents/GitHub/Small2D_SDL/build/Debug/Small2D_SDL.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mj/Documents/GitHub/Small2D_SDL/build/Release/Small2D_SDL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/mj/Documents/GitHub/Small2D_SDL/build/Release/Small2D_SDL.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mj/Documents/GitHub/Small2D_SDL/build/MinSizeRel/Small2D_SDL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/mj/Documents/GitHub/Small2D_SDL/build/MinSizeRel/Small2D_SDL.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mj/Documents/GitHub/Small2D_SDL/build/RelWithDebInfo/Small2D_SDL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/mj/Documents/GitHub/Small2D_SDL/build/RelWithDebInfo/Small2D_SDL.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\Dev\CMake\bin\cmake.exe -HC:/Users/mj/Documents/GitHub/Small2D_SDL -BC:/Users/mj/Documents/GitHub/Small2D_SDL/build --check-stamp-file C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeSystem.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeCCompiler.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeCXXCompiler.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeRCCompiler.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeModules\FindSDL2.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindThreads.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeModules\FindSDL2_ttf.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\Dev\CMake\bin\cmake.exe -HC:/Users/mj/Documents/GitHub/Small2D_SDL -BC:/Users/mj/Documents/GitHub/Small2D_SDL/build --check-stamp-file C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeSystem.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeCCompiler.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeCXXCompiler.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeRCCompiler.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeModules\FindSDL2.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindThreads.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeModules\FindSDL2_ttf.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+D:\Dev\CMake\bin\cmake.exe -HC:/Users/mj/Documents/GitHub/Small2D_SDL -BC:/Users/mj/Documents/GitHub/Small2D_SDL/build --check-stamp-file C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeSystem.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeCCompiler.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeCXXCompiler.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeRCCompiler.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeModules\FindSDL2.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindThreads.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeModules\FindSDL2_ttf.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+D:\Dev\CMake\bin\cmake.exe -HC:/Users/mj/Documents/GitHub/Small2D_SDL -BC:/Users/mj/Documents/GitHub/Small2D_SDL/build --check-stamp-file C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/mj/Documents/GitHub/Small2D_SDL/CMakeLists.txt;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeSystem.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeCCompiler.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeCXXCompiler.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\3.6.1\CMakeRCCompiler.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeModules\FindSDL2.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindThreads.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeModules\FindSDL2_ttf.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;D:\Dev\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\mj\Documents\GitHub\Small2D_SDL\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\mj\Documents\GitHub\Small2D_SDL\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\Core\DisplayManager.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\Core\GameManager.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\Core\GameState.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\Core\IntroState.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\Core\MenuState.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\Core\PlayState.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\UIObject\UIObject.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\UIObject\Entities\Player.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\UIObject\Entities\Wall.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\UIObject\Widgets\Button.cpp"  />
+    <ClCompile Include="C:\Users\mj\Documents\GitHub\Small2D_SDL\UIObject\Widgets\Label.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/mj/Documents/GitHub/Small2D_SDL/build/ZERO_CHECK.vcxproj">
+      <Project>FD7DE100-C497-3AB1-BE30-AF0B875E4D1B</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

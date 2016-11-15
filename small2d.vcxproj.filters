@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{8c5b6477-6291-4977-a828-f8761e93c158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UIObject">
+      <UniqueIdentifier>{18f84c69-e7be-40a9-99ef-0a6a6fb5c711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{4b22d182-c800-4191-8826-9858563c7997}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\DisplayManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GameManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GameState.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\IntroState.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\MenuState.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\PlayState.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject\Button.cpp">
+      <Filter>UIObject</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject\Label.cpp">
+      <Filter>UIObject</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject\Player.cpp">
+      <Filter>UIObject</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject\UIObject.cpp">
+      <Filter>UIObject</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject\Wall.cpp">
+      <Filter>UIObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\FontManager.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\FPSManager.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Logger.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Texture.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\DisplayManager.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GameManager.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GameState.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\IntroState.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\MenuState.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\PlayState.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObject\Button.hpp">
+      <Filter>UIObject</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObject\Label.hpp">
+      <Filter>UIObject</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObject\Player.hpp">
+      <Filter>UIObject</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObject\UIObject.hpp">
+      <Filter>UIObject</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObject\Wall.hpp">
+      <Filter>UIObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\FontManager.hpp">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\FPSManager.hpp">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Logger.hpp">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Texture.hpp">
+      <Filter>Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
