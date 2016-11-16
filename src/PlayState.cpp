@@ -33,7 +33,7 @@
 
 cPlayState::cPlayState()
 {
-//m_tex_bg=ImageFunc::LoadSprites("Images/play.png");
+//m_tex_bg=ImageFunc::LoadSprites("./data/Images/play.png");
 
 //init other members
     m_walls.clear();

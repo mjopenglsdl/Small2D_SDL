@@ -32,7 +32,7 @@
 cMenuState::cMenuState()
 {
     m_tex_bg=new cTexture();
-    m_tex_bg->LoadSprite("Images/menu.png");
+    m_tex_bg->LoadSprite("./data/Images/menu.png");
 
     cFPSManager::GetInstance()->StartCount();
 }

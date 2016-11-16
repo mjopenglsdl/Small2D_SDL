@@ -30,7 +30,7 @@ cButton::cButton(int x, int y)
     m_height=30;
 
     m_tex=new cTexture();
-    m_tex->LoadSprite("Images/btn.png",true,255,0,0);
+    m_tex->LoadSprite("./data/Images/btn.png",true,255,0,0);
 }
 
 cButton::~cButton()

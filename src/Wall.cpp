@@ -28,13 +28,13 @@
 cWall::cWall()
 {
     m_tex=new cTexture();
-    m_tex->LoadSprite("Images/tile.png");
+    m_tex->LoadSprite("./data/Images/tile.png");
 }
 
 cWall::cWall(int xGrid, int yUpGrid)
 {
     m_tex=new cTexture();
-    m_tex->LoadSprite("Images/tile.png");
+    m_tex->LoadSprite("./data/Images/tile.png");
 
     m_xGrid=xGrid;
     m_yUpGrid=yUpGrid;

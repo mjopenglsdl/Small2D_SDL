@@ -37,7 +37,7 @@
 cIntroState::cIntroState()
 {
     m_tex_bg=new cTexture();
-    m_tex_bg->LoadSprite("Images/intro.png");
+    m_tex_bg->LoadSprite("data/Images/intro.png");
 
     cFPSManager::GetInstance()->StartCount();
 

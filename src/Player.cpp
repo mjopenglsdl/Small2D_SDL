@@ -35,7 +35,7 @@ cPlayer::cPlayer()
     m_jumpVelocity=0;
 
     m_tex=new cTexture();
-    m_tex->LoadSprite("Images/teddy.png",true,255,0,0);
+    m_tex->LoadSprite("./data/Images/teddy.png",true,255,0,0);
 
     m_x=0;
     m_y=m_baseHeight;

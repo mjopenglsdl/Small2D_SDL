@@ -44,7 +44,7 @@ cFontManager *cFontManager::GetInstance()
 cFontManager::cFontManager()
 {
     TTF_Init();
-    m_defaultFont=TTF_OpenFont("./Fonts/ARIAL.TTF", DEFAULT_FONT_SIZE);
+    m_defaultFont=TTF_OpenFont("data/Fonts/ARIAL.TTF", DEFAULT_FONT_SIZE);
     if(!m_defaultFont){LOG_ERROR("TTF_OpenFont() failed!");}
 }
 

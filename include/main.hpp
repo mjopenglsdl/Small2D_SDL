@@ -28,13 +28,6 @@
 #include <SDL2/SDL_main.h>
 //#endif
 
+
+
 #endif
-
-
-/* some rules defined here
-*******************************************************
-1. State the inheritance for derived class at last line of file comment,
-    like cObject->cCollisionObject->cWall
-
-*******************************************************
-*/
