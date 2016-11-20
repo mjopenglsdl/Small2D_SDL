@@ -3,12 +3,14 @@ Small SDL 2D Game Framework (C++)
 
 A small C++ 2D framework using SDL2 library.
 
-I started this project in 2011 and the origin purpose is to make an easy-to-use framework for fast game development. 
 I will make the code consice simple with minimal use of external libraries.
 
-Currently I have integrated it with MSVC and supports will be given to other common IDEs soon.
-The MSVC version only works for x64 and there is a problem for 32-bit(I guess it's a mis-configuration in the lib)
-If you have any compilation problem please let me know
+Currently supported IDE/platforms:
+- Windows MSVC: open by 'build/msvc'
+- Linux cmake(also valid for cygwin): 
+'cd build'
+'cmake ..'
+'make'
 
 Libraries that I have used:
 * SDL2: https://www.libsdl.org/download-2.0.php
